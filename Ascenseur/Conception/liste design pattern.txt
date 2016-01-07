@@ -1,0 +1,9 @@
+Liste des design pattern utiles au projets :
+
+-Iterator
+-Singleton
+-Strategy
+-Strategy
+-Observateur
+-Décorateur
+
