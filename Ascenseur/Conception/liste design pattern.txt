@@ -5,5 +5,6 @@ Liste des design pattern utiles au projets :
 -Strategy
 -Strategy
 -Observateur
--Décorateur
+-Decorateur
+-Factory
 
