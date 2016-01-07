@@ -6,7 +6,7 @@
 package ascenseur;
 
 /**
- *
+ * COUCOU
  * @author Thorrsten
  */
 public class Requete {
