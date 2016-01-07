@@ -10,11 +10,24 @@ package ascenseur;
  * @author jeremtop
  */
 public class Controleur {
-   public void creerRequeteExterne(){
-       //todo
-   }
-   public void choisirAscenseur(){
-       //todo
-   }
+    private Controleur instance;
+    
+    private Controleur () {
+        
+    }
+    
+    public void creerRequeteExterne(){
+        //todo
+    }
+    public void choisirAscenseur(){
+        //todo
+    }
+    
+    public Controleur getInstance () {
+        if (instance == null) {
+            this.instance = new Controleur ();
+        }
+        return instance;
+    }
    
 }
