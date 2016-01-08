@@ -10,7 +10,7 @@ package ascenseur;
  * @author jeremtop
  */
 public class Controleur {
-    private Controleur instance;
+    private static Controleur instance;
     
     private Controleur () {
         
@@ -23,9 +23,9 @@ public class Controleur {
         //todo
     }
     
-    public Controleur getInstance () {
+    public static Controleur getInstance () {
         if (instance == null) {
-            this.instance = new Controleur ();
+            instance = new Controleur ();
         }
         return instance;
     }
