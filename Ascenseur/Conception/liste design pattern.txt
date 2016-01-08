@@ -2,8 +2,8 @@ Liste des design pattern utiles au projets :
 
 -Iterator
 -Singleton
--Strategy
--Strategy
+-Strategy Requete interne
+-Strategy Controlleur
 -Observateur
 -Decorateur
 -Factory
