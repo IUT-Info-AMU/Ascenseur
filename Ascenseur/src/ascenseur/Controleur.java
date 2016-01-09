@@ -5,22 +5,28 @@
  */
 package ascenseur;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author jeremtop
  */
 public class Controleur {
+    
     private static Controleur instance;
+    private ArrayList<Requete> requetes;
+    private ArrayList<Ascenseur> ascenseurs;
     
     private Controleur () {
         
     }
     
-    public void creerRequeteExterne(){
-        //todo
+    public void creerRequeteExterne (int numEtage, boolean direction){
+        Requete r = new RequeteExterne (numEtage, direction);
+        requetes.add (r);
     }
-    public void choisirAscenseur(){
-        //todo
+    public void choisirAscenseur (){
+        
     }
     
     public static Controleur getInstance () {

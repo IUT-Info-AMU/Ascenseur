@@ -5,17 +5,39 @@
  */
 package ascenseur;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Bprog
  */
 public class Ascenseur {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        System.out.print ("HELLO");
+    private int numEtage;
+    private ArrayList<Requete> requetes;
+    
+    public Ascenseur () {
+        
     }
     
+    public void bloquer () {
+        
+    }
+    
+    public void debloquer () {
+        
+    }
+    
+    public void ajouterRequete (Requete r) {
+        this.requetes.add (r);
+    }
+    
+    public void creerRequeteInterne (int numEtage) {
+        RequeteInterne requete = new RequeteInterne (numEtage);
+        this.requetes.add (requete);
+    }
+    
+    public void action () {
+
+    }
 }

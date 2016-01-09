@@ -9,6 +9,18 @@ package ascenseur;
  *
  * @author Thorrsten
  */
-public class RequeteExterne extends Requete{
+public class RequeteExterne extends Requete {
+    
+    private int numEtage;
+    private boolean direction;
+    
+    public RequeteExterne (int numEtage, boolean direction) {
+        this.numEtage = numEtage;
+        this.direction = direction;
+    }
+    
+    public int getNumEtage () {
+        return numEtage;
+    }
     
 }

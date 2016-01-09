@@ -9,6 +9,16 @@ package ascenseur;
  *
  * @author Thorrsten
  */
-public class RequeteInterne extends Requete{
+public class RequeteInterne extends Requete {
+    
+    private int numEtage;
+    
+    public RequeteInterne (int numEtage) {
+        this.numEtage = numEtage;
+    }
+    
+    public int getNumEtage () {
+        return numEtage;
+    }
     
 }
