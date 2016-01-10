@@ -42,20 +42,25 @@ public class Controleur {
             else{
                 //Si l'Assenceur a monte
                 if (a.getRequetes().get(0).getNumEtage() > a.getNumEtage() && 
-                        //ET
+                        //ET la requete a traité se trouve sur le chemin de l'Ascensseur a
                         requete.getNumEtage() < a.getRequetes().get(0).getNumEtage() &&
                         requete.getNumEtage() > a.getNumEtage()){
                     
+                    //On ajoute la requete en position 0 et devient prioritaire
+                    a.getRequetes().add(0, requete);
                 }
                 //Si l'Assenceur a descend
                 if (a.getRequetes().get(0).getNumEtage() < a.getNumEtage() &&
-                         requete.getNumEtage() > a.getRequetes().get(0).getNumEtage() &&
+                        //ET la requete a traité se trouve sur le chemin de l'Ascensseur a
+                        requete.getNumEtage() > a.getRequetes().get(0).getNumEtage() &&
                         requete.getNumEtage() < a.getNumEtage()){
                     
+                    //On ajoute la requete en position 0 et devient prioritaire
+                    a.getRequetes().add(0, requete);
                 }
             }
         }
-    }
+    }//choisirAscenseur()
     
     public static Controleur getInstance () {
         if (instance == null) {
