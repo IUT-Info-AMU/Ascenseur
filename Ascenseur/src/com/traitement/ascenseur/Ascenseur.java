@@ -19,10 +19,10 @@ public class Ascenseur {
     private boolean             enMouvement;
     private boolean             ouvert;
     private boolean             bloque;
-    private LinkedList<Requete>  requetes;
+    private LinkedList<Requete> requetes;
     
     public Ascenseur () {
-        this.numEtage =          0;
+        this.numEtage =     0;
         requetes =          new LinkedList<Requete>();
         this.enMouvement =  false;
         this.ouvert =       false;
@@ -64,7 +64,6 @@ public class Ascenseur {
     }
     
     public void action () {
-       
         //si il n'y a plus de requetes 
         if ( requetes.isEmpty() ){
             

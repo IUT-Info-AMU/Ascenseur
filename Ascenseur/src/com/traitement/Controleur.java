@@ -7,6 +7,7 @@ package com.traitement;
 
 import com.traitement.ascenseur.Ascenseur;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  *
@@ -14,9 +15,9 @@ import java.util.ArrayList;
  */
 public class Controleur {
     
-    private static Controleur instance;
-    private ArrayList<Requete> requetes;
-    private ArrayList<Ascenseur> ascenseurs;
+    private static Controleur       instance;
+    private LinkedList<Requete>     requetes;
+    private ArrayList<Ascenseur>    ascenseurs;
     
     private Controleur () {
         
