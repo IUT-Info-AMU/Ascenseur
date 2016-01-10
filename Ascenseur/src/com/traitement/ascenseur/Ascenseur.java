@@ -22,32 +22,34 @@ public class Ascenseur {
     private ArrayList<Requete>  requetes;
     
     public Ascenseur () {
+        this.numEtage =          0;
         requetes =          new ArrayList<Requete>();
         this.enMouvement =  false;
         this.ouvert =       false;
+        this.bloque =       false;
     }
     
     public void bloquer () {
-        this.bloque = false;
+        this.bloque = true;
     }
     
     public void debloquer () {
-        this.bloque = true;
+        this.bloque = false;
     }
   
-    public void fermer(){
+    public void fermer (){
         this.ouvert = false;
     }
     
-    public void ouvrir(){
+    public void ouvrir (){
         this.ouvert = true;
     }
     
-    public void immobile(){
+    public void immobile (){
         this.enMouvement = false;
     }
     
-    public void mouvement(){
+    public void mouvement (){
         this.enMouvement = true;
     }
     
@@ -83,8 +85,8 @@ public class Ascenseur {
         if (!requetes.isEmpty() && requetes.get(0).getNumEtage() != this.numEtage){
             
             //En mouvement
-            this.mouvement();
             this.fermer();
+            this.mouvement();
             
             //Etage requete < etage ascenseur
             if ( requetes.get(0).getNumEtage() < this.numEtage ){
@@ -100,4 +102,10 @@ public class Ascenseur {
             }   
         }
     }// action()
+
+    @Override
+    public String toString() {
+        return "Ascenseur{" + "numEtage=" + numEtage + ", enMouvement=" + enMouvement + ", ouvert=" + ouvert + ", bloque=" + bloque + ", requetes=" + requetes + '}';
+    }
+        
 }//class Ascenseur
