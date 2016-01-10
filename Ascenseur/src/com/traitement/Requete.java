@@ -6,9 +6,17 @@
 package com.traitement;
 
 /**
- * COUCOU
+ * 
  * @author Thorrsten
  */
 public class Requete {
     
+    private int numEtage;
+    
+    
+    
+    public int getNumEtage(){
+        
+        return numEtage;
+    }
 }

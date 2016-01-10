@@ -21,10 +21,14 @@ public class Ascenseur {
     private ArrayList<Requete> requetes;
     
     public Ascenseur () {
+        requetes = new ArrayList<Requete>();
         this.enMouvement = false;
         this.ouvert = false;
     }
     
+    
+    
+    //to do : bloquer / debloquer
     public void bloquer () {
         this.enMouvement = false;
     }
@@ -43,6 +47,31 @@ public class Ascenseur {
     }
     
     public void action () {
-        //todo
+       
+        //si il n'y a plus de requetes : on ne fait rien
+        if ( requetes.isEmpty() ){
+            
+            return;
+        }
+        //si il y a des requetes ET etage requete = etage ascenseur
+        else if ( !requetes.isEmpty() && requetes.get(0).getNumEtage() > this.numEtage ){
+            
+            //Ouverture des portes
+            this.bloquer();
+            this.ouvert = true;
+        }
+        //si il y a des requetes ET etage requete < etage ascenseur
+        else if ( !requetes.isEmpty() && requetes.get(0).getNumEtage() < this.numEtage ){
+            
+            //Mouvement bas
+            -- this.numEtage;
+        }
+        //si il y a des requetes ET etage requete > etage ascenseur
+        else if ( !requetes.isEmpty() && requetes.get(0).getNumEtage() > this.numEtage ){
+            
+            //mouvement haut
+            ++ this.numEtage;
+        }
+        
     }
 }
