@@ -26,15 +26,20 @@ public class Ascenseur {
         this.ouvert = false;
     }
     
-    
-    
-    //to do : bloquer / debloquer
     public void bloquer () {
         this.enMouvement = false;
     }
     
     public void debloquer () {
         this.enMouvement = true;
+    }
+    
+    public void ouvrir(){
+        this.ouvert = true;
+    }
+    
+    public void fermer(){
+        this.ouvert = false;
     }
     
     public void ajouterRequete (Requete r) {
@@ -51,27 +56,43 @@ public class Ascenseur {
         //si il n'y a plus de requetes : on ne fait rien
         if ( requetes.isEmpty() ){
             
-            return;
+            this.bloquer();
         }
-        //si il y a des requetes ET etage requete = etage ascenseur
-        else if ( !requetes.isEmpty() && requetes.get(0).getNumEtage() > this.numEtage ){
+        
+        
+        
+        //si il y a des requetes ET etage requete == etage ascenseur
+        else if ( !requetes.isEmpty() && requetes.get(0).getNumEtage() == this.numEtage ){
             
             //Ouverture des portes
             this.bloquer();
-            this.ouvert = true;
+            this.ouvrir();
         }
-        //si il y a des requetes ET etage requete < etage ascenseur
-        else if ( !requetes.isEmpty() && requetes.get(0).getNumEtage() < this.numEtage ){
+        //si il y n'a plus de requetes OU etage requete != etage ascenseur
+        else if ( requetes.isEmpty() || requetes.get(0).getNumEtage() != this.numEtage ){
             
-            //Mouvement bas
-            -- this.numEtage;
-        }
-        //si il y a des requetes ET etage requete > etage ascenseur
-        else if ( !requetes.isEmpty() && requetes.get(0).getNumEtage() > this.numEtage ){
-            
-            //mouvement haut
-            ++ this.numEtage;
+            //Immobile fermé
+            this.bloquer();
+            this.fermer();
         }
         
-    }
+        
+        if (!requetes.isEmpty() && requetes.get(0).getNumEtage() != this.numEtage){
+            
+            //En mouvement
+            
+            //Etage requete < etage ascenseur
+            if ( requetes.get(0).getNumEtage() < this.numEtage ){
+
+                //Mouvement bas
+                -- this.numEtage;
+            }
+            //Etage requete > etage ascenseur
+            else if ( requetes.get(0).getNumEtage() > this.numEtage ){
+
+                //mouvement haut
+                ++ this.numEtage;
+            }   
+        }
+    }// action()
 }
