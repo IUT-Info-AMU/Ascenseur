@@ -1,7 +1,9 @@
 
-import com.traitement.Immeuble;
+import com.affichage.AfficheurEtatAscenseur;
 import org.junit.Test;
 import com.traitement.ascenseur.Ascenseur;
+import com.affichage.AscenseurObserveur;
+import java.util.ArrayList;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -16,18 +18,17 @@ import com.traitement.ascenseur.Ascenseur;
 public class AfficheurTest {
     @Test
     public void testAfficheurTest () {
-        /*
         Ascenseur ascenseur1 = new Ascenseur ();
         Ascenseur ascenseur2 = new Ascenseur ();
-        
-        Immeuble immeuble = new Immeuble ();
-        immeuble.ajouterAscenseur (ascenseur1);
-        immeuble.ajouterAscenseur (ascenseur2);
         
         ascenseur1.creerRequeteInterne (3);
         ascenseur1.creerRequeteInterne (10);
         ascenseur2.creerRequeteInterne (6);
         ascenseur2.creerRequeteInterne (2);
+        
+        ArrayList<AscenseurObserveur> observeurs = new ArrayList<AscenseurObserveur> ();
+        observeurs.add (new AfficheurEtatAscenseur (ascenseur1));
+        observeurs.add (new AfficheurEtatAscenseur (ascenseur2));
 
         for ( ; ; ) {
             if ( !ascenseur1.getRequetes ().isEmpty () )
@@ -35,6 +36,5 @@ public class AfficheurTest {
             if ( !ascenseur2.getRequetes ().isEmpty () )
                 ascenseur2.action ();
         }
-        */
     }   
 }
