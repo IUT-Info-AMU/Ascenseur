@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.traitement;
+package com.traitement.controleur;
 
+import com.traitement.Requete;
+import com.traitement.RequeteExterne;
 import com.traitement.ascenseur.Ascenseur;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -21,14 +23,22 @@ public class Controleur {
     
     private Controleur () {
         
+        ascenseurs = new ArrayList<Ascenseur> ();
     }
     
     public void creerRequeteExterne (int numEtage, boolean direction){
         Requete r = new RequeteExterne (numEtage, direction);
         requetes.add (r);
     }
-    public void choisirAscenseur (){
+    public void choisirAscenseur (RequeteExterne requete){
         
+        //Pour chaque Ascenseur a contenu dans ascenceurs
+        for(Ascenseur a : ascenseurs){
+            
+            if(true){
+                
+            }
+        }
     }
     
     public static Controleur getInstance () {

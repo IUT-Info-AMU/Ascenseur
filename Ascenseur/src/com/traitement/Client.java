@@ -13,6 +13,13 @@ public class Client {
     
     public static void main (String[] args) {
         
+       /* 
+        * intancier l'immeuble
+        * les ascensseurs
+        * le controlleur
+        * iteration 
+        * + exception
+        */
     }
     
 }
