@@ -7,7 +7,7 @@ package com.traitement.ascenseur;
 
 import com.traitement.Requete;
 import com.traitement.RequeteInterne;
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  *
@@ -19,11 +19,11 @@ public class Ascenseur {
     private boolean             enMouvement;
     private boolean             ouvert;
     private boolean             bloque;
-    private ArrayList<Requete>  requetes;
+    private LinkedList<Requete>  requetes;
     
     public Ascenseur () {
         this.numEtage =          0;
-        requetes =          new ArrayList<Requete>();
+        requetes =          new LinkedList<Requete>();
         this.enMouvement =  false;
         this.ouvert =       false;
         this.bloque =       false;
@@ -79,6 +79,8 @@ public class Ascenseur {
             //Ouverture des portes
             this.immobile();
             this.ouvrir();
+            while (requetes.get(0).getNumEtage() == this.numEtage)
+                requetes.removeFirst ();
         }
 
         //si il y a des requetes ET etage requete != etage ascenseur
@@ -99,7 +101,7 @@ public class Ascenseur {
 
                 //mouvement haut
                 ++ this.numEtage;
-            }   
+            }
         }
     }// action()
 

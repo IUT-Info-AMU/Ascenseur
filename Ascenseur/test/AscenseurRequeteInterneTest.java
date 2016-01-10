@@ -19,6 +19,7 @@ public class AscenseurRequeteInterneTest {
         
         ascenseur.creerRequeteInterne (3);
         ascenseur.creerRequeteInterne (10);
+        ascenseur.creerRequeteInterne (3);
         ascenseur.creerRequeteInterne (2);
         
         for (;;) {
