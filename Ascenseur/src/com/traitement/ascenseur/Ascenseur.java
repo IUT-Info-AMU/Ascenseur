@@ -26,11 +26,11 @@ public class Ascenseur {
     }
     
     public void bloquer () {
-        
+        this.enMouvement = false;
     }
     
     public void debloquer () {
-        
+        this.enMouvement = true;
     }
     
     public void ajouterRequete (Requete r) {
