@@ -79,12 +79,12 @@ public class Ascenseur {
             //Ouverture des portes
             this.immobile();
             this.ouvrir();
-            while (requetes.get(0).getNumEtage() == this.numEtage)
+            while ( !requetes.isEmpty() && requetes.get(0).getNumEtage() == this.numEtage )
                 requetes.removeFirst ();
         }
 
         //si il y a des requetes ET etage requete != etage ascenseur
-        if (!requetes.isEmpty() && requetes.get(0).getNumEtage() != this.numEtage){
+        if ( !requetes.isEmpty() && requetes.get(0).getNumEtage() != this.numEtage ){
             
             //En mouvement
             this.fermer();
