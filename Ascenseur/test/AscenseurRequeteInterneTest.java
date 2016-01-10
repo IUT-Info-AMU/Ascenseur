@@ -22,7 +22,7 @@ public class AscenseurRequeteInterneTest {
         ascenseur.creerRequeteInterne (3);
         ascenseur.creerRequeteInterne (2);
         
-        for (int i = 0; i < 4; ++i) {
+        for (;;) {
             ascenseur.action ();
             System.out.println (ascenseur);
         }
