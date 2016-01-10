@@ -23,6 +23,7 @@ public class Controleur {
     
     private Controleur () {
         
+        ascenseurs = new ArrayList<Ascenseur> ();
     }
     
     public void creerRequeteExterne (int numEtage, boolean direction){
@@ -31,6 +32,13 @@ public class Controleur {
     }
     public void choisirAscenseur (RequeteExterne requete){
         
+        //Pour chaque Ascenseur a contenu dans ascenceurs
+        for(Ascenseur a : ascenseurs){
+            
+            if(true){
+                
+            }
+        }
     }
     
     public static Controleur getInstance () {
