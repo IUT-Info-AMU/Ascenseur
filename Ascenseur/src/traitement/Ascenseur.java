@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ascenseur;
+package traitement;
 
 import java.util.ArrayList;
 
@@ -14,10 +14,13 @@ import java.util.ArrayList;
 public class Ascenseur {
 
     private int numEtage;
+    private boolean enMouvement;
+    private boolean ouvert;
     private ArrayList<Requete> requetes;
     
     public Ascenseur () {
-        
+        this.enMouvement = false;
+        this.ouvert = false;
     }
     
     public void bloquer () {
@@ -38,6 +41,6 @@ public class Ascenseur {
     }
     
     public void action () {
-
+        //todo
     }
 }

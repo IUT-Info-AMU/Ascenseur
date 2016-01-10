@@ -3,16 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ascenseur;
+package traitement;
 
 /**
  *
- * @author Bprog
+ * @author Thorrsten
  */
-public class Client {
+public class Immeuble {
     
-    public static void main (String[] args) {
-        
-    }
+    private int nombreEtage;
     
 }
