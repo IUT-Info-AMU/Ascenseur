@@ -1,7 +1,7 @@
 
 import org.junit.Test;
-import traitement.Ascenseur;
-import traitement.options.Musique;
+import com.traitement.ascenseur.Ascenseur;
+import com.traitement.ascenseur.Musique;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package traitement;
+package com.traitement.ascenseur;
 
+import com.traitement.Requete;
+import com.traitement.RequeteInterne;
 import java.util.ArrayList;
 
 /**
