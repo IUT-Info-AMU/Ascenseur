@@ -60,6 +60,14 @@ public class Controleur {
                 }
             }
         }
+        
+        /* 
+         * Si aucun ascenseur ne peut répondre aux conditions,  
+         * on place la requete dans la collection requetes du controlleur
+         * et on attend
+         */
+        
+        this.requetes.add(requete);
     }//choisirAscenseur()
     
     public static Controleur getInstance () {
