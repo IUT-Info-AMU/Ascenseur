@@ -23,8 +23,10 @@ public class AscenseurRequeteInterneTest {
         ascenseur.creerRequeteInterne (2);
 
         for (;;) {
-            ascenseur.action ();
-            System.out.println (ascenseur);
+            if ( !ascenseur.getRequetes ().isEmpty () ) {
+                ascenseur.action ();
+                System.out.println (ascenseur);
+            }
         }
     }
 }

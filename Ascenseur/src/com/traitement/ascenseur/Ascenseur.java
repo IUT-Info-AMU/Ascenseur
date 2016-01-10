@@ -5,28 +5,24 @@
  */
 package com.traitement.ascenseur;
 
-import com.affichage.AfficheurObserveur;
 import com.traitement.Requete;
 import com.traitement.RequeteInterne;
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
  *
  * @author Bprog
  */
-public class Ascenseur implements AscenseurObservable {
+public class Ascenseur {
 
     private int                             numEtage;
     private boolean                         enMouvement;
     private boolean                         ouvert;
     private boolean                         bloque;
     private LinkedList<Requete>             requetes;
-    private ArrayList<AfficheurObserveur>   afficheurs;
     
     public Ascenseur () {
-        this.numEtage =     0;
-        afficheurs =        new ArrayList<AfficheurObserveur> ();
+        this.numEtage =     0;   
         requetes =          new LinkedList<Requete>();
         this.enMouvement =  false;
         this.ouvert =       false;
@@ -115,33 +111,11 @@ public class Ascenseur implements AscenseurObservable {
             }
         }
         
-        mettreAJourAfficheur ();
-        
     }// action()
 
     @Override
     public String toString() {
         return "Ascenseur{" + "numEtage=" + numEtage + ", enMouvement=" + enMouvement + ", ouvert=" + ouvert + ", bloque=" + bloque + ", requetes=" + requetes + '}';
-    }
-
-    @Override
-    public void ajouterAfficheur (AfficheurObserveur a) {
-        this.afficheurs.add (a);
-    }
-
-    @Override
-    public void retirerAfficheur (AfficheurObserveur a) {
-        for (AfficheurObserveur b : afficheurs) {
-            if (b == a) this.afficheurs.remove (b);
-        }
-    }
-
-    @Override
-    public void mettreAJourAfficheur () {
-        for (int i = 0; i < afficheurs.size (); ++i) {
-            AfficheurObserveur afficheur = (AfficheurObserveur) afficheurs.get (i);
-            afficheur.mettreAJour (numEtage, enMouvement, ouvert, bloque);
-        }
     }
         
 }//class Ascenseur

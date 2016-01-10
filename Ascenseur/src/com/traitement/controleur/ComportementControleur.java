@@ -11,6 +11,6 @@ package com.traitement.controleur;
  */
 public interface ComportementControleur {
     
-    
     public void choisirAscenseur();
+    
 }

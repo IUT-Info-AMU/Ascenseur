@@ -5,6 +5,9 @@
  */
 package com.traitement;
 
+import com.traitement.ascenseur.Ascenseur;
+import java.util.ArrayList;
+
 /**
  *
  * @author Thorrsten
@@ -12,5 +15,14 @@ package com.traitement;
 public class Immeuble {
     
     private int nombreEtage;
+    private ArrayList<Ascenseur> ascenseurs;
     
+    public Immeuble () {
+        this.ascenseurs = new ArrayList<Ascenseur> ();
+    }
+    
+    public void ajouterAscenseur (Ascenseur a) {
+        this.ascenseurs.add (a);
+    }
+
 }
