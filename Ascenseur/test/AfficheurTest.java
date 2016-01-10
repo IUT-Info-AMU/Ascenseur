@@ -1,4 +1,6 @@
 
+import com.affichage.AfficheurEtatAscenseur;
+import com.affichage.AfficheurObserveur;
 import org.junit.Test;
 import com.traitement.ascenseur.Ascenseur;
 
@@ -12,9 +14,9 @@ import com.traitement.ascenseur.Ascenseur;
  *
  * @author Bprog
  */
-public class AscenseurRequeteInterneTest {
+public class AfficheurTest {
     @Test
-    public void testAscenseurRequeteInterneTest () {
+    public void testAfficheurTest () {
         Ascenseur ascenseur = new Ascenseur ();
         
         ascenseur.creerRequeteInterne (3);
@@ -22,9 +24,9 @@ public class AscenseurRequeteInterneTest {
         ascenseur.creerRequeteInterne (3);
         ascenseur.creerRequeteInterne (2);
 
+        AfficheurObserveur afficheur = new AfficheurEtatAscenseur (ascenseur);
         for (;;) {
             ascenseur.action ();
-            System.out.println (ascenseur);
         }
-    }
+    }   
 }

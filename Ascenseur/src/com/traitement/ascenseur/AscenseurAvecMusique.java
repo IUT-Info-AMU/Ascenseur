@@ -9,11 +9,11 @@ package com.traitement.ascenseur;
  *
  * @author Bprog
  */
-public class Musique extends OptionAscenseur {
+public class AscenseurAvecMusique extends OptionAscenseur {
     
     private String musique;
     
-    public Musique (Ascenseur ascenseur, String nomMusique) {
+    public AscenseurAvecMusique (Ascenseur ascenseur, String nomMusique) {
         super (ascenseur);
         this.musique = nomMusique;
     }

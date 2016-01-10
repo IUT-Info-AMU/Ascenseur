@@ -1,7 +1,7 @@
 
 import org.junit.Test;
 import com.traitement.ascenseur.Ascenseur;
-import com.traitement.ascenseur.Musique;
+import com.traitement.ascenseur.AscenseurAvecMusique;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -17,7 +17,7 @@ public class OptionAscenseurTest {
     @Test
     public void testOptionAscenseurTest () {
         System.out.println ("----test decorateur ascenseur----");
-        Ascenseur ascenseurMusique = new Musique (new Ascenseur (), "Massive Attack - \"Butterfly Caught\"");
+        Ascenseur ascenseurMusique = new AscenseurAvecMusique (new Ascenseur (), "Massive Attack - \"Butterfly Caught\"");
         ascenseurMusique.action ();
     }
 }
