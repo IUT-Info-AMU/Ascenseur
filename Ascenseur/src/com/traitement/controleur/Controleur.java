@@ -62,7 +62,7 @@ public class Controleur {
         }
         
         /* 
-         * Si aucun ascenseur ne peut répondre aux conditions,  
+         * Si aucun ascenseur ne peut répondre aux conditions ci-dessus,  
          * on place la requete dans la collection requetes du controlleur
          * et on attend
          */
