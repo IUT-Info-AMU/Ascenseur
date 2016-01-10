@@ -9,9 +9,9 @@ package com.traitement.controleur;
  *
  * @author Thorrsten
  */
-public class Algorithme implements ComportementControleur{
+public class ChoisirAscenseurSimple implements ComportementControleur{
     
     public void choisirAscenseur(){
         
     }
-}//class Algorithme
+}//class ChoisirAscenseurSimple
