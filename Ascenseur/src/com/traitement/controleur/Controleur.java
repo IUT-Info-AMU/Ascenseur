@@ -35,8 +35,24 @@ public class Controleur {
         //Pour chaque Ascenseur a contenu dans ascenceurs
         for(Ascenseur a : ascenseurs){
             
-            if(true){
-                
+            //si un Ascenseur a n'a pas de requetes, alors on lui assigne celle-ci
+            if(a.getRequetes().isEmpty()){
+                a.getRequetes().add(requete);
+            }
+            else{
+                //Si l'Assenceur a monte
+                if (a.getRequetes().get(0).getNumEtage() > a.getNumEtage() && 
+                        //ET
+                        requete.getNumEtage() < a.getRequetes().get(0).getNumEtage() &&
+                        requete.getNumEtage() > a.getNumEtage()){
+                    
+                }
+                //Si l'Assenceur a descend
+                if (a.getRequetes().get(0).getNumEtage() < a.getNumEtage() &&
+                         requete.getNumEtage() > a.getRequetes().get(0).getNumEtage() &&
+                        requete.getNumEtage() < a.getNumEtage()){
+                    
+                }
             }
         }
     }
