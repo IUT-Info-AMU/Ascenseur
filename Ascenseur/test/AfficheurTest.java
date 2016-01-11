@@ -18,18 +18,22 @@ import java.util.ArrayList;
 public class AfficheurTest {
     @Test
     public void testAfficheurTest () {
+        //ceration des ascenseurs
         Ascenseur ascenseur1 = new Ascenseur ();
         Ascenseur ascenseur2 = new Ascenseur ();
         
+        //ajout de requêtes
         ascenseur1.creerRequeteInterne (3);
         ascenseur1.creerRequeteInterne (10);
         ascenseur2.creerRequeteInterne (6);
         ascenseur2.creerRequeteInterne (2);
         
+        //ajout des observeurs
         ArrayList<AscenseurObserveur> observeurs = new ArrayList<AscenseurObserveur> ();
         observeurs.add (new AfficheurEtatAscenseur (ascenseur1));
         observeurs.add (new AfficheurEtatAscenseur (ascenseur2));
 
+        //simulation
         for ( ; ; ) {
             if ( !ascenseur1.getRequetes ().isEmpty () )
                 ascenseur1.action ();
