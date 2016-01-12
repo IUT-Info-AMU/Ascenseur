@@ -6,19 +6,20 @@
 package com.affichage;
 
 import com.traitement.Requete;
-import com.traitement.ascenseur.AscenseurStandard;
 import java.util.Collection;
 
 /**
  *
  * @author Bprog
  */
-public abstract class Afficheur {
+public class AfficheurBoutonAscenseur extends Afficheur {
+
+    @Override
+    void afficher() {
+        //todo
+    }
     
-    protected AscenseurStandard sujet;
-    
-    abstract void afficher ();
-    
+    @Override
     public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
         
     }

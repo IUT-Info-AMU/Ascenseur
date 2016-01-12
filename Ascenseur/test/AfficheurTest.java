@@ -1,9 +1,8 @@
 
+import com.affichage.Afficheur;
 import com.affichage.AfficheurEtatAscenseur;
 import org.junit.Test;
 import com.traitement.ascenseur.AscenseurStandard;
-import com.affichage.AscenseurObserveur;
-import com.traitement.ascenseur.Ascenseur;
 import com.traitement.ascenseur.AscenseurAvecMusique;
 import java.util.ArrayList;
 
@@ -23,7 +22,7 @@ public class AfficheurTest {
         //ceration des ascenseurs
         AscenseurStandard ascenseur1 = new AscenseurStandard ();
         AscenseurStandard ascenseur2 = new AscenseurStandard ();
-        Ascenseur ascenseurMusique = new AscenseurAvecMusique (ascenseur2, "Massive Attack - \"Butterfly Caught\"");
+        AscenseurAvecMusique ascenseurMusique = new AscenseurAvecMusique (ascenseur2, "Massive Attack - \"Butterfly Caught\"");
         
         //ajout de requêtes
         ascenseur1.creerRequeteInterne (3);
@@ -32,7 +31,7 @@ public class AfficheurTest {
         ascenseur2.creerRequeteInterne (2);
         
         //ajout des observeurs
-        ArrayList<AscenseurObserveur> observeurs = new ArrayList<AscenseurObserveur> ();
+        ArrayList<Afficheur> observeurs = new ArrayList<Afficheur> ();
         observeurs.add (new AfficheurEtatAscenseur (ascenseur1));
         observeurs.add (new AfficheurEtatAscenseur (ascenseur2));
 

@@ -25,4 +25,8 @@ public class AscenseurAvecMusique extends OptionAscenseur {
         System.out.println ("joue " + musique);
     }
     
+    public void changerMusique (String musique) {
+        this.musique = musique;
+    }
+    
 }

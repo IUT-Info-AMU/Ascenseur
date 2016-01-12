@@ -5,7 +5,7 @@
  */
 package com.traitement.ascenseur;
 
-import com.affichage.AscenseurObserveur;
+import com.affichage.Afficheur;
 import com.traitement.Requete;
 import com.traitement.RequeteInterne;
 import java.util.ArrayList;
@@ -15,19 +15,19 @@ import java.util.LinkedList;
  *
  * @author Bprog
  */
-public class AscenseurStandard implements Ascenseur, AscenseurObservable {
+public class AscenseurStandard implements Ascenseur {
 
     private int                             numEtage;
     private boolean                         enMouvement;
     private boolean                         ouvert;
     private boolean                         bloque;
     private LinkedList<Requete>             requetes;
-    private ArrayList<AscenseurObserveur>   observeurs;
+    private ArrayList<Afficheur>            observeurs;
     
     public AscenseurStandard () {
         this.numEtage =     0;
         requetes =          new LinkedList<Requete> ();
-        observeurs =        new ArrayList<AscenseurObserveur> ();
+        observeurs =        new ArrayList<Afficheur> ();
         this.enMouvement =  false;
         this.ouvert =       false;
         this.bloque =       false;
@@ -130,20 +130,17 @@ public class AscenseurStandard implements Ascenseur, AscenseurObservable {
         return "Ascenseur{" + "numEtage=" + numEtage + ", enMouvement=" + enMouvement + ", ouvert=" + ouvert + ", bloque=" + bloque + ", requetes=" + requetes + '}';
     }
 
-    @Override
-    public void ajouterObserveur (AscenseurObserveur o) {
+    public void ajouterObserveur (Afficheur o) {
         observeurs.add (o);
     }
 
-    @Override
-    public void retirerObserveur (AscenseurObserveur o) {
+    public void retirerObserveur (Afficheur o) {
         //todo
     }
 
-    @Override
     public void mettreAJourObserveurs () {
-        for (AscenseurObserveur o : observeurs) {
-            o.mettreAJour (numEtage, enMouvement, ouvert, bloque);
+        for (Afficheur o : observeurs) {
+            o.mettreAJour (numEtage, enMouvement, ouvert, bloque, requetes);
         }
     }
         

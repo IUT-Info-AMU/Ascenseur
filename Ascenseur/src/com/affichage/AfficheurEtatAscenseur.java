@@ -5,21 +5,22 @@
  */
 package com.affichage;
 
-import com.traitement.ascenseur.AscenseurObservable;
+import com.traitement.Requete;
+import com.traitement.ascenseur.AscenseurStandard;
+import java.util.Collection;
 
 /**
  *
  * @author Bprog
  */
-public class AfficheurEtatAscenseur implements Afficheur, AscenseurObserveur {
+public class AfficheurEtatAscenseur extends Afficheur{
     
-    private int                 numEtage;
-    private boolean             enMouvement;
-    private boolean             ouvert;
-    private boolean             bloque;
-    private AscenseurObservable sujet;
+    private int     numEtage;
+    private boolean enMouvement;
+    private boolean ouvert;
+    private boolean bloque;
     
-    public AfficheurEtatAscenseur (AscenseurObservable ascenseur) {
+    public AfficheurEtatAscenseur (AscenseurStandard ascenseur) {
         this.sujet = ascenseur;
         ascenseur.ajouterObserveur (this);
     }
@@ -42,7 +43,7 @@ public class AfficheurEtatAscenseur implements Afficheur, AscenseurObserveur {
     }
 
     @Override
-    public void mettreAJour(int numEtage, boolean enMouvement, boolean ouvert, boolean bloque) {
+    public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
         this.numEtage = numEtage;
         this.enMouvement = enMouvement;
         this.ouvert = ouvert;
