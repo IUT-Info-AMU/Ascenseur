@@ -13,19 +13,13 @@ import java.util.LinkedList;
  *
  * @author Thorrsten
  */
-public class ChoisirAscenseurSimple implements ComportementControleur{
+public class ChoisirAscenseurSimple implements ControleurStrategie{
     
     private LinkedList<Requete>              requetes;
     private ArrayList<AscenseurStandard>     ascenseurs;
     
      public void choisirAscenseur(Requete requete){
          
-         int nbRequete;
-         
-        //Pour chaque AscenseurStandard a contenu dans ascenceurs
-        for(AscenseurStandard a : ascenseurs){
-            
-            a.getRequetes();
-        }
-    }
+        
+    }//choisirAscenseur()
 }//class ChoisirAscenseurSimple

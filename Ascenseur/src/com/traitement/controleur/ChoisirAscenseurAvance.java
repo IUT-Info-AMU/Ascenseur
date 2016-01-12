@@ -13,7 +13,7 @@ import java.util.LinkedList;
  *
  * @author Thorrsten
  */
-public class ChoisirAscenseurAvance implements ComportementControleur{
+public class ChoisirAscenseurAvance implements ControleurStrategie{
     
     
     private LinkedList<Requete>              requetes;
@@ -53,5 +53,5 @@ public class ChoisirAscenseurAvance implements ComportementControleur{
                 }
             }
         }
-    }
-}
+    }//choisirAscenseur()
+}//class ChoisirAscenseurAvance
