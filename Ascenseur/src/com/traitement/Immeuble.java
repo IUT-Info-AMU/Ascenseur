@@ -5,7 +5,7 @@
  */
 package com.traitement;
 
-import com.traitement.ascenseur.Ascenseur;
+import com.traitement.ascenseur.AscenseurStandard;
 import java.util.ArrayList;
 
 /**
@@ -15,13 +15,13 @@ import java.util.ArrayList;
 public class Immeuble {
     
     private int nombreEtage;
-    private ArrayList<Ascenseur> ascenseurs;
+    private ArrayList<AscenseurStandard> ascenseurs;
     
     public Immeuble () {
-        this.ascenseurs = new ArrayList<Ascenseur> ();
+        this.ascenseurs = new ArrayList<AscenseurStandard> ();
     }
     
-    public void ajouterAscenseur (Ascenseur a) {
+    public void ajouterAscenseur (AscenseurStandard a) {
         this.ascenseurs.add (a);
     }
 

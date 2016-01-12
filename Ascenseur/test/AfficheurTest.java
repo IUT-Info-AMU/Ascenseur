@@ -1,8 +1,10 @@
 
 import com.affichage.AfficheurEtatAscenseur;
 import org.junit.Test;
-import com.traitement.ascenseur.Ascenseur;
+import com.traitement.ascenseur.AscenseurStandard;
 import com.affichage.AscenseurObserveur;
+import com.traitement.ascenseur.Ascenseur;
+import com.traitement.ascenseur.AscenseurAvecMusique;
 import java.util.ArrayList;
 
 /*
@@ -19,8 +21,9 @@ public class AfficheurTest {
     @Test
     public void testAfficheurTest () {
         //ceration des ascenseurs
-        Ascenseur ascenseur1 = new Ascenseur ();
-        Ascenseur ascenseur2 = new Ascenseur ();
+        AscenseurStandard ascenseur1 = new AscenseurStandard ();
+        AscenseurStandard ascenseur2 = new AscenseurStandard ();
+        Ascenseur ascenseurMusique = new AscenseurAvecMusique (ascenseur2, "Massive Attack - \"Butterfly Caught\"");
         
         //ajout de requêtes
         ascenseur1.creerRequeteInterne (3);
@@ -38,7 +41,7 @@ public class AfficheurTest {
             if ( !ascenseur1.getRequetes ().isEmpty () )
                 ascenseur1.action ();
             if ( !ascenseur2.getRequetes ().isEmpty () )
-                ascenseur2.action ();
+                ascenseurMusique.action ();
         }
     }   
 }

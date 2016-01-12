@@ -1,6 +1,6 @@
 
 import org.junit.Test;
-import com.traitement.ascenseur.Ascenseur;
+import com.traitement.ascenseur.AscenseurStandard;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -15,7 +15,7 @@ import com.traitement.ascenseur.Ascenseur;
 public class AscenseurRequeteInterneTest {
     @Test
     public void testAscenseurRequeteInterneTest () {
-        Ascenseur ascenseur = new Ascenseur ();
+        AscenseurStandard ascenseur = new AscenseurStandard ();
         
         ascenseur.creerRequeteInterne (3);
         ascenseur.creerRequeteInterne (10);

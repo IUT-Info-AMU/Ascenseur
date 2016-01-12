@@ -9,7 +9,7 @@ package com.traitement.ascenseur;
  *
  * @author Bprog
  */
-public abstract class OptionAscenseur extends Ascenseur {
+public abstract class OptionAscenseur implements Ascenseur {
     
     protected Ascenseur ascenseur;
     

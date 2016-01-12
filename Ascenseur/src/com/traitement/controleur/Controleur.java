@@ -7,7 +7,7 @@ package com.traitement.controleur;
 
 import com.traitement.Requete;
 import com.traitement.RequeteExterne;
-import com.traitement.ascenseur.Ascenseur;
+import com.traitement.ascenseur.AscenseurStandard;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -19,11 +19,11 @@ public class Controleur {
     
     private static Controleur       instance;
     private LinkedList<Requete>     requetes;
-    private ArrayList<Ascenseur>    ascenseurs;
+    private ArrayList<AscenseurStandard>    ascenseurs;
     
     private Controleur () {
         
-        ascenseurs = new ArrayList<Ascenseur> ();
+        ascenseurs = new ArrayList<AscenseurStandard> ();
     }
     
     public void creerRequeteExterne (int numEtage, boolean direction){
@@ -32,10 +32,10 @@ public class Controleur {
     }
     public void choisirAscenseur (RequeteExterne requete){
         
-        //Pour chaque Ascenseur a contenu dans ascenceurs
-        for(Ascenseur a : ascenseurs){
+        //Pour chaque AscenseurStandard a contenu dans ascenceurs
+        for(AscenseurStandard a : ascenseurs){
             
-            //si un Ascenseur a n'a pas de requetes, alors on lui assigne celle-ci
+            //si un AscenseurStandard a n'a pas de requetes, alors on lui assigne celle-ci
             if(a.getRequetes().isEmpty()){
                 a.getRequetes().add(requete);
             }
