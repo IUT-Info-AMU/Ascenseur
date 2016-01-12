@@ -16,7 +16,4 @@ public interface Ascenseur {
     
     abstract void action ();
     
-    abstract LinkedList<Requete> getRequetes ();
-    
-    abstract int getNumEtage ();
 }

@@ -5,8 +5,6 @@
  */
 package com.traitement.ascenseur;
 
-import com.traitement.Requete;
-import java.util.LinkedList;
 
 /**
  *
@@ -14,17 +12,7 @@ import java.util.LinkedList;
  */
 public class AscenseurAvecMusique extends OptionAscenseur {
     
-    private int                             numEtage;
-    private LinkedList<Requete>             requetes;
     private String musique;
-    
-    public int getNumEtage () {
-        return numEtage;
-    }
-
-    public LinkedList<Requete> getRequetes () {
-        return requetes;
-    }
     
     public AscenseurAvecMusique (Ascenseur ascenseur, String nomMusique) {
         super (ascenseur);

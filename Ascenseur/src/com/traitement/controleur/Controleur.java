@@ -20,11 +20,11 @@ public class Controleur {
     
     private static Controleur                instance;
     private LinkedList<Requete>              requetes;
-    private ArrayList<Ascenseur>     ascenseurs;
+    private ArrayList<AscenseurStandard>     ascenseurs;
     
     private Controleur () {
         
-        ascenseurs  = new ArrayList<Ascenseur> ();
+        ascenseurs  = new ArrayList<AscenseurStandard> ();
         requetes    = new LinkedList<Requete>          ();
     }
     
@@ -35,7 +35,7 @@ public class Controleur {
     public void choisirAscenseur (RequeteExterne requete){
         
         //Pour chaque AscenseurStandard a contenu dans ascenceurs
-        for(Ascenseur a : ascenseurs){
+        for(AscenseurStandard a : ascenseurs){
             
             //si un AscenseurStandard a n'a pas de requetes, alors on lui assigne celle-ci
             if(a.getRequetes().isEmpty()){
