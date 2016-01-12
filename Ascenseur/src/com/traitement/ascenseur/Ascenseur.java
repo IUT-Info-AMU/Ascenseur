@@ -5,9 +5,6 @@
  */
 package com.traitement.ascenseur;
 
-import com.traitement.Requete;
-import java.util.LinkedList;
-
 /**
  *
  * @author Bprog

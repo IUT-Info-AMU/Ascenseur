@@ -13,8 +13,8 @@ import com.affichage.AscenseurObserveur;
  */
 public interface AscenseurObservable {
     
-    public void ajouterObserveur (AscenseurObserveur o);
-    public void retirerObserveur (AscenseurObserveur o);
-    public void mettreAJourObserveurs ();
+    abstract void ajouterObserveur (AscenseurObserveur o);
+    abstract void retirerObserveur (AscenseurObserveur o);
+    abstract void mettreAJourObserveurs ();
     
 }
