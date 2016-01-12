@@ -10,7 +10,7 @@ import com.traitement.Requete;
  *
  * @author Thorrsten
  */
-public interface ComportementControleur {
+public interface ControleurStrategie {
     
     
     public void choisirAscenseur(Requete req);
