@@ -5,6 +5,9 @@
  */
 package com.traitement.ascenseur;
 
+import com.traitement.Requete;
+import java.util.LinkedList;
+
 /**
  *
  * @author Bprog
@@ -12,4 +15,8 @@ package com.traitement.ascenseur;
 public interface Ascenseur {
     
     abstract void action ();
+    
+    abstract LinkedList<Requete> getRequetes ();
+    
+    abstract int getNumEtage ();
 }

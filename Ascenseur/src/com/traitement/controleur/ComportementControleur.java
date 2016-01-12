@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package com.traitement.controleur;
+import com.traitement.Requete;
 
 /**
  *
@@ -11,6 +12,7 @@ package com.traitement.controleur;
  */
 public interface ComportementControleur {
     
-    public void choisirAscenseur();
+    
+    public void choisirAscenseur(Requete req);
     
 }

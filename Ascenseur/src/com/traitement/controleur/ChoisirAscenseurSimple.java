@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 package com.traitement.controleur;
+import com.traitement.Requete;
+import com.traitement.ascenseur.AscenseurStandard;
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  *
@@ -11,7 +15,17 @@ package com.traitement.controleur;
  */
 public class ChoisirAscenseurSimple implements ComportementControleur{
     
-    public void choisirAscenseur(){
-        
+    private LinkedList<Requete>              requetes;
+    private ArrayList<AscenseurStandard>     ascenseurs;
+    
+     public void choisirAscenseur(Requete requete){
+         
+         int nbRequete;
+         
+        //Pour chaque AscenseurStandard a contenu dans ascenceurs
+        for(AscenseurStandard a : ascenseurs){
+            
+            a.getRequetes();
+        }
     }
 }//class ChoisirAscenseurSimple
