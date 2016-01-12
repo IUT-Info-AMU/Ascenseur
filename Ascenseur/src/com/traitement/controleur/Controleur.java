@@ -30,11 +30,13 @@ public class Controleur {
     }
     
     public void creerRequeteExterne (int numEtage, boolean direction){
+        
         Requete r = new RequeteExterne (numEtage, direction);
         requetes.add (r);
     }
     public void choisirAscenseur (RequeteExterne requete, ControleurStrategie methode){
         
+        //appelle la methode approprié de choisirAscenseur()
         methode.choisirAscenseur(requete);
     }
     
