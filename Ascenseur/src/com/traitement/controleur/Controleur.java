@@ -35,7 +35,7 @@ public class Controleur {
     }
     
     public void choisirAscenseur (RequeteExterne requete) {   
-        if ( requetes.isEmpty() ) {
+        if ( !requetes.isEmpty() ) {
             //appelle la methode approprié de choisirAscenseur()
             methode.choisirAscenseur (requete);
         }

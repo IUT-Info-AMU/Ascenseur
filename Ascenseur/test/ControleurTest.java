@@ -29,7 +29,6 @@ public class ControleurTest {
 
         Controleur.getInstance().ajouterAscenseur (a1);
         Controleur.getInstance().ajouterAscenseur (a2);
-        Controleur.getInstance().ajouterAscenseur (a3);
         
         Controleur.getInstance().creerRequeteExterne (5, true);
         Controleur.getInstance().creerRequeteExterne (7, false);
@@ -44,15 +43,12 @@ public class ControleurTest {
         ArrayList<Afficheur> observeurs = new ArrayList<Afficheur> ();
         observeurs.add (new AfficheurEtatAscenseur (a1));
         observeurs.add (new AfficheurEtatAscenseur (a2));
-        observeurs.add (new AfficheurEtatAscenseur (a3));
         
         for ( ; ; ) {
             if ( !a1.getRequetes ().isEmpty () )
                 a1.action ();
             if ( !a2.getRequetes ().isEmpty () )
                 a2.action ();
-            if ( !a2.getRequetes ().isEmpty () )
-                a3.action ();
         }
     }
 }
