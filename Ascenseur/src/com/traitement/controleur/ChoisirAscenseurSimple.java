@@ -12,7 +12,7 @@ import com.traitement.RequeteExterne;
  */
 public class ChoisirAscenseurSimple implements ControleurStrategie{
     
-    public void choisirAscenseur (RequeteExterne requete){        
+    public void choisirAscenseur (RequeteExterne requete) {
         
     }//choisirAscenseur()
     

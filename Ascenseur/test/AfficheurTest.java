@@ -23,12 +23,11 @@ public class AfficheurTest {
         //ceration des ascenseurs
         AscenseurStandard ascenseur1 = new AscenseurStandard ();
         AscenseurStandard ascenseur2 = new AscenseurStandard ();
-        Ascenseur ascenseur3 = new AscenseurAvecMusique (ascenseur2, "Massive Attack - \"Butterfly Caught\"");
+        AscenseurAvecMusique ascenseurMusique = new AscenseurAvecMusique (ascenseur2, "Massive Attack - \"Butterfly Caught\"");
         
         ArrayList<Ascenseur> ascenseurs = new ArrayList<Ascenseur> ();
         ascenseurs.add (ascenseur1);
-        ascenseurs.add (ascenseur2);
-        ascenseurs.add (ascenseur3);
+        ascenseurs.add (ascenseurMusique);
         
         //ajout de requêtes
         ascenseur1.creerRequeteInterne (3);
@@ -37,16 +36,14 @@ public class AfficheurTest {
         ascenseur2.creerRequeteInterne (2);
         
         //ajout des observeurs
-        ArrayList<Afficheur> observeurs = new ArrayList<Afficheur> ();
-        observeurs.add (new AfficheurEtatAscenseur (ascenseur1));
-        observeurs.add (new AfficheurEtatAscenseur (ascenseur2));
-
-        //simulation
+        new AfficheurEtatAscenseur (ascenseur2);
+        new AfficheurEtatAscenseur (ascenseur1);
+        
         for ( ; ; ) {
             if ( !ascenseur1.getRequetes ().isEmpty () )
                 ascenseur1.action ();
             if ( !ascenseur2.getRequetes ().isEmpty () )
-                ascenseur2.action ();
+                ascenseurMusique.action ();
         }
     }   
 }
