@@ -13,12 +13,13 @@ import java.util.Collection;
  *
  * @author Bprog
  */
-public class AfficheurEtatAscenseur extends Afficheur{
+public class AfficheurEtatAscenseur implements Afficheur{
     
     private int     numEtage;
     private boolean enMouvement;
     private boolean ouvert;
     private boolean bloque;
+    protected AscenseurStandard sujet;
     
     public AfficheurEtatAscenseur (AscenseurStandard ascenseur) {
         this.sujet = ascenseur;

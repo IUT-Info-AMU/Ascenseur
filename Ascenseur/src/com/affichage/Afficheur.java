@@ -6,21 +6,16 @@
 package com.affichage;
 
 import com.traitement.Requete;
-import com.traitement.ascenseur.AscenseurStandard;
 import java.util.Collection;
 
 /**
  *
  * @author Bprog
  */
-public abstract class Afficheur {
-    
-    protected AscenseurStandard sujet;
+public interface Afficheur {
     
     abstract void afficher ();
     
-    public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
-        
-    }
+    public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes);
     
 }
