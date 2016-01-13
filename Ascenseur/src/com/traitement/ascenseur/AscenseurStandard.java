@@ -33,30 +33,17 @@ public class AscenseurStandard implements Ascenseur {
         this.bloque =       false;
     }
     
-    public void bloquer () {
-        this.bloque = true;
-    }
-    
-    public void debloquer () {
-        this.bloque = false;
+    public void bloquer (boolean bloquer) {
+        this.bloque = bloquer;
     }
   
-    public void fermer (){
-        this.ouvert = false;
+    public void ouvrir (boolean ouvrir) {
+        this.ouvert = ouvrir;
     }
     
-    public void ouvrir (){
-        this.ouvert = true;
-    }
-    
-    public void immobile (){
-        this.enMouvement = false;
-    }
-    
-    public void mouvement (){
-        this.enMouvement = true;
-    }
-    
+    public void mettreEnMouvement (boolean mouvement) {
+        this.enMouvement = mouvement;
+    }    
     
     public void ajouterRequete (Requete r) {
         this.requetes.add (r);
@@ -84,16 +71,16 @@ public class AscenseurStandard implements Ascenseur {
             if ( requetes.isEmpty() ){
 
                 //Immobile
-                this.immobile();
-                this.fermer();
+                this.mettreEnMouvement (false);
+                this.ouvrir (false);
             }
 
             //si il y a des requetes ET etage requete == etage ascenseur
             else if ( requetes.get(0).getNumEtage() == this.numEtage ){
 
                 //ouverture des portes
-                this.immobile();
-                this.ouvrir();
+                this.mettreEnMouvement (false);
+                this.ouvrir (true);
                 
                 //retrait des requetes effectuées
                 while ( !requetes.isEmpty() && requetes.get(0).getNumEtage() == this.numEtage )
@@ -104,8 +91,8 @@ public class AscenseurStandard implements Ascenseur {
             else if ( requetes.get(0).getNumEtage() != this.numEtage ){
 
                 //en mouvement
-                this.fermer();
-                this.mouvement();
+                this.ouvrir (false);
+                this.mettreEnMouvement (true);
 
                 //Etage requete < etage ascenseur
                 if ( requetes.get(0).getNumEtage() < this.numEtage ){

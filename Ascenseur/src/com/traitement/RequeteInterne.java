@@ -11,8 +11,6 @@ package com.traitement;
  */
 public class RequeteInterne extends Requete {
     
-    private int numEtage;
-    
     public RequeteInterne (int numEtage) {
         this.numEtage = numEtage;
     }

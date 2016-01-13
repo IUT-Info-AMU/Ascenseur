@@ -11,7 +11,6 @@ package com.traitement;
  */
 public class RequeteExterne extends Requete {
     
-    private int numEtage;
     private boolean direction;
     
     public RequeteExterne (int numEtage, boolean direction) {

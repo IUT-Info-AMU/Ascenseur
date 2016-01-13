@@ -11,12 +11,10 @@ package com.traitement;
  */
 public class Requete {
     
-    private int numEtage;
+    protected int numEtage;  
     
-    
-    
-    public int getNumEtage(){
-        
+    public int getNumEtage () {
         return numEtage;
     }
+    
 }
