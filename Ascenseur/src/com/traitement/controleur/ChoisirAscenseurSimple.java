@@ -4,10 +4,7 @@
  * and open the template in the editor.
  */
 package com.traitement.controleur;
-import com.traitement.Requete;
-import com.traitement.ascenseur.AscenseurStandard;
-import java.util.ArrayList;
-import java.util.LinkedList;
+import com.traitement.RequeteExterne;
 
 /**
  *
@@ -15,10 +12,7 @@ import java.util.LinkedList;
  */
 public class ChoisirAscenseurSimple implements ControleurStrategie{
     
-    private LinkedList<Requete>              requetes;
-    private ArrayList<AscenseurStandard>     ascenseurs;
-    
-    public void choisirAscenseur(Requete requete){        
+    public void choisirAscenseur (RequeteExterne requete){        
         
     }//choisirAscenseur()
     

@@ -18,26 +18,27 @@ import java.util.LinkedList;
  */
 public class Controleur {
     
-    private static Controleur                   instance;
-    private static LinkedList<Requete>          requetes;
+    final private static Controleur instance = new Controleur ();
+    private static LinkedList<RequeteExterne> requetes;
     private static ArrayList<AscenseurStandard> ascenseurs;
-    private ControleurStrategie                 methode;
+    private ControleurStrategie methode;
     
-    private Controleur () {      
+    private Controleur () {
         ascenseurs  = new ArrayList<AscenseurStandard> ();
-        requetes    = new LinkedList<Requete>          ();
+        requetes    = new LinkedList<RequeteExterne>   ();
         methode     = new ChoisirAscenseurAvance       ();
     }
     
-    public void creerRequeteExterne (int numEtage, boolean direction) {
-        
-        Requete r = new RequeteExterne (numEtage, direction);
+    public void creerRequeteExterne (int numEtage, boolean direction) {     
+        RequeteExterne r = new RequeteExterne (numEtage, direction);
         requetes.add (r);
     }
     
     public void choisirAscenseur (RequeteExterne requete) {   
-        //appelle la methode approprié de choisirAscenseur()
-        methode.choisirAscenseur (requete);
+        if ( requetes.isEmpty() ) {
+            //appelle la methode approprié de choisirAscenseur()
+            methode.choisirAscenseur (requete);
+        }
     }
     
     public void ajouterAscenseur (AscenseurStandard a) {
@@ -48,7 +49,7 @@ public class Controleur {
         return ascenseurs;
     }
     
-    public static LinkedList<Requete> getRequetes () {
+    public static LinkedList<RequeteExterne> getRequetes () {
         return requetes;
     }
     
@@ -57,9 +58,6 @@ public class Controleur {
     }
     
     public static Controleur getInstance () {
-        if (instance == null) {
-            instance = new Controleur ();
-        }
         return instance;
     }
 

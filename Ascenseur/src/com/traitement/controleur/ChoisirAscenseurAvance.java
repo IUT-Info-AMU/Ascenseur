@@ -5,6 +5,7 @@
  */
 package com.traitement.controleur;
 import com.traitement.Requete;
+import com.traitement.RequeteExterne;
 import com.traitement.ascenseur.AscenseurStandard;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -15,18 +16,18 @@ import java.util.LinkedList;
  */
 public class ChoisirAscenseurAvance implements ControleurStrategie{
   
-    public void choisirAscenseur (Requete requete){
+    public void choisirAscenseur (RequeteExterne requete){
         
-        LinkedList<Requete> requetes = Controleur.getRequetes ();
+        LinkedList<RequeteExterne> requetes = Controleur.getRequetes ();
         ArrayList<AscenseurStandard> ascenseurs = Controleur.getAscenseurs ();
         //Pour chaque AscenseurStandard a contenu dans ascenceurs
         for(AscenseurStandard a : ascenseurs){
             
             //si un AscenseurStandard a n'a pas de requetes, alors on lui assigne celle-ci
-            if(a.getRequetes().isEmpty()){
-                a.getRequetes().add(requete);
+            if (a.getRequetes().isEmpty()){
+                a.ajouterRequete (requete);
             }
-            else{
+            else {
                 //Si l'Assenceur a monte
                 if (a.getRequetes().get(0).getNumEtage() > a.getNumEtage() && 
                         //ET la requete a traité se trouve sur le chemin de l'Ascensseur a
@@ -50,7 +51,11 @@ public class ChoisirAscenseurAvance implements ControleurStrategie{
                     requetes.removeFirst();
                 }
             }
+            
+            //todo ascenseur par default
         }
+        
+        
     }//choisirAscenseur()
     
 }//class ChoisirAscenseurAvance

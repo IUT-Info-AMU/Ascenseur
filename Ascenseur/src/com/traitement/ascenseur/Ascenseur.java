@@ -11,6 +11,6 @@ package com.traitement.ascenseur;
  */
 public interface Ascenseur {
     
-    abstract void action ();
-
+    public void action ();
+    
 }
