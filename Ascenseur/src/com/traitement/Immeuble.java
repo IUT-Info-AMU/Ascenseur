@@ -17,8 +17,9 @@ public class Immeuble {
     private int nombreEtage;
     private ArrayList<Ascenseur> ascenseurs;
     
-    public Immeuble () {
+    public Immeuble (int nombreEtage) {
         this.ascenseurs = new ArrayList<Ascenseur> ();
+        this.nombreEtage = nombreEtage;
     }
     
      public int getNombreEtage(){
