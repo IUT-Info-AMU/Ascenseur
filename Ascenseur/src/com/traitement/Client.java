@@ -32,7 +32,7 @@ public class Client {
        for(int i = 0 ;i < 5; ++i){
            
            immeuble.ajouterAscenseur(new AscenseurStandard());
-           
+           Controleur.getInstance().ajouterAscenseur(new AscenseurStandard());
        }
        
        for(Ascenseur a : immeuble.getAscenseurs()){
