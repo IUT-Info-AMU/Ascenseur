@@ -19,5 +19,7 @@ public class ControleurTest {
     AscenseurStandard a3 = new AscenseurStandard ();
     AscenseurAvecMusique aM1 = new AscenseurAvecMusique (a3, "Gégé - \"yolo banjo\"");
     
-    Controleur.getInstance();
+    Controleur.getInstance().ajouterAscenseur (a1);
+    Controleur.getInstance().ajouterAscenseur (a2);
+    Controleur.getInstance().ajouterAscenseur (a3);
 }

@@ -8,7 +8,6 @@ package com.traitement.controleur;
 import com.traitement.Requete;
 import com.traitement.RequeteExterne;
 import com.traitement.ascenseur.AscenseurStandard;
-import com.traitement.ascenseur.Ascenseur;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
