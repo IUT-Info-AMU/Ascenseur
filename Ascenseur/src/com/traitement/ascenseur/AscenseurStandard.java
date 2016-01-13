@@ -76,14 +76,14 @@ public class AscenseurStandard implements Ascenseur {
             }
 
             //si il y a des requetes ET etage requete == etage ascenseur
-            else if ( this.requetes.get(0).getNumEtage() == this.numEtage ){
+            else if ( this.requetes.getFirst().getNumEtage() == this.numEtage ){
 
                 //ouverture des portes
                 this.mettreEnMouvement (false);
                 this.ouvrir (true);
                 
                 //retrait des requetes effectuées
-                while ( !this.requetes.isEmpty() && this.requetes.get(0).getNumEtage() == this.numEtage )
+                while ( !this.requetes.isEmpty() && this.requetes.getFirst().getNumEtage() == this.numEtage )
                     this.requetes.removeFirst ();
             }
 
@@ -95,13 +95,13 @@ public class AscenseurStandard implements Ascenseur {
                 this.mettreEnMouvement (true);
 
                 //Etage requete < etage ascenseur
-                if ( this.requetes.get(0).getNumEtage() < this.numEtage ){
+                if ( this.requetes.getFirst().getNumEtage() < this.numEtage ){
 
                     //mouvement bas
                     -- this.numEtage;
                 }
                 //Etage requete > etage ascenseur
-                else if ( requetes.get(0).getNumEtage() > this.numEtage ){
+                else if ( requetes.getFirst().getNumEtage() > this.numEtage ){
 
                     //mouvement haut
                     ++ this.numEtage;

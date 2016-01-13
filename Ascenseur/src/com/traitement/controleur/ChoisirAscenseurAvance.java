@@ -19,44 +19,43 @@ public class ChoisirAscenseurAvance implements ControleurStrategie{
     public void choisirAscenseur (RequeteExterne requete){
         
         LinkedList<RequeteExterne> requetes = Controleur.getInstance().getRequetes ();
-        ArrayList<AscenseurStandard> ascenseurs = Controleur.getInstance().getAscenseurs ();
         
         //Pour chaque AscenseurStandard a contenu dans ascenceurs
-        for(AscenseurStandard a : Controleur.getInstance().getAscenseurs ()){
+        for(AscenseurStandard a : Controleur.getInstance().getAscenseurs () ){
             
             //si un AscenseurStandard a n'a pas de requetes, alors on lui assigne celle-ci
             if (a.getRequetes().isEmpty()){
                 a.ajouterRequete(requete);
+                requetes.remove();
+                break;
             }
             else {
                 //Si l'Assenceur a monte
-                if (a.getRequetes().get(0).getNumEtage() > a.getNumEtage() && 
+                if (a.getRequetes().getFirst().getNumEtage() > a.getNumEtage() && 
                         //ET la requete a traité se trouve sur le chemin de l'Ascensseur a
-                        requete.getNumEtage() < a.getRequetes().get(0).getNumEtage() &&
+                        requete.getNumEtage() < a.getRequetes().getFirst().getNumEtage() &&
                         requete.getNumEtage() > a.getNumEtage()){
                     
                     //On ajoute la requete en position 0 et devient prioritaire
-                    a.getRequetes().add(0, requete);
+                    a.ajouterRequete(requete);
                     //La requete est assigné au bon ascenseur, le controlleur ne s'en charge plus
                     requetes.removeFirst();
+                    break;
                 }
                 //Si l'Assenceur a descend
-                else if (a.getRequetes().get(0).getNumEtage() < a.getNumEtage() &&
+                else if (a.getRequetes().getFirst().getNumEtage() < a.getNumEtage() &&
                         //ET la requete a traité se trouve sur le chemin de l'Ascensseur a
-                        requete.getNumEtage() > a.getRequetes().get(0).getNumEtage() &&
+                        requete.getNumEtage() > a.getRequetes().getFirst().getNumEtage() &&
                         requete.getNumEtage() < a.getNumEtage()){
                     
                     //On ajoute la requete en position 0 et devient prioritaire
-                    a.getRequetes().add(0, requete);
+                    a.ajouterRequete(requete);
                     //La requete est assigné au bon ascenseur, le controlleur ne s'en charge plus
                     requetes.removeFirst();
+                    break;
                 }
             }
-            
-            //todo ascenseur par default
         }
-        
-        
     }//choisirAscenseur()
     
 }//class ChoisirAscenseurAvance

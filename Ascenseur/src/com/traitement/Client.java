@@ -29,16 +29,15 @@ public class Client {
        
         Immeuble immeuble = new Immeuble(10);
        
-       for(int i = 0 ;i < 5; ++i){
+       for(int i = 0 ;i < 2; ++i){
            
            immeuble.ajouterAscenseur(new AscenseurStandard());
            Controleur.getInstance().ajouterAscenseur(new AscenseurStandard());
        }
        
-       for(Ascenseur a : immeuble.getAscenseurs()){
+       for(Ascenseur a : Controleur.getInstance().getAscenseurs()){
                
-            new AfficheurEtatAscenseur((AscenseurStandard)a);
-               
+            new AfficheurEtatAscenseur((AscenseurStandard)a);    
        }
        
        while(true){
@@ -56,8 +55,8 @@ public class Client {
            
                    String requeteChoisie = new Scanner(System.in).next();
                    
-                    System.out.println("Entrez un numero d'etage (max " + immeuble.getNombreEtage() + "):");
-                    int numeroEtage = new Scanner(System.in).nextInt();
+                   System.out.println("Entrez un numero d'etage (max " + immeuble.getNombreEtage() + "):");
+                   int numeroEtage = new Scanner(System.in).nextInt();
                    
                    switch(requeteChoisie){
                        
@@ -68,7 +67,8 @@ public class Client {
                            break;
                            
                        case "E" :
-                           Controleur.getInstance().choisirAscenseur(new RequeteExterne(numeroEtage, true));
+                           Controleur.getInstance().creerRequeteExterne(numeroEtage, true);
+                           Controleur.getInstance().choisirAscenseur(Controleur.getRequetes().getFirst());
                            break;
                        
                        default :
@@ -84,7 +84,7 @@ public class Client {
                    break;
            }//switch reponse
            
-           for(Ascenseur a : immeuble.getAscenseurs()){
+           for(Ascenseur a : Controleur.getInstance().getAscenseurs()){
                
                a.action();
                
