@@ -18,8 +18,8 @@ public class ChoisirAscenseurSimple implements ControleurStrategie{
     private LinkedList<Requete>              requetes;
     private ArrayList<AscenseurStandard>     ascenseurs;
     
-     public void choisirAscenseur(Requete requete){
-         
+    public void choisirAscenseur(Requete requete){        
         
     }//choisirAscenseur()
+    
 }//class ChoisirAscenseurSimple

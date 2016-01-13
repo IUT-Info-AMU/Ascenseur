@@ -12,7 +12,6 @@ import com.traitement.Requete;
  */
 public interface ControleurStrategie {
     
-    
     public void choisirAscenseur(Requete req);
     
 }

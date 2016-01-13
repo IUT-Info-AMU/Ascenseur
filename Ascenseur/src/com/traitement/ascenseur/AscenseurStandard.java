@@ -68,7 +68,7 @@ public class AscenseurStandard implements Ascenseur {
         if ( !bloque ) {
             
             //si il n'y a plus de requetes 
-            if ( requetes.isEmpty() ){
+            if ( requetes.isEmpty() ) {
 
                 //Immobile
                 this.mettreEnMouvement (false);

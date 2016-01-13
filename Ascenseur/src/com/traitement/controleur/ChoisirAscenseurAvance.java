@@ -14,13 +14,11 @@ import java.util.LinkedList;
  * @author Thorrsten
  */
 public class ChoisirAscenseurAvance implements ControleurStrategie{
-    
-    
-    private LinkedList<Requete>              requetes;
-    private ArrayList<AscenseurStandard>     ascenseurs;
-    
   
-     public void choisirAscenseur(Requete requete){
+    public void choisirAscenseur (Requete requete){
+        
+        LinkedList<Requete> requetes = Controleur.getRequetes ();
+        ArrayList<AscenseurStandard> ascenseurs = Controleur.getAscenseurs ();
         //Pour chaque AscenseurStandard a contenu dans ascenceurs
         for(AscenseurStandard a : ascenseurs){
             
@@ -38,7 +36,7 @@ public class ChoisirAscenseurAvance implements ControleurStrategie{
                     //On ajoute la requete en position 0 et devient prioritaire
                     a.getRequetes().add(0, requete);
                     //La requete est assigné au bon ascenseur, le controlleur ne s'en charge plus
-                    this.requetes.removeFirst();
+                    requetes.removeFirst();
                 }
                 //Si l'Assenceur a descend
                 else if (a.getRequetes().get(0).getNumEtage() < a.getNumEtage() &&
@@ -49,9 +47,10 @@ public class ChoisirAscenseurAvance implements ControleurStrategie{
                     //On ajoute la requete en position 0 et devient prioritaire
                     a.getRequetes().add(0, requete);
                     //La requete est assigné au bon ascenseur, le controlleur ne s'en charge plus
-                    this.requetes.removeFirst();
+                    requetes.removeFirst();
                 }
             }
         }
     }//choisirAscenseur()
+    
 }//class ChoisirAscenseurAvance
