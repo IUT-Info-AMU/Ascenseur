@@ -8,6 +8,7 @@ package com.traitement;
 import com.traitement.ascenseur.Ascenseur;
 import com.traitement.ascenseur.AscenseurStandard;
 import com.traitement.controleur.Controleur;
+import com.affichage.AfficheurEtatAscenseur;
 import java.util.Scanner;
 
 /**
@@ -31,6 +32,13 @@ public class Client {
        for(int i = 0 ;i < 5; ++i){
            
            immeuble.ajouterAscenseur(new AscenseurStandard());
+           
+       }
+       
+       for(Ascenseur a : immeuble.getAscenseurs()){
+               
+            new AfficheurEtatAscenseur((AscenseurStandard)a);
+               
        }
        
        while(true){
@@ -48,7 +56,7 @@ public class Client {
            
                    String requeteChoisie = new Scanner(System.in).next();
                    
-                    System.out.println("Entrez un numero d'Ã©tage (max " + immeuble.getNombreEtage() + "):");
+                    System.out.println("Entrez un numero d'etage (max " + immeuble.getNombreEtage() + "):");
                     int numeroEtage = new Scanner(System.in).nextInt();
                    
                    switch(requeteChoisie){
@@ -66,9 +74,10 @@ public class Client {
                        default :
                            break;
                    }//swtich requeteChoisie
-   
+                   break;
+                   
                case "N" :
-                   System.out.println("Requete non ajoutÃ©");
+                   System.out.println("Requete non ajoute");
                    break;
                    
                default :
@@ -78,6 +87,7 @@ public class Client {
            for(Ascenseur a : immeuble.getAscenseurs()){
                
                a.action();
+               
            }
        }//while(true)
     }
