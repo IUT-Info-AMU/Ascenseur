@@ -1,6 +1,7 @@
 
 import com.affichage.Afficheur;
 import com.affichage.AfficheurEtatAscenseur;
+import com.traitement.RequeteInterne;
 import com.traitement.ascenseur.Ascenseur;
 import org.junit.Test;
 import com.traitement.ascenseur.AscenseurStandard;
