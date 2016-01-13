@@ -5,6 +5,11 @@
  */
 package com.traitement;
 
+import com.traitement.ascenseur.Ascenseur;
+import com.traitement.ascenseur.AscenseurStandard;
+import com.traitement.controleur.Controleur;
+import java.util.Scanner;
+
 /**
  *
  * @author Bprog
@@ -20,6 +25,61 @@ public class Client {
         * iteration 
         * + exception
         */
+       
+        Immeuble immeuble = new Immeuble(10);
+       
+       for(int i = 0 ;i < 5; ++i){
+           
+           immeuble.ajouterAscenseur(new AscenseurStandard());
+       }
+       
+       while(true){
+           
+           System.out.println("Voulez-vous ajoutez une requete ? (O/N)");
+           String reponse = new Scanner(System.in).next();
+
+           switch(reponse){
+               
+               case "O" :
+                   System.out.println("Choisir votre type de requete :" + "\n" + 
+                   "I pour interne"+ "\n" + 
+                   "E pour externe" + "\n" + 
+                   "autre pour ne rien faire");
+           
+                   String requeteChoisie = new Scanner(System.in).next();
+                   
+                    System.out.println("Entrez un numero d'Ã©tage (max " + immeuble.getNombreEtage() + "):");
+                    int numeroEtage = new Scanner(System.in).nextInt();
+                   
+                   switch(requeteChoisie){
+                       
+                       case "I":
+                            System.out.println("Entrez un numero d'ascenseur (entre 0 et " + immeuble.getAscenseurs().size() + "):");
+                            int numeroAscenseur = new Scanner(System.in).nextInt();
+                            Controleur.getInstance().getAscenseurs().get(numeroAscenseur).ajouterRequete(new RequeteInterne(numeroEtage));
+                           break;
+                           
+                       case "E" :
+                           Controleur.getInstance().choisirAscenseur(new RequeteExterne(numeroEtage, true));
+                           break;
+                       
+                       default :
+                           break;
+                   }//swtich requeteChoisie
+   
+               case "N" :
+                   System.out.println("Requete non ajoutÃ©");
+                   break;
+                   
+               default :
+                   break;
+           }//switch reponse
+           
+           for(Ascenseur a : immeuble.getAscenseurs()){
+               
+               a.action();
+           }
+       }//while(true)
     }
     
 }
