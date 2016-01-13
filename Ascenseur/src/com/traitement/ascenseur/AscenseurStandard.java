@@ -68,7 +68,7 @@ public class AscenseurStandard implements Ascenseur {
         if ( !bloque ) {
             
             //si il n'y a plus de requetes 
-            if ( requetes.isEmpty() ) {
+            if ( this.requetes.isEmpty() ) {
 
                 //Immobile
                 this.mettreEnMouvement (false);
@@ -76,26 +76,26 @@ public class AscenseurStandard implements Ascenseur {
             }
 
             //si il y a des requetes ET etage requete == etage ascenseur
-            else if ( requetes.get(0).getNumEtage() == this.numEtage ){
+            else if ( this.requetes.get(0).getNumEtage() == this.numEtage ){
 
                 //ouverture des portes
                 this.mettreEnMouvement (false);
                 this.ouvrir (true);
                 
                 //retrait des requetes effectuées
-                while ( !requetes.isEmpty() && requetes.get(0).getNumEtage() == this.numEtage )
-                    requetes.removeFirst ();
+                while ( !this.requetes.isEmpty() && this.requetes.get(0).getNumEtage() == this.numEtage )
+                    this.requetes.removeFirst ();
             }
 
             //si il y a des requetes ET etage requete != etage ascenseur
-            else if ( requetes.get(0).getNumEtage() != this.numEtage ){
+            else {//( requetes.get(0).getNumEtage() != this.numEtage ){
 
                 //en mouvement
                 this.ouvrir (false);
                 this.mettreEnMouvement (true);
 
                 //Etage requete < etage ascenseur
-                if ( requetes.get(0).getNumEtage() < this.numEtage ){
+                if ( this.requetes.get(0).getNumEtage() < this.numEtage ){
 
                     //mouvement bas
                     -- this.numEtage;
@@ -105,6 +105,7 @@ public class AscenseurStandard implements Ascenseur {
 
                     //mouvement haut
                     ++ this.numEtage;
+                    
                 }
             }
         }
