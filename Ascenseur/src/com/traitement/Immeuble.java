@@ -21,6 +21,16 @@ public class Immeuble {
         this.ascenseurs = new ArrayList<Ascenseur> ();
     }
     
+     public int getNombreEtage(){
+        
+        return this.nombreEtage;
+    }
+    
+    public ArrayList<Ascenseur> getAscenseurs(){
+        
+        return this.ascenseurs;
+    }
+    
     public void ajouterAscenseur (Ascenseur a) {
         this.ascenseurs.add (a);
     }
