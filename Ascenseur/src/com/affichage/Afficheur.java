@@ -14,8 +14,7 @@ import java.util.Collection;
  */
 public interface Afficheur {
     
-    abstract void afficher ();
-    
+    public void afficher ();  
     public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes);
     
 }
