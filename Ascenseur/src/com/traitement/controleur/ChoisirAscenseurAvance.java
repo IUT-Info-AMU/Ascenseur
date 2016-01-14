@@ -4,10 +4,8 @@
  * and open the template in the editor.
  */
 package com.traitement.controleur;
-import com.traitement.Requete;
 import com.traitement.RequeteExterne;
 import com.traitement.ascenseur.AscenseurStandard;
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
@@ -16,12 +14,13 @@ import java.util.LinkedList;
  */
 public class ChoisirAscenseurAvance implements ControleurStrategie{
   
+    @Override
     public void choisirAscenseur (RequeteExterne requete){
         
-        LinkedList<RequeteExterne> requetes = Controleur.getInstance().getRequetes ();
+        LinkedList<RequeteExterne> requetes = Controleur.getRequetes ();
         
         //Pour chaque AscenseurStandard a contenu dans ascenceurs
-        for(AscenseurStandard a : Controleur.getInstance().getAscenseurs () ){
+        for(AscenseurStandard a : Controleur.getAscenseurs () ){
             
             //si un AscenseurStandard a n'a pas de requetes, alors on lui assigne celle-ci
             if (a.getRequetes().isEmpty()){
