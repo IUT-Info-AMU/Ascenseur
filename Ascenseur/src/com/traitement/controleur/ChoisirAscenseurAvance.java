@@ -41,7 +41,7 @@ public class ChoisirAscenseurAvance implements ControleurStrategie{
                         //La requete est assigné au bon ascenseur, le controlleur ne s'en charge plus
                         requetes.removeFirst();
                         break;
-                    
+
                 }
                 //Si l'Assenceur  descend
                 else if (ascenseur.getRequetes().getFirst().getNumEtage() < ascenseur.getNumEtage() &&
