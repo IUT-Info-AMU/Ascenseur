@@ -11,7 +11,10 @@ import com.traitement.RequeteExterne;
  * @author Thorrsten
  */
 public interface ControleurStrategie {
-    
+    /*
+    *
+    *@param req RequeteExterne
+    */
     public void choisirAscenseur (RequeteExterne req);
     
 }
