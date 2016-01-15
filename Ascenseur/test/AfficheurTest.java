@@ -1,12 +1,10 @@
 
 import com.affichage.AfficheurEtatAscenseur;
-import com.traitement.RequeteInterne;
 import com.traitement.ascenseur.Ascenseur;
 import org.junit.Test;
 import com.traitement.ascenseur.AscenseurStandard;
 import com.traitement.ascenseur.AscenseurAvecMusique;
 import java.util.ArrayList;
-import com.affichage.AfficheurObservateur;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -33,8 +31,8 @@ public class AfficheurTest {
         //ajout de requêtes
         ascenseur1.creerRequeteInterne (3);
         ascenseur1.creerRequeteInterne (10);
-        ascenseur2.creerRequeteInterne (6);
-        ascenseur2.creerRequeteInterne (2);
+        ascenseurMusique.creerRequeteInterne (6);
+        ascenseurMusique.creerRequeteInterne (2);
         
         //ajout des observeurs
         new AfficheurEtatAscenseur (ascenseur2);
