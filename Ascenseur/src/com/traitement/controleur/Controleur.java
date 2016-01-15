@@ -5,7 +5,6 @@
  */
 package com.traitement.controleur;
 
-import com.traitement.Requete;
 import com.traitement.RequeteExterne;
 import com.traitement.ascenseur.AscenseurStandard;
 

@@ -5,6 +5,7 @@
  */
 package com.traitement;
 
+import com.traitement.ascenseur.Ascenseur;
 import com.traitement.ascenseur.AscenseurStandard;
 import java.util.ArrayList;
 import org.junit.After;
@@ -59,8 +60,8 @@ public class ImmeubleTest {
     public void testGetAscenseurs() {
         System.out.println("getAscenseurs");
         Immeuble instance = new Immeuble(0);
-        ArrayList<AscenseurStandard> expResult = new ArrayList<AscenseurStandard> ();
-        ArrayList<AscenseurStandard> result = instance.getAscenseurs();
+        ArrayList<Ascenseur> expResult = new ArrayList<Ascenseur> ();
+        ArrayList<Ascenseur> result = instance.getAscenseurs();
         assertEquals(expResult, result);
         
     }

@@ -5,6 +5,8 @@
  */
 package com.traitement.ascenseur;
 
+import com.affichage.AfficheurObservateur;
+
 
 /**
  *
@@ -27,6 +29,16 @@ public class AscenseurAvecMusique extends OptionAscenseur {
     
     public void changerMusique (String musique) {
         this.musique = musique;
+    }
+
+    @Override
+    public void ajouterObserveur(AfficheurObservateur o) {
+        
+    }
+
+    @Override
+    public void retirerObserveur(AfficheurObservateur o) {
+        
     }
     
 }
