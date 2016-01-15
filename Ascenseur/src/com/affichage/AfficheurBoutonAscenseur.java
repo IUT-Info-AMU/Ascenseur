@@ -12,7 +12,7 @@ import java.util.Collection;
  *
  * @author Bprog
  */
-public class AfficheurBoutonAscenseur implements Afficheur {
+public class AfficheurBoutonAscenseur implements AfficheurObservateur {
 
     @Override
     public void afficher () {

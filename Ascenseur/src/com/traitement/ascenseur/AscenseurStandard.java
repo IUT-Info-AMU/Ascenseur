@@ -5,29 +5,28 @@
  */
 package com.traitement.ascenseur;
 
-import com.affichage.Afficheur;
 import com.traitement.Requete;
 import com.traitement.RequeteInterne;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import com.affichage.AfficheurObservateur;
 
 /**
  *
  * @author Bprog
  */
-public class AscenseurStandard implements Ascenseur {
+public class AscenseurStandard extends AscenseurObservable implements Ascenseur {
 
     private int                             numEtage;
     private boolean                         enMouvement;
     private boolean                         ouvert;
     private boolean                         bloque;
     private LinkedList<Requete>             requetes;
-    private ArrayList<Afficheur>            observeurs;
     
     public AscenseurStandard () {
         this.numEtage =     0;
         requetes =          new LinkedList<Requete> ();
-        observeurs =        new ArrayList<Afficheur> ();
+        observateurs =      new ArrayList<AfficheurObservateur> ();
         this.enMouvement =  false;
         this.ouvert =       false;
         this.bloque =       false;
@@ -110,7 +109,8 @@ public class AscenseurStandard implements Ascenseur {
             }
         }
         
-        mettreAJourObserveurs ();
+        mettreAJourObservateurs (numEtage, enMouvement, ouvert, bloque, requetes);
+        
     }// action()
 
     @Override
@@ -118,18 +118,14 @@ public class AscenseurStandard implements Ascenseur {
         return "Ascenseur{" + "numEtage=" + numEtage + ", enMouvement=" + enMouvement + ", ouvert=" + ouvert + ", bloque=" + bloque + ", requetes=" + requetes + '}';
     }
 
-    public void ajouterObserveur (Afficheur o) {
-        observeurs.add (o);
+    @Override
+    public void ajouterObserveur (AfficheurObservateur o) {
+        observateurs.add (o);
     }
 
-    public void retirerObserveur (Afficheur o) {
+    @Override
+    public void retirerObserveur (AfficheurObservateur o) {
         //todo
-    }
-
-    public void mettreAJourObserveurs () {
-        for (Afficheur o : observeurs) {
-            o.mettreAJour (numEtage, enMouvement, ouvert, bloque, requetes);
-        }
     }
         
 }//class AscenseurStandard

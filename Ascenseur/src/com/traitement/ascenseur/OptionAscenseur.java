@@ -5,6 +5,9 @@
  */
 package com.traitement.ascenseur;
 
+import com.traitement.Requete;
+import java.util.LinkedList;
+
 /**
  *
  * @author Bprog
@@ -15,6 +18,35 @@ public abstract class OptionAscenseur implements Ascenseur {
     
     public OptionAscenseur (Ascenseur ascenseur) {
         this.ascenseur = ascenseur;
+    }
+    
+    @Override
+    public void bloquer (boolean bloquer) {
+        ascenseur.bloquer (bloquer);
+    }
+    @Override
+    public void ouvrir (boolean ouvrir) {
+        ascenseur.ouvrir (ouvrir);
+    }
+    @Override
+    public void mettreEnMouvement (boolean mouvement) {
+        ascenseur.mettreEnMouvement (mouvement);
+    }   
+    @Override
+    public void ajouterRequete (Requete r) {
+        ascenseur.ajouterRequete (r);
+    }
+    @Override
+    public void creerRequeteInterne (int numEtage) {
+        ascenseur.creerRequeteInterne (numEtage);
+    }   
+    @Override
+    public int getNumEtage () {
+        return ascenseur.getNumEtage ();
+    }
+    @Override
+    public LinkedList<Requete> getRequetes () {
+        return ascenseur.getRequetes ();
     }
     
     @Override
