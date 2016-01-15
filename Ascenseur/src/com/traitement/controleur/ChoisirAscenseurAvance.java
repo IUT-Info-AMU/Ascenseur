@@ -57,6 +57,6 @@ public class ChoisirAscenseurAvance implements ControleurStrategie{
                     break;
                 }
             }
-        }
+        }//for()
     }//choisirAscenseur()
 }//class ChoisirAscenseurAvance
