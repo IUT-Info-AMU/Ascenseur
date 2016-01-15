@@ -5,20 +5,21 @@
  */
 package com.traitement;
 
-import com.traitement.ascenseur.AscenseurStandard;
+import com.traitement.ascenseur.Ascenseur;
 import java.util.ArrayList;
 
 /**
  *
- * @author Thorrsten
+ * @author Thorrsten, Gaëtan (modification du fichier)
+ * 
  */
 public class Immeuble {
     
     private int nombreEtage;
-    private ArrayList<AscenseurStandard> ascenseurs;
+    private ArrayList<Ascenseur> ascenseurs;
     
     public Immeuble (int nombreEtage) {
-        this.ascenseurs = new ArrayList<AscenseurStandard> ();
+        this.ascenseurs = new ArrayList<Ascenseur> ();
         this.nombreEtage = nombreEtage;
     }
     
@@ -27,12 +28,12 @@ public class Immeuble {
         return this.nombreEtage;
     }
     
-    public ArrayList<AscenseurStandard> getAscenseurs(){
+    public ArrayList<Ascenseur> getAscenseurs(){
         
         return this.ascenseurs;
     }
     
-    public void ajouterAscenseur (AscenseurStandard a) {
+    public void ajouterAscenseur (Ascenseur a) {
         this.ascenseurs.add (a);
     }
 
