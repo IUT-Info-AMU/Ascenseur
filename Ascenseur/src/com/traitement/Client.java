@@ -5,14 +5,15 @@
  */
 package com.traitement;
 
+import com.affichage.AfficheurEtatAscenseur;
+import com.traitement.ascenseur.Ascenseur;
 import com.traitement.ascenseur.AscenseurStandard;
 import com.traitement.controleur.Controleur;
-import com.affichage.AfficheurEtatAscenseur;
 import java.util.Scanner;
 
 /**
  *
- * @author Bprog
+ * @author Bprog, Gaëtan (modification du fichier)
  */
 public class Client {
     
@@ -31,7 +32,7 @@ public class Client {
            Controleur.getInstance().ajouterAscenseur(new AscenseurStandard());
         }
        
-        for(AscenseurStandard a : Controleur.getInstance().getAscenseurs()){
+        for(Ascenseur a : Controleur.getInstance().getAscenseurs()){
                
             new AfficheurEtatAscenseur(a);    
         }
@@ -98,7 +99,7 @@ public class Client {
                    break;
            }//switch reponse
            
-           for(AscenseurStandard a : Controleur.getInstance().getAscenseurs()){
+           for(Ascenseur a : Controleur.getInstance().getAscenseurs()){
                
                a.action();
            }
