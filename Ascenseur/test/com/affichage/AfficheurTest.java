@@ -45,7 +45,7 @@ public class AfficheurTest {
     @Test
     public void testAfficher() {
         System.out.println("afficher");
-        Afficheur instance = new AfficheurImpl();
+        AfficheurObservateur instance = new AfficheurImpl();
         instance.afficher();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -62,13 +62,13 @@ public class AfficheurTest {
         boolean ouvert = false;
         boolean bloque = false;
         Collection<Requete> requetes = null;
-        Afficheur instance = new AfficheurImpl();
+        AfficheurObservateur instance = new AfficheurImpl();
         instance.mettreAJour(numEtage, enMouvement, ouvert, bloque, requetes);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
-    public class AfficheurImpl implements Afficheur {
+    public class AfficheurImpl implements AfficheurObservateur {
 
         public void afficher() {
         }

@@ -18,12 +18,18 @@ public abstract class AscenseurObservable {
 
     protected ArrayList<AfficheurObservateur> observateurs;
     
-    abstract public void ajouterObserveur (AfficheurObservateur o);
-    abstract public void retirerObserveur (AfficheurObservateur o);
+    public void ajouterObserveur (AfficheurObservateur o) {
+        observateurs.add (o);
+    }
+    
+    public void retirerObserveur (AfficheurObservateur o) {
+        //todo
+    }
     
     public void mettreAJourObservateurs (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
         for (AfficheurObservateur o : observateurs) {
             o.mettreAJour (numEtage, enMouvement, ouvert, bloque, requetes);
         }
     }
+    
 }

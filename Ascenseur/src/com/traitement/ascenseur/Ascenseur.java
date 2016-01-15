@@ -12,18 +12,18 @@ import java.util.LinkedList;
  *
  * @author Bprog
  */
-public interface Ascenseur {
+public abstract class Ascenseur extends AscenseurObservable{
     
-    public void bloquer (boolean bloquer);
-    public void ouvrir (boolean ouvrir);
-    public void mettreEnMouvement (boolean mouvement);
+    abstract public void bloquer (boolean bloquer);
+    abstract public void ouvrir (boolean ouvrir);
+    abstract public void mettreEnMouvement (boolean mouvement);
     
-    public void ajouterRequete (Requete r);
-    public void creerRequeteInterne (int numEtage);
+    abstract public void ajouterRequete (Requete r);
+    abstract public void creerRequeteInterne (int numEtage);
     
-    public int getNumEtage ();
-    public LinkedList<Requete> getRequetes ();
+    abstract public int getNumEtage ();
+    abstract public LinkedList<Requete> getRequetes ();
     
-    public void action ();
+    abstract public void action ();
     
 }

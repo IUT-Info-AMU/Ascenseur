@@ -35,7 +35,7 @@ public class AfficheurTest {
         ascenseurMusique.creerRequeteInterne (2);
         
         //ajout des observeurs
-        new AfficheurEtatAscenseur (ascenseur2);
+        new AfficheurEtatAscenseur (ascenseurMusique);
         new AfficheurEtatAscenseur (ascenseur1);
         
         for ( ; ; ) {

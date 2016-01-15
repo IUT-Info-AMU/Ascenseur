@@ -6,6 +6,7 @@
 package com.traitement.controleur;
 
 import com.traitement.RequeteExterne;
+import com.traitement.ascenseur.Ascenseur;
 import com.traitement.ascenseur.AscenseurStandard;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -86,7 +87,7 @@ public class ControleurTest {
     public void testGetAscenseurs() {
         System.out.println("getAscenseurs");
         ArrayList<AscenseurStandard> expResult = new ArrayList<AscenseurStandard>();
-        ArrayList<AscenseurStandard> result = Controleur.getAscenseurs();
+        ArrayList<Ascenseur> result = Controleur.getAscenseurs();
         assertEquals(expResult, result);
         
     }

@@ -5,6 +5,8 @@
  */
 package com.traitement.ascenseur;
 
+import com.traitement.Requete;
+import java.util.LinkedList;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -49,14 +51,46 @@ public class AscenseurTest {
         fail("The test case is a prototype.");
     }
 
-    public class AscenseurImpl implements Ascenseur {
+    public class AscenseurImpl extends Ascenseur {
 
+        @Override
         public void action() {
+        }
+
+        @Override
+        public void bloquer(boolean bloquer) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        @Override
+        public void ouvrir(boolean ouvrir) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        @Override
+        public void mettreEnMouvement(boolean mouvement) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        @Override
+        public void ajouterRequete(Requete r) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        @Override
+        public void creerRequeteInterne(int numEtage) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        @Override
+        public int getNumEtage() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        @Override
+        public LinkedList<Requete> getRequetes() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     }
 
-    
-
-    
-    
 }

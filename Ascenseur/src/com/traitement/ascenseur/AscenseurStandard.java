@@ -15,7 +15,7 @@ import com.affichage.AfficheurObservateur;
  *
  * @author Bprog
  */
-public class AscenseurStandard extends AscenseurObservable implements Ascenseur {
+public class AscenseurStandard extends Ascenseur {
 
     private int                             numEtage;
     private boolean                         enMouvement;
@@ -32,31 +32,38 @@ public class AscenseurStandard extends AscenseurObservable implements Ascenseur 
         this.bloque =       false;
     }
     
+    @Override
     public void bloquer (boolean bloquer) {
         this.bloque = bloquer;
     }
   
+    @Override
     public void ouvrir (boolean ouvrir) {
         this.ouvert = ouvrir;
     }
     
+    @Override
     public void mettreEnMouvement (boolean mouvement) {
         this.enMouvement = mouvement;
     }    
     
+    @Override
     public void ajouterRequete (Requete r) {
         this.requetes.add (r);
     }
     
+    @Override
     public void creerRequeteInterne (int numEtage) {
         RequeteInterne requete = new RequeteInterne (numEtage);
         this.requetes.add (requete);
     }
 
+    @Override
     public int getNumEtage () {
         return numEtage;
     }
 
+    @Override
     public LinkedList<Requete> getRequetes () {
         return requetes;
     }
@@ -116,16 +123,6 @@ public class AscenseurStandard extends AscenseurObservable implements Ascenseur 
     @Override
     public String toString () {
         return "Ascenseur{" + "numEtage=" + numEtage + ", enMouvement=" + enMouvement + ", ouvert=" + ouvert + ", bloque=" + bloque + ", requetes=" + requetes + '}';
-    }
-
-    @Override
-    public void ajouterObserveur (AfficheurObservateur o) {
-        observateurs.add (o);
-    }
-
-    @Override
-    public void retirerObserveur (AfficheurObservateur o) {
-        //todo
     }
         
 }//class AscenseurStandard

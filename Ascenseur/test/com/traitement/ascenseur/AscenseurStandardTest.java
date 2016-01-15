@@ -5,7 +5,7 @@
  */
 package com.traitement.ascenseur;
 
-import com.affichage.Afficheur;
+import com.affichage.AfficheurObservateur;
 import com.traitement.Requete;
 import java.util.LinkedList;
 import org.junit.After;
@@ -165,7 +165,7 @@ public class AscenseurStandardTest {
     @Test
     public void testAjouterObserveur() {
         System.out.println("ajouterObserveur");
-        Afficheur o = null;
+        AfficheurObservateur o = null;
         AscenseurStandard instance = new AscenseurStandard();
         instance.ajouterObserveur(o);
         // TODO review the generated test code and remove the default call to fail.
@@ -178,7 +178,7 @@ public class AscenseurStandardTest {
     @Test
     public void testRetirerObserveur() {
         System.out.println("retirerObserveur");
-        Afficheur o = null;
+        AfficheurObservateur o = null;
         AscenseurStandard instance = new AscenseurStandard();
         instance.retirerObserveur(o);
         // TODO review the generated test code and remove the default call to fail.
@@ -192,7 +192,7 @@ public class AscenseurStandardTest {
     public void testMettreAJourObserveurs() {
         System.out.println("mettreAJourObserveurs");
         AscenseurStandard instance = new AscenseurStandard();
-        instance.mettreAJourObserveurs();
+        //instance.mettreAJourObservateurs();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
