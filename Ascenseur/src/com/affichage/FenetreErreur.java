@@ -12,5 +12,7 @@ import javax.swing.JPanel;
  * @author Gaëtan
  */
 public class FenetreErreur extends JPanel{
-    
+    FenetreErreur(){
+        super();
+    }
 }
