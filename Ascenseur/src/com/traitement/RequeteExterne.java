@@ -11,15 +11,20 @@ package com.traitement;
  */
 public class RequeteExterne extends Requete {
     
-    private boolean direction;
+    private boolean haut;
     
     public RequeteExterne (int numEtage, boolean direction) {
         this.numEtage = numEtage;
-        this.direction = direction;
+        this.haut = direction;
     }
     
     public int getNumEtage () {
         return numEtage;
+    }
+    
+    public boolean getDirection(){
+        
+        return haut;
     }
     
 }
