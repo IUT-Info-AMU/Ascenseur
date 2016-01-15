@@ -11,10 +11,18 @@ package com.traitement;
  */
 public class RequeteInterne extends Requete {
     
+    /*
+    *Constructeur RequeteInterne
+    *@param numEtage un int, le numéro étage
+    */
     public RequeteInterne (int numEtage) {
         this.numEtage = numEtage;
     }
     
+    /*
+    *Retourne le numéro d'étage
+    *@return int numEtage
+    */
     public int getNumEtage () {
         return numEtage;
     }
