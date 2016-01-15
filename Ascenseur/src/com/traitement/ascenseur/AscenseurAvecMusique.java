@@ -5,17 +5,20 @@
  */
 package com.traitement.ascenseur;
 
-import com.affichage.AfficheurObservateur;
-
 
 /**
  *
- * @author Bprog
+ * @author Bprog, Gaëtan (modification du fichier)
  */
 public class AscenseurAvecMusique extends OptionAscenseur {
     
     private String musique;
     
+    /*
+    *Constructeur de AscenseurAvecMusique
+    *@param ascenseur Ascenseur
+    *@param nomMusique String
+    */
     public AscenseurAvecMusique (Ascenseur ascenseur, String nomMusique) {
         super (ascenseur);
         this.musique = nomMusique;
@@ -27,6 +30,10 @@ public class AscenseurAvecMusique extends OptionAscenseur {
         System.out.println ("joue " + musique);
     }
     
+    /*
+    *Permet de changer de musique
+    *@param musique String
+    */
     public void changerMusique (String musique) {
         this.musique = musique;
     }
