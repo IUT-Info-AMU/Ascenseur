@@ -38,9 +38,9 @@ public class Client {
         
         while(true){
             
-            System.out.println("Voulez-vous ajoutez une requete ? (O/N)");
+           System.out.println("Voulez-vous ajoutez une requete ? (O/N)");
            String reponse = new Scanner(System.in).next();
-
+           reponse = reponse.toUpperCase(); 
            switch(reponse){
                
                case "O" :
@@ -49,7 +49,7 @@ public class Client {
                    "E pour externe \n");
            
                    String requeteChoisie = new Scanner(System.in).next();
-                                      
+                   requeteChoisie= requeteChoisie.toUpperCase();
                    switch(requeteChoisie){
                        
                        case "I":
@@ -72,7 +72,7 @@ public class Client {
                        
                        default :
                            break;
-                   }//swtich requeteChoisie
+                   }//switch requeteChoisie
    
                case "N" :
         
