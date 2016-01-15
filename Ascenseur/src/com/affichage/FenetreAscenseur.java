@@ -5,10 +5,12 @@
  */
 package com.affichage;
 
+import javax.swing.JPanel;
+
 /**
  *
  * @author Gaëtan
  */
-public class FenetreAscenseur {
+public class FenetreAscenseur extends JPanel{
     
 }

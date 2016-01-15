@@ -5,10 +5,12 @@
  */
 package com.affichage;
 
+import javax.swing.JPanel;
+
 /**
  *
  * @author Gaëtan
  */
-public class FenetreErreur {
+public class FenetreErreur extends JPanel{
     
 }
