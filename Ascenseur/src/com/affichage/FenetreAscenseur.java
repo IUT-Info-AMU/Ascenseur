@@ -6,6 +6,7 @@
 package com.affichage;
 
 import com.traitement.Requete;
+import com.traitement.ascenseur.AscenseurObservable;
 import java.util.Collection;
 import javax.swing.JPanel;
 
@@ -15,14 +16,39 @@ import javax.swing.JPanel;
  */
 public class FenetreAscenseur extends JPanel implements AfficheurObservateur{
 
+    private int     numEtage;
+    private boolean enMouvement;
+    private boolean ouvert;
+    private boolean bloque;
+    
+    public FenetreAscenseur(AscenseurObservable ascenseur){
+        ascenseur.ajouterObserveur (this);
+    }
+    
     @Override
     public void afficher() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         /*System.out.print ("---Ascenseur---\netage: " + numEtage + "\netat: ");
+        if ( bloque )
+            System.out.println ("BLOQUE");
+        else {
+            if ( ouvert )
+                System.out.print ("ouvert, ");
+            else
+                System.out.print ("fermé, ");
+            if ( enMouvement )
+                System.out.println ("en mouvement");
+            else
+                System.out.println ("à l'arrêt");
+        }*/
     }
 
     @Override
-    public void mettreAJour(int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
+        this.numEtage = numEtage;
+        this.enMouvement = enMouvement;
+        this.ouvert = ouvert;
+        this.bloque = bloque;
+        afficher ();
     }
     
 }
