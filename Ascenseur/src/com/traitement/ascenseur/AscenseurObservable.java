@@ -12,18 +12,26 @@ import com.affichage.AfficheurObservateur;
 
 /**
  *
- * @author m13001362
+ * @author m13001362, Gaëtan (modification du fichier)
  */
 public abstract class AscenseurObservable {
 
     protected ArrayList<AfficheurObservateur> observateurs;
     
+    /*
+    *Ajoute un Observateur
+    *@param o AfficheurObservateur
+    */
     public void ajouterObserveur (AfficheurObservateur o) {
         observateurs.add (o);
     }
     
+    /*
+    *Retirer un Observateur
+    *@param o AfficheurObservateur
+    */
     public void retirerObserveur (AfficheurObservateur o) {
-        //todo
+        observateurs.remove(o);
     }
     
     public void mettreAJourObservateurs (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
