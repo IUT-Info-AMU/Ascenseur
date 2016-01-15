@@ -6,23 +6,21 @@
 package com.affichage;
 
 import com.traitement.Requete;
-import com.traitement.ascenseur.AscenseurStandard;
+import com.traitement.ascenseur.AscenseurObservable;
 import java.util.Collection;
 
 /**
  *
  * @author Bprog
  */
-public class AfficheurEtatAscenseur implements Afficheur{
+public class AfficheurEtatAscenseur implements AfficheurObservateur{
     
     private int     numEtage;
     private boolean enMouvement;
     private boolean ouvert;
     private boolean bloque;
-    protected AscenseurStandard sujet;
     
-    public AfficheurEtatAscenseur (AscenseurStandard ascenseur) {
-        this.sujet = ascenseur;
+    public AfficheurEtatAscenseur (AscenseurObservable ascenseur) {
         ascenseur.ajouterObserveur (this);
     }
 

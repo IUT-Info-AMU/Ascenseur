@@ -12,7 +12,7 @@ import java.util.Collection;
  *
  * @author Bprog
  */
-public interface Afficheur {
+public interface AfficheurObservateur {
     
     public void afficher ();  
     public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes);

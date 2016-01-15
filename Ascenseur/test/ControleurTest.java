@@ -1,5 +1,4 @@
 
-import com.affichage.Afficheur;
 import com.affichage.AfficheurEtatAscenseur;
 import com.traitement.RequeteExterne;
 import com.traitement.ascenseur.AscenseurAvecMusique;
@@ -8,6 +7,7 @@ import com.traitement.controleur.Controleur;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import org.junit.Test;
+import com.affichage.AfficheurObservateur;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -40,7 +40,7 @@ public class ControleurTest {
             Controleur.getInstance().choisirAscenseur (r);
         }
         
-        ArrayList<Afficheur> observeurs = new ArrayList<Afficheur> ();
+        ArrayList<AfficheurObservateur> observeurs = new ArrayList<AfficheurObservateur> ();
         observeurs.add (new AfficheurEtatAscenseur (a1));
         observeurs.add (new AfficheurEtatAscenseur (a2));
         

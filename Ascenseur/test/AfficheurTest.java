@@ -1,5 +1,4 @@
 
-import com.affichage.Afficheur;
 import com.affichage.AfficheurEtatAscenseur;
 import com.traitement.RequeteInterne;
 import com.traitement.ascenseur.Ascenseur;
@@ -7,6 +6,7 @@ import org.junit.Test;
 import com.traitement.ascenseur.AscenseurStandard;
 import com.traitement.ascenseur.AscenseurAvecMusique;
 import java.util.ArrayList;
+import com.affichage.AfficheurObservateur;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
