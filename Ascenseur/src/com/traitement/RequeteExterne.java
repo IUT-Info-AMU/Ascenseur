@@ -7,7 +7,7 @@ package com.traitement;
 
 /**
  *
- * @author Thorrsten
+ * @author Thorrsten, Gaëtan (javadoc)
  */
 public class RequeteExterne extends Requete {
     

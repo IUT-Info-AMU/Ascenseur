@@ -13,7 +13,7 @@ import com.affichage.AfficheurObservateur;
 
 /**
  *
- * @author Bprog
+ * @author Bprog, Gaëtan (javadoc)
  */
 public class AscenseurStandard extends Ascenseur {
 
@@ -23,6 +23,9 @@ public class AscenseurStandard extends Ascenseur {
     private boolean                         bloque;
     private LinkedList<Requete>             requetes;
     
+    /*
+    *Constructeur de AscenseurStandard
+    */
     public AscenseurStandard () {
         this.numEtage =     0;
         requetes =          new LinkedList<Requete> ();
@@ -33,37 +36,65 @@ public class AscenseurStandard extends Ascenseur {
     }
     
     @Override
+    /*
+    *Bloque la porte de l'Ascenseur
+    *@param bloquer boolean
+    */
     public void bloquer (boolean bloquer) {
         this.bloque = bloquer;
     }
   
     @Override
+    /*
+    *Ouvrir la prote de l'Ascenseur
+    *@param ouvrir boolean
+    */
     public void ouvrir (boolean ouvrir) {
         this.ouvert = ouvrir;
     }
     
     @Override
+    /*
+    *Met en mouvement l'Ascenseur
+    *@param mouvement boolean
+    */
     public void mettreEnMouvement (boolean mouvement) {
         this.enMouvement = mouvement;
     }    
     
     @Override
+    /*
+    *Ajoute une Requete
+    *@param r Requete
+    */
     public void ajouterRequete (Requete r) {
         this.requetes.add (r);
     }
     
     @Override
+    /*
+    *Creer une RequeteInterne
+    *@param numEtage int
+    */
     public void creerRequeteInterne (int numEtage) {
         RequeteInterne requete = new RequeteInterne (numEtage);
         this.requetes.add (requete);
     }
 
     @Override
+    /*
+    *
+    *@return
+    */
     public int getNumEtage () {
         return numEtage;
     }
 
     @Override
+    /*
+    *Retourne une List des Requete
+    *@return LinkedList<Requete>
+    */
     public LinkedList<Requete> getRequetes () {
         return requetes;
     }
