@@ -107,57 +107,7 @@ public class Client {
        }//while(true)
        } 
        catch(Exception e){
-           System.err.println("Exception caught: "+e);
-           
+           System.err.println("Exception caught: "+e);         
        }
-            /*
-             System.out.println(reponse);
-            
-            while(reponse != "N"){
-                System.out.println("Voulez-vous ajoutez une requete ? (O/N)");
-                reponse = new Scanner(System.in).next();
-               
-                System.out.println(reponse);
-                
-                
-                System.out.println("Choisissez votre type de requete :\n \n" + 
-                   "I pour interne \n" + 
-                   "E pour externe \n");
-               
-                String requeteChoisie = new Scanner(System.in).next();
-                   
-                    switch(requeteChoisie){
-                       
-                        case "I":
-                            
-                            System.out.println("Entrez un numero d'etage (max " + immeuble.getNombreEtage() + "):");
-                            int numeroEtageInt = new Scanner(System.in).nextInt();
-                            
-                            int nbAsc = immeuble.getAscenseurs().size() -1;
-                            System.out.println("Entrez un numero d'ascenseur (entre 0 et " + nbAsc + "):");
-                            
-                            int numeroAscenseur = new Scanner(System.in).nextInt();
-                            Controleur.getInstance().getAscenseurs().get(numeroAscenseur).creerRequeteInterne(numeroEtageInt);
-                           break;
-                           
-                        case "E" :
-                            System.out.println("Entrez un numero d'etage (max " + immeuble.getNombreEtage() + "):");
-                            int numeroEtageExt = new Scanner(System.in).nextInt();
-                            Controleur.getInstance().creerRequeteExterne(numeroEtageExt, true);
-                            Controleur.getInstance().choisirAscenseur(Controleur.getRequetes().getFirst());
-                            break;
-                       
-                        default :
-                           System.out.println("Mauvaise entree \n");
-                           break;
-                    }//swtich requeteChoisie
-            //}//for(;;)
-           
-            for(AscenseurStandard a : Controleur.getInstance().getAscenseurs()){
-               
-               a.action();
-            }
-        }//while(true)
-*/
     } 
 }
