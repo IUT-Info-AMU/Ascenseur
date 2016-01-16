@@ -14,11 +14,11 @@ import java.util.LinkedList;
  */
 public class ChoisirAscenseurAvance implements ControleurStrategie{
   
-    @Override
     /*
     *
     *@param requete RequeteExterne
     */
+    @Override
     public void choisirAscenseur (RequeteExterne requete){
         
         LinkedList<RequeteExterne> requetes = Controleur.getRequetes ();

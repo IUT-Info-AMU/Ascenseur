@@ -22,17 +22,19 @@ public class AscenseurStandard extends AscenseurObservable implements Ascenseur 
     private boolean                         ouvert;
     private boolean                         bloque;
     private LinkedList<Requete>             requetes;
+    private AscenseurStrategie              methode;
     
     /*
     *Constructeur de AscenseurStandard
     */
     public AscenseurStandard () {
-        this.numEtage =     0;
-        requetes =          new LinkedList<Requete> ();
-        observateurs =      new ArrayList<AfficheurObservateur> ();
-        this.enMouvement =  false;
-        this.ouvert =       false;
-        this.bloque =       false;
+        this.numEtage     = 0;
+        requetes          = new LinkedList<Requete> ();
+        observateurs      = new ArrayList<AfficheurObservateur> ();
+        methode           = new AjoutRequeteAvance ();
+        this.enMouvement  = false;
+        this.ouvert       = false;
+        this.bloque       = false;
     }
     
     @Override
@@ -67,11 +69,8 @@ public class AscenseurStandard extends AscenseurObservable implements Ascenseur 
     *Ajoute une Requete
     *@param r Requete
     */
-    public void ajouterRequete (Requete r) {
-        if (requetes.isEmpty()) {
-            this.requetes.add (r);
-        }
-        
+    public void ajouterRequete (Requete r) {       
+        requetes = methode.ajouterRequete (numEtage, requetes, r);       
     }
     
     @Override
@@ -100,6 +99,10 @@ public class AscenseurStandard extends AscenseurObservable implements Ascenseur 
     */
     public LinkedList<Requete> getRequetes () {
         return requetes;
+    }
+    
+    public void setMethode (AscenseurStrategie strategie) {
+        this.methode = strategie;
     }
     
     @Override
