@@ -6,6 +6,7 @@
 package com.affichage;
 
 import java.awt.Desktop;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -23,7 +24,7 @@ import javax.swing.JMenuItem;
  */
 public class FenetreApplicationPrincipale extends JFrame{
     FenetreApplicationPrincipale(){
-        super("Fenètre principale");
+        super("Fenêtre principale");
         creerMenu();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
@@ -41,9 +42,11 @@ public class FenetreApplicationPrincipale extends JFrame{
             }        
         });
         fichier.add(fichierFermer);
+        fichier.setMaximumSize(new Dimension(64,40));
         menuBar.add(fichier);
         
         JMenuItem documentation = new JMenuItem("Documentation");
+        documentation.setMaximumSize(new Dimension(100,40));
         documentation.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e) {
                     try {

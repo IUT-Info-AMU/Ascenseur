@@ -12,6 +12,7 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.util.Collection;
 import javax.swing.ButtonGroup;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
@@ -51,12 +52,18 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
         requeteExterne.setActionCommand("requete interne");
         groupeBouton.add(requeteExterne);
         
-        this.add(requeteInterne);
-        this.add(requeteExterne);
-        
         JTextField numEtage = new JTextField();
         numEtage.setPreferredSize( new Dimension( 30, 20 ) );
+       
+        JButton envoyer = new JButton("Envoyer");
+        
+        this.add(requeteInterne);
+        this.add(requeteExterne);
         this.add(numEtage);
+        this.add(envoyer);
+        
+        
+        
     }
     
 }
