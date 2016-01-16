@@ -68,7 +68,10 @@ public class AscenseurStandard extends AscenseurObservable implements Ascenseur 
     *@param r Requete
     */
     public void ajouterRequete (Requete r) {
-        this.requetes.add (r);
+        if (requetes.isEmpty()) {
+            this.requetes.add (r);
+        }
+        
     }
     
     @Override
@@ -78,7 +81,7 @@ public class AscenseurStandard extends AscenseurObservable implements Ascenseur 
     */
     public void creerRequeteInterne (int numEtage) {
         RequeteInterne requete = new RequeteInterne (numEtage);
-        this.requetes.add (requete);
+        ajouterRequete (requete);
     }
 
     @Override

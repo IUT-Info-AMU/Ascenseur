@@ -28,18 +28,15 @@ public class Client {
         */
        try{
         Immeuble immeuble = new Immeuble(10);
-        /*
+        
         for(int i = 0 ;i < 2; ++i){
            
            immeuble.ajouterAscenseur(new AscenseurStandard());
            Controleur.getInstance().ajouterAscenseur(new AscenseurStandard());
         }
-        */
-        immeuble.ajouterAscenseur(new AscenseurStandard ());
-        Controleur.getInstance().ajouterAscenseur(new AscenseurStandard ());
            
         for(Ascenseur a : Controleur.getInstance().getAscenseurs()){
-            new AfficheurEtatAscenseur ((AscenseurStandard) a);
+            new AfficheurEtatAscenseur ((AscenseurObservable) a);
         }
         
         while(true){
