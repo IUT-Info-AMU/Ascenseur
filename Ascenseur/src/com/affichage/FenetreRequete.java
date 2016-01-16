@@ -6,10 +6,12 @@
 
 package com.affichage;
 
+import javax.swing.JPanel;
+
 /**
  *
  * @author Gaëtan
  */
-public class FenetreRequete {
+public class FenetreRequete extends JPanel{
     
 }
