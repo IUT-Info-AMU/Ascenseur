@@ -5,6 +5,7 @@
  */
 package com.affichage;
 
+import java.awt.BorderLayout;
 import java.awt.Desktop;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
@@ -26,6 +27,9 @@ public class FenetreApplicationPrincipale extends JFrame{
     FenetreApplicationPrincipale(){
         super("Fenêtre principale");
         creerMenu();
+        setLayout(new BorderLayout());
+        //add(new FenetreBoutonAscenseur());
+        //add(new FenetreRequete(),BorderLayout.EAST);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setVisible(true);

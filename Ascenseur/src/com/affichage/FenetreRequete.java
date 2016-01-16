@@ -10,6 +10,7 @@ import com.traitement.Requete;
 import com.traitement.ascenseur.AscenseurObservable;
 import java.util.Collection;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -18,6 +19,8 @@ import javax.swing.JPanel;
 public class FenetreRequete extends JPanel implements AfficheurObservateur{
 
     public FenetreRequete(AscenseurObservable ascenseur){
+        super();
+        creerZoneTexte();
         ascenseur.ajouterObserveur (this);
     }
     
@@ -31,4 +34,8 @@ public class FenetreRequete extends JPanel implements AfficheurObservateur{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    public void creerZoneTexte(){
+        JTextArea ZoneTexte = new JTextArea(10,50);
+        this.add(ZoneTexte);
+    }
 }
