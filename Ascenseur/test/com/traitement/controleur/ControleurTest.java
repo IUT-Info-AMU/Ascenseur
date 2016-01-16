@@ -7,7 +7,6 @@ package com.traitement.controleur;
 
 import com.traitement.RequeteExterne;
 import com.traitement.ascenseur.Ascenseur;
-import com.traitement.ascenseur.AscenseurStandard;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import org.junit.After;
@@ -19,10 +18,12 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author r14004493
+ * @author jalal
  */
 public class ControleurTest {
-    private ControleurStrategie methode;
+    
+    ControleurStrategie methode;
+    Ascenseur a;
     
     public ControleurTest() {
     }
@@ -51,19 +52,17 @@ public class ControleurTest {
         System.out.println("creerRequeteExterne");
         int numEtage = 0;
         boolean direction = false;
-        //Controleur instance = null;
-        
+        Controleur.getInstance().creerRequeteExterne(numEtage, direction);
         
     }
 
     /**
      * Test of choisirAscenseur method, of class Controleur.
      */
-    @Test
+    @Test(expected = NullPointerException.class)
     public void testChoisirAscenseur() {
         System.out.println("choisirAscenseur");
-        RequeteExterne requete = new RequeteExterne(0,false);
-        //Controleur instance = null;
+        RequeteExterne requete = new RequeteExterne(0, false);
         Controleur.getInstance().choisirAscenseur(requete);
         
     }
@@ -74,8 +73,6 @@ public class ControleurTest {
     @Test
     public void testAjouterAscenseur() {
         System.out.println("ajouterAscenseur");
-        AscenseurStandard a = new AscenseurStandard();
-        //Controleur instance = null;
         Controleur.getInstance().ajouterAscenseur(a);
         
     }
@@ -86,9 +83,8 @@ public class ControleurTest {
     @Test
     public void testGetAscenseurs() {
         System.out.println("getAscenseurs");
-        ArrayList<AscenseurStandard> expResult = new ArrayList<AscenseurStandard>();
         ArrayList<Ascenseur> result = Controleur.getAscenseurs();
-        assertEquals(expResult, result);
+        assertEquals(Controleur.getAscenseurs(), result);
         
     }
 
@@ -98,10 +94,8 @@ public class ControleurTest {
     @Test
     public void testGetRequetes() {
         System.out.println("getRequetes");
-        LinkedList<RequeteExterne> expResult = new LinkedList<>() ;
         LinkedList<RequeteExterne> result = Controleur.getRequetes();
-        assertEquals(expResult, result);
-        
+        assertEquals(Controleur.getRequetes(), result);
     }
 
     /**
@@ -110,8 +104,6 @@ public class ControleurTest {
     @Test
     public void testSetMethode() {
         System.out.println("setMethode");
-        //ControleurStrategie methode = null;
-        //Controleur instance = null;
         Controleur.getInstance().setMethode(methode);
         
     }
@@ -122,7 +114,6 @@ public class ControleurTest {
     @Test
     public void testGetInstance() {
         System.out.println("getInstance");
-        Controleur.getInstance();
         Controleur result = Controleur.getInstance();
         assertEquals(Controleur.getInstance(), result);
         

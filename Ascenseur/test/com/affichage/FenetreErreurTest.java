@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.traitement.controleur;
+package com.affichage;
 
-import com.traitement.RequeteExterne;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author jalal
  */
-public class ControleurStrategieTest {
+public class FenetreErreurTest {
     
-    public ControleurStrategieTest() {
+    public FenetreErreurTest() {
     }
     
     @BeforeClass
@@ -38,23 +37,10 @@ public class ControleurStrategieTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of choisirAscenseur method, of class ControleurStrategie.
-     */
     @Test
-    public void testChoisirAscenseur() {
-        System.out.println("choisirAscenseur");
-        RequeteExterne req = null;
-        ControleurStrategie instance = new ControleurStrategieImpl();
-        instance.choisirAscenseur(req);
+    public void testSomeMethod() {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
-    }
-
-    public class ControleurStrategieImpl implements ControleurStrategie {
-
-        public void choisirAscenseur(RequeteExterne req) {
-        }
     }
     
 }

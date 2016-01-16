@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author r14004493
+ * @author jalal
  */
 public class AscenseurTest {
     
@@ -40,6 +40,99 @@ public class AscenseurTest {
     }
 
     /**
+     * Test of bloquer method, of class Ascenseur.
+     */
+    @Test
+    public void testBloquer() {
+        System.out.println("bloquer");
+        boolean bloquer = false;
+        Ascenseur instance = new AscenseurImpl();
+        instance.bloquer(bloquer);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of ouvrir method, of class Ascenseur.
+     */
+    @Test
+    public void testOuvrir() {
+        System.out.println("ouvrir");
+        boolean ouvrir = false;
+        Ascenseur instance = new AscenseurImpl();
+        instance.ouvrir(ouvrir);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of mettreEnMouvement method, of class Ascenseur.
+     */
+    @Test
+    public void testMettreEnMouvement() {
+        System.out.println("mettreEnMouvement");
+        boolean mouvement = false;
+        Ascenseur instance = new AscenseurImpl();
+        instance.mettreEnMouvement(mouvement);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of ajouterRequete method, of class Ascenseur.
+     */
+    @Test
+    public void testAjouterRequete() {
+        System.out.println("ajouterRequete");
+        Requete r = null;
+        Ascenseur instance = new AscenseurImpl();
+        instance.ajouterRequete(r);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of creerRequeteInterne method, of class Ascenseur.
+     */
+    @Test
+    public void testCreerRequeteInterne() {
+        System.out.println("creerRequeteInterne");
+        int numEtage = 0;
+        Ascenseur instance = new AscenseurImpl();
+        instance.creerRequeteInterne(numEtage);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getNumEtage method, of class Ascenseur.
+     */
+    @Test
+    public void testGetNumEtage() {
+        System.out.println("getNumEtage");
+        Ascenseur instance = new AscenseurImpl();
+        int expResult = 0;
+        int result = instance.getNumEtage();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getRequetes method, of class Ascenseur.
+     */
+    @Test
+    public void testGetRequetes() {
+        System.out.println("getRequetes");
+        Ascenseur instance = new AscenseurImpl();
+        LinkedList<Requete> expResult = null;
+        LinkedList<Requete> result = instance.getRequetes();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
      * Test of action method, of class Ascenseur.
      */
     @Test
@@ -51,46 +144,33 @@ public class AscenseurTest {
         fail("The test case is a prototype.");
     }
 
-    public class AscenseurImpl extends Ascenseur {
+    public class AscenseurImpl implements Ascenseur {
 
-        @Override
+        public void bloquer(boolean bloquer) {
+        }
+
+        public void ouvrir(boolean ouvrir) {
+        }
+
+        public void mettreEnMouvement(boolean mouvement) {
+        }
+
+        public void ajouterRequete(Requete r) {
+        }
+
+        public void creerRequeteInterne(int numEtage) {
+        }
+
+        public int getNumEtage() {
+            return 0;
+        }
+
+        public LinkedList<Requete> getRequetes() {
+            return null;
+        }
+
         public void action() {
         }
-
-        @Override
-        public void bloquer(boolean bloquer) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        @Override
-        public void ouvrir(boolean ouvrir) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        @Override
-        public void mettreEnMouvement(boolean mouvement) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        @Override
-        public void ajouterRequete(Requete r) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        @Override
-        public void creerRequeteInterne(int numEtage) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        @Override
-        public int getNumEtage() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        @Override
-        public LinkedList<Requete> getRequetes() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
     }
-
+    
 }

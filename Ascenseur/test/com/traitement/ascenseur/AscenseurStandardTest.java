@@ -5,7 +5,6 @@
  */
 package com.traitement.ascenseur;
 
-import com.affichage.AfficheurObservateur;
 import com.traitement.Requete;
 import java.util.LinkedList;
 import org.junit.After;
@@ -17,7 +16,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author r14004493
+ * @author jalal
  */
 public class AscenseurStandardTest {
     
@@ -134,6 +133,19 @@ public class AscenseurStandardTest {
     }
 
     /**
+     * Test of setMethode method, of class AscenseurStandard.
+     */
+    @Test
+    public void testSetMethode() {
+        System.out.println("setMethode");
+        AscenseurStrategie strategie = null;
+        AscenseurStandard instance = new AscenseurStandard();
+        instance.setMethode(strategie);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
      * Test of action method, of class AscenseurStandard.
      */
     @Test
@@ -155,44 +167,6 @@ public class AscenseurStandardTest {
         String expResult = "";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of ajouterObserveur method, of class AscenseurStandard.
-     */
-    @Test
-    public void testAjouterObserveur() {
-        System.out.println("ajouterObserveur");
-        AfficheurObservateur o = null;
-        AscenseurStandard instance = new AscenseurStandard();
-        instance.ajouterObserveur(o);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of retirerObserveur method, of class AscenseurStandard.
-     */
-    @Test
-    public void testRetirerObserveur() {
-        System.out.println("retirerObserveur");
-        AfficheurObservateur o = null;
-        AscenseurStandard instance = new AscenseurStandard();
-        instance.retirerObserveur(o);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of mettreAJourObserveurs method, of class AscenseurStandard.
-     */
-    @Test
-    public void testMettreAJourObserveurs() {
-        System.out.println("mettreAJourObserveurs");
-        AscenseurStandard instance = new AscenseurStandard();
-        //instance.mettreAJourObservateurs();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

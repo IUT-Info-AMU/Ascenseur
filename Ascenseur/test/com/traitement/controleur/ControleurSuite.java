@@ -14,10 +14,10 @@ import org.junit.runners.Suite;
 
 /**
  *
- * @author r14004493
+ * @author jalal
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({com.traitement.controleur.ChoisirAscenseurSimpleTest.class, com.traitement.controleur.ControleurTest.class, com.traitement.controleur.ControleurStrategieTest.class, com.traitement.controleur.ChoisirAscenseurAvanceTest.class})
+@Suite.SuiteClasses({com.traitement.controleur.ControleurStrategieTest.class, com.traitement.controleur.ControleurTest.class, com.traitement.controleur.ChoisirAscenseurSimpleTest.class, com.traitement.controleur.ChoisirAscenseurAvanceTest.class})
 public class ControleurSuite {
 
     @BeforeClass

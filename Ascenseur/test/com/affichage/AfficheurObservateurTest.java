@@ -18,9 +18,9 @@ import static org.junit.Assert.*;
  *
  * @author jalal
  */
-public class AfficheurEtatAscenseurTest {
+public class AfficheurObservateurTest {
     
-    public AfficheurEtatAscenseurTest() {
+    public AfficheurObservateurTest() {
     }
     
     @BeforeClass
@@ -40,19 +40,19 @@ public class AfficheurEtatAscenseurTest {
     }
 
     /**
-     * Test of afficher method, of class AfficheurEtatAscenseur.
+     * Test of afficher method, of class AfficheurObservateur.
      */
     @Test
     public void testAfficher() {
         System.out.println("afficher");
-        AfficheurEtatAscenseur instance = null;
+        AfficheurObservateur instance = new AfficheurObservateurImpl();
         instance.afficher();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of mettreAJour method, of class AfficheurEtatAscenseur.
+     * Test of mettreAJour method, of class AfficheurObservateur.
      */
     @Test
     public void testMettreAJour() {
@@ -62,10 +62,19 @@ public class AfficheurEtatAscenseurTest {
         boolean ouvert = false;
         boolean bloque = false;
         Collection<Requete> requetes = null;
-        AfficheurEtatAscenseur instance = null;
+        AfficheurObservateur instance = new AfficheurObservateurImpl();
         instance.mettreAJour(numEtage, enMouvement, ouvert, bloque, requetes);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
+    }
+
+    public class AfficheurObservateurImpl implements AfficheurObservateur {
+
+        public void afficher() {
+        }
+
+        public void mettreAJour(int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
+        }
     }
     
 }

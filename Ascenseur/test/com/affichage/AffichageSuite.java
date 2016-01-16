@@ -14,10 +14,10 @@ import org.junit.runners.Suite;
 
 /**
  *
- * @author r14004493
+ * @author jalal
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({com.affichage.AfficheurTest.class, com.affichage.AfficheurBoutonAscenseurTest.class, com.affichage.AfficheurEtatAscenseurTest.class})
+@Suite.SuiteClasses({com.affichage.FenetreBoutonAscenseurTest.class, com.affichage.FenetreErreurTest.class, com.affichage.AfficheurObservateurTest.class, com.affichage.FenetreApplicationPrincipaleTest.class, com.affichage.AfficheurEtatAscenseurTest.class, com.affichage.FenetreRequeteTest.class, com.affichage.FenetreAscenseurTest.class, com.affichage.AfficheurBoutonAscenseurTest.class})
 public class AffichageSuite {
 
     @BeforeClass

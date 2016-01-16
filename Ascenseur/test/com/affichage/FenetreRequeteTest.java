@@ -18,9 +18,9 @@ import static org.junit.Assert.*;
  *
  * @author jalal
  */
-public class AfficheurEtatAscenseurTest {
+public class FenetreRequeteTest {
     
-    public AfficheurEtatAscenseurTest() {
+    public FenetreRequeteTest() {
     }
     
     @BeforeClass
@@ -40,19 +40,19 @@ public class AfficheurEtatAscenseurTest {
     }
 
     /**
-     * Test of afficher method, of class AfficheurEtatAscenseur.
+     * Test of afficher method, of class FenetreRequete.
      */
     @Test
     public void testAfficher() {
         System.out.println("afficher");
-        AfficheurEtatAscenseur instance = null;
+        FenetreRequete instance = null;
         instance.afficher();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of mettreAJour method, of class AfficheurEtatAscenseur.
+     * Test of mettreAJour method, of class FenetreRequete.
      */
     @Test
     public void testMettreAJour() {
@@ -62,8 +62,20 @@ public class AfficheurEtatAscenseurTest {
         boolean ouvert = false;
         boolean bloque = false;
         Collection<Requete> requetes = null;
-        AfficheurEtatAscenseur instance = null;
+        FenetreRequete instance = null;
         instance.mettreAJour(numEtage, enMouvement, ouvert, bloque, requetes);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of creerZoneTexte method, of class FenetreRequete.
+     */
+    @Test
+    public void testCreerZoneTexte() {
+        System.out.println("creerZoneTexte");
+        FenetreRequete instance = null;
+        instance.creerZoneTexte();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

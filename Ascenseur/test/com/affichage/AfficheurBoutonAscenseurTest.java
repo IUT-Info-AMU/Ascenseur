@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author r14004493
+ * @author jalal
  */
 public class AfficheurBoutonAscenseurTest {
     

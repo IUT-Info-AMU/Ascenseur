@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.traitement.controleur;
+package com.traitement.ascenseur;
 
-import com.traitement.RequeteExterne;
+import com.traitement.Requete;
+import java.util.LinkedList;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,9 +18,9 @@ import static org.junit.Assert.*;
  *
  * @author jalal
  */
-public class ControleurStrategieTest {
+public class AjoutRequeteAvanceTest {
     
-    public ControleurStrategieTest() {
+    public AjoutRequeteAvanceTest() {
     }
     
     @BeforeClass
@@ -39,22 +40,20 @@ public class ControleurStrategieTest {
     }
 
     /**
-     * Test of choisirAscenseur method, of class ControleurStrategie.
+     * Test of ajouterRequete method, of class AjoutRequeteAvance.
      */
     @Test
-    public void testChoisirAscenseur() {
-        System.out.println("choisirAscenseur");
-        RequeteExterne req = null;
-        ControleurStrategie instance = new ControleurStrategieImpl();
-        instance.choisirAscenseur(req);
+    public void testAjouterRequete() {
+        System.out.println("ajouterRequete");
+        int etageCourant = 0;
+        LinkedList<Requete> requetes = null;
+        Requete r = null;
+        AjoutRequeteAvance instance = new AjoutRequeteAvance();
+        LinkedList<Requete> expResult = null;
+        LinkedList<Requete> result = instance.ajouterRequete(etageCourant, requetes, r);
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
-    }
-
-    public class ControleurStrategieImpl implements ControleurStrategie {
-
-        public void choisirAscenseur(RequeteExterne req) {
-        }
     }
     
 }

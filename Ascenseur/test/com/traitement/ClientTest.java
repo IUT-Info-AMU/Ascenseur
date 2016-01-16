@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author r14004493
+ * @author jalal
  */
 public class ClientTest {
     
@@ -45,7 +45,8 @@ public class ClientTest {
         System.out.println("main");
         String[] args = null;
         Client.main(args);
-        
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
     
 }
