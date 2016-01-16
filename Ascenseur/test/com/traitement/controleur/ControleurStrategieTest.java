@@ -44,11 +44,10 @@ public class ControleurStrategieTest {
     @Test
     public void testChoisirAscenseur() {
         System.out.println("choisirAscenseur");
-        RequeteExterne req = null;
+        RequeteExterne req = new RequeteExterne(0, false);
         ControleurStrategie instance = new ControleurStrategieImpl();
         instance.choisirAscenseur(req);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     public class ControleurStrategieImpl implements ControleurStrategie {

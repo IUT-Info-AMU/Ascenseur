@@ -41,14 +41,13 @@ public class ChoisirAscenseurSimpleTest {
     /**
      * Test of choisirAscenseur method, of class ChoisirAscenseurSimple.
      */
-    @Test
+    @Test(expected = NullPointerException.class)
     public void testChoisirAscenseur() {
         System.out.println("choisirAscenseur");
-        RequeteExterne requete = null;
+        RequeteExterne requete = new RequeteExterne(0, false);
         ChoisirAscenseurSimple instance = new ChoisirAscenseurSimple();
         instance.choisirAscenseur(requete);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }
