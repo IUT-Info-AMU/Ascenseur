@@ -23,7 +23,7 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
     
     public FenetreBoutonAscenseur(AscenseurObservable ascenseur){
         super();
-        
+        creerBouton();
         ascenseur.ajouterObserveur (this);
     }
     
@@ -37,20 +37,20 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    public ButtonGroup creerBoutton(){
-        setLayout(new BorderLayout());
+    public void creerBouton(){
         
-        ButtonGroup groupeBoutton = new ButtonGroup();
+        ButtonGroup groupeBouton = new ButtonGroup();
         
         JRadioButton requeteInterne = new JRadioButton("Requete Interne");
         requeteInterne.setActionCommand("requete interne");
-        groupeBoutton.add(requeteInterne);
+        groupeBouton.add(requeteInterne);
         
         JRadioButton requeteExterne = new JRadioButton("Requete Externe");
         requeteExterne.setActionCommand("requete interne");
-        groupeBoutton.add(requeteExterne);
+        groupeBouton.add(requeteExterne);
         
-        return groupeBoutton;
+        this.add(requeteInterne);
+        this.add(requeteExterne);    
     }
     
 }
