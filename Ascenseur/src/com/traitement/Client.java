@@ -7,6 +7,7 @@ package com.traitement;
 
 import com.affichage.AfficheurEtatAscenseur;
 import com.traitement.ascenseur.Ascenseur;
+import com.traitement.ascenseur.AscenseurAvecMusique;
 import com.traitement.ascenseur.AscenseurStandard;
 import com.traitement.controleur.Controleur;
 import java.util.Scanner;
@@ -19,6 +20,7 @@ public class Client {
     
     public static void main (String[] args) {
         
+       
        /* 
         * To do: 
         * + exception
@@ -31,10 +33,9 @@ public class Client {
            immeuble.ajouterAscenseur(new AscenseurStandard());
            Controleur.getInstance().ajouterAscenseur(new AscenseurStandard());
         }
-       
+              
         for(Ascenseur a : Controleur.getInstance().getAscenseurs()){
-               
-            new AfficheurEtatAscenseur(a);    
+            new AfficheurEtatAscenseur(a);
         }
         
         while(true){
