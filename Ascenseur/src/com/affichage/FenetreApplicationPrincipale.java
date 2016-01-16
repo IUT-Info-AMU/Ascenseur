@@ -33,8 +33,15 @@ public class FenetreApplicationPrincipale extends JFrame{
     public void creerMenu(){
         JMenuBar menuBar = new JMenuBar();
         
-        JMenu parametre = new JMenu("Paramètres"); 
-        menuBar.add(parametre);
+        JMenu fichier = new JMenu("Fichier");
+        JMenuItem fichierFermer = new JMenuItem("Fermer");
+        fichierFermer.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent arg0) {
+                System.exit(0);
+            }        
+        });
+        fichier.add(fichierFermer);
+        menuBar.add(fichier);
         
         JMenuItem documentation = new JMenuItem("Documentation");
         documentation.addActionListener(new ActionListener(){

@@ -9,10 +9,12 @@ package com.affichage;
 import com.traitement.Requete;
 import com.traitement.ascenseur.AscenseurObservable;
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.util.Collection;
 import javax.swing.ButtonGroup;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 
 /**
  *
@@ -50,7 +52,11 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
         groupeBouton.add(requeteExterne);
         
         this.add(requeteInterne);
-        this.add(requeteExterne);    
+        this.add(requeteExterne);
+        
+        JTextField numEtage = new JTextField();
+        numEtage.setPreferredSize( new Dimension( 30, 20 ) );
+        this.add(numEtage);
     }
     
 }
