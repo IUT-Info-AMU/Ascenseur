@@ -23,21 +23,19 @@ public class ChoisirAscenseurAvance implements ControleurStrategie{
         
         LinkedList<RequeteExterne> requetes = Controleur.getRequetes ();
         
-        //On verifie d'abord si un ascenseur est au meme niveau que la requete à traiter
-        for(Ascenseur ascenseur : Controleur.getAscenseurs () ) {
-            
-            if (ascenseur.getRequetes().getFirst().getNumEtage() == requete.getNumEtage()){
-                ascenseur.ajouterRequete(requete);
-                requetes.remove();
-                return;
-            }
-        }
-        
-        //Puis, pour chaque Ascenseur contenu dans ascenceurs :
+        //Pour chaque Ascenseur contenu dans ascenceurs :
         for(Ascenseur ascenseur : Controleur.getAscenseurs () ) {
             
             //si un Ascenseur n'a pas de requetes, alors on lui assigne celle-ci
             if (ascenseur.getRequetes().isEmpty()){
+                
+                ascenseur.ajouterRequete(requete);
+                requetes.remove();
+                break;
+            }
+            //si un ascenseur est au meme niveau que la requete à traiter
+            else if (ascenseur.getRequetes().getFirst().getNumEtage() == requete.getNumEtage()){
+                
                 ascenseur.ajouterRequete(requete);
                 requetes.remove();
                 break;
