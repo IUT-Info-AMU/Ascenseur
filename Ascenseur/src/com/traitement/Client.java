@@ -7,9 +7,11 @@ package com.traitement;
 
 import com.affichage.AfficheurEtatAscenseur;
 import com.traitement.ascenseur.Ascenseur;
+import com.traitement.ascenseur.AscenseurAvecMusique;
 import com.traitement.ascenseur.AscenseurObservable;
 import com.traitement.ascenseur.AscenseurStandard;
 import com.traitement.controleur.Controleur;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -25,19 +27,22 @@ public class Client {
         * To do: 
         * + exception
         */
-       try{
+    try {
+        
         Immeuble immeuble = new Immeuble(10);
+        ArrayList<AscenseurStandard> ascenseurs = new ArrayList<AscenseurStandard> ();
         
-        for(int i = 0 ;i < 2; ++i){
-           
-           immeuble.ajouterAscenseur(new AscenseurStandard());
-           Controleur.getInstance().ajouterAscenseur(new AscenseurStandard());
-        }
-           
-        for(Ascenseur a : Controleur.getInstance().getAscenseurs()){
-            new AfficheurEtatAscenseur ((AscenseurObservable) a);
+        for(int i = 0 ;i < 2; ++i) {
+            AscenseurStandard a = new AscenseurStandard ();
+            new AfficheurEtatAscenseur (a);
+            ascenseurs.add (a);
         }
         
+        for (Ascenseur a : ascenseurs) {
+            immeuble.ajouterAscenseur(a);
+            Controleur.getInstance().ajouterAscenseur(new AscenseurAvecMusique (a, "yoyo"));
+        }
+
         while(true){
             
            System.out.println("Voulez-vous ajoutez une requete ? (O/N)");
