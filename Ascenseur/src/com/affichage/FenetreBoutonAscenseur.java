@@ -7,6 +7,7 @@
 package com.affichage;
 
 import com.traitement.Requete;
+import com.traitement.ascenseur.AscenseurObservable;
 import java.util.Collection;
 import javax.swing.JPanel;
 
@@ -16,6 +17,11 @@ import javax.swing.JPanel;
  */
 public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservateur{
 
+    
+    public FenetreBoutonAscenseur(AscenseurObservable ascenseur){
+        ascenseur.ajouterObserveur (this);
+    }
+    
     @Override
     public void afficher() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

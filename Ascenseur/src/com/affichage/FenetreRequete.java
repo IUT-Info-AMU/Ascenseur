@@ -6,12 +6,29 @@
 
 package com.affichage;
 
+import com.traitement.Requete;
+import com.traitement.ascenseur.AscenseurObservable;
+import java.util.Collection;
 import javax.swing.JPanel;
 
 /**
  *
  * @author Gaëtan
  */
-public class FenetreRequete extends JPanel{
+public class FenetreRequete extends JPanel implements AfficheurObservateur{
+
+    public FenetreRequete(AscenseurObservable ascenseur){
+        ascenseur.ajouterObserveur (this);
+    }
+    
+    @Override
+    public void afficher() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mettreAJour(int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
