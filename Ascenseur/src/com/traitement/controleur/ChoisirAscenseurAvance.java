@@ -24,7 +24,7 @@ public class ChoisirAscenseurAvance implements ControleurStrategie{
         LinkedList<RequeteExterne> requetes = Controleur.getRequetes ();
         
         //Pour chaque AscenseurStandard a contenu dans ascenceurs
-        for(Ascenseur ascenseur : Controleur.getAscenseurs () ){
+        for(Ascenseur ascenseur : Controleur.getAscenseurs () ) {
             
             //si un AscenseurStandard a n'a pas de requetes, alors on lui assigne celle-ci
             if (ascenseur.getRequetes().isEmpty()){

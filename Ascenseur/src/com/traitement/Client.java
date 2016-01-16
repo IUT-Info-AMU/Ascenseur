@@ -8,6 +8,7 @@ package com.traitement;
 import com.affichage.AfficheurEtatAscenseur;
 import com.traitement.ascenseur.Ascenseur;
 import com.traitement.ascenseur.AscenseurAvecMusique;
+import com.traitement.ascenseur.AscenseurObservable;
 import com.traitement.ascenseur.AscenseurStandard;
 import com.traitement.controleur.Controleur;
 import java.util.Scanner;
@@ -35,7 +36,7 @@ public class Client {
         }
               
         for(Ascenseur a : Controleur.getInstance().getAscenseurs()){
-            new AfficheurEtatAscenseur(a);
+            new AfficheurEtatAscenseur((AscenseurStandard) a);
         }
         
         while(true){
