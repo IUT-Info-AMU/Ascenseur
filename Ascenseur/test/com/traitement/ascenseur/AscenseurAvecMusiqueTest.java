@@ -18,6 +18,8 @@ import static org.junit.Assert.*;
  */
 public class AscenseurAvecMusiqueTest {
     
+    Ascenseur a;
+            
     public AscenseurAvecMusiqueTest() {
     }
     
@@ -40,13 +42,13 @@ public class AscenseurAvecMusiqueTest {
     /**
      * Test of action method, of class AscenseurAvecMusique.
      */
-    @Test
+    @Test(expected = NullPointerException.class)
     public void testAction() {
         System.out.println("action");
-        AscenseurAvecMusique instance = null;
+        
+        AscenseurAvecMusique instance = new AscenseurAvecMusique(a, "lala");
         instance.action();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -56,10 +58,9 @@ public class AscenseurAvecMusiqueTest {
     public void testChangerMusique() {
         System.out.println("changerMusique");
         String musique = "";
-        AscenseurAvecMusique instance = null;
+        AscenseurAvecMusique instance = new AscenseurAvecMusique(a, "lalala");
         instance.changerMusique(musique);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

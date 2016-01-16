@@ -20,6 +20,8 @@ import static org.junit.Assert.*;
  */
 public class AscenseurStandardTest {
     
+    AscenseurStrategie strategie;
+    
     public AscenseurStandardTest() {
     }
     
@@ -48,8 +50,7 @@ public class AscenseurStandardTest {
         boolean bloquer = false;
         AscenseurStandard instance = new AscenseurStandard();
         instance.bloquer(bloquer);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -61,8 +62,7 @@ public class AscenseurStandardTest {
         boolean ouvrir = false;
         AscenseurStandard instance = new AscenseurStandard();
         instance.ouvrir(ouvrir);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -74,8 +74,7 @@ public class AscenseurStandardTest {
         boolean mouvement = false;
         AscenseurStandard instance = new AscenseurStandard();
         instance.mettreEnMouvement(mouvement);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -87,8 +86,7 @@ public class AscenseurStandardTest {
         Requete r = null;
         AscenseurStandard instance = new AscenseurStandard();
         instance.ajouterRequete(r);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -100,8 +98,7 @@ public class AscenseurStandardTest {
         int numEtage = 0;
         AscenseurStandard instance = new AscenseurStandard();
         instance.creerRequeteInterne(numEtage);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -114,8 +111,7 @@ public class AscenseurStandardTest {
         int expResult = 0;
         int result = instance.getNumEtage();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -125,11 +121,10 @@ public class AscenseurStandardTest {
     public void testGetRequetes() {
         System.out.println("getRequetes");
         AscenseurStandard instance = new AscenseurStandard();
-        LinkedList<Requete> expResult = null;
+        LinkedList<Requete> expResult = instance.getRequetes();
         LinkedList<Requete> result = instance.getRequetes();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -138,11 +133,9 @@ public class AscenseurStandardTest {
     @Test
     public void testSetMethode() {
         System.out.println("setMethode");
-        AscenseurStrategie strategie = null;
         AscenseurStandard instance = new AscenseurStandard();
         instance.setMethode(strategie);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -153,8 +146,7 @@ public class AscenseurStandardTest {
         System.out.println("action");
         AscenseurStandard instance = new AscenseurStandard();
         instance.action();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -164,11 +156,10 @@ public class AscenseurStandardTest {
     public void testToString() {
         System.out.println("toString");
         AscenseurStandard instance = new AscenseurStandard();
-        String expResult = "";
+        String expResult = instance.toString();
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

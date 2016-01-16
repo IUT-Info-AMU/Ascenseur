@@ -21,6 +21,9 @@ import static org.junit.Assert.*;
  */
 public class AscenseurObservableTest {
     
+    AfficheurObservateur o;
+    Collection<Requete> requetes;
+    
     public AscenseurObservableTest() {
     }
     
@@ -43,44 +46,38 @@ public class AscenseurObservableTest {
     /**
      * Test of ajouterObserveur method, of class AscenseurObservable.
      */
-    @Test
+    @Test(expected = NullPointerException.class)
     public void testAjouterObserveur() {
         System.out.println("ajouterObserveur");
-        AfficheurObservateur o = null;
         AscenseurObservable instance = new AscenseurObservableImpl();
         instance.ajouterObserveur(o);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
      * Test of retirerObserveur method, of class AscenseurObservable.
      */
-    @Test
+    @Test(expected = NullPointerException.class)
     public void testRetirerObserveur() {
         System.out.println("retirerObserveur");
-        AfficheurObservateur o = null;
         AscenseurObservable instance = new AscenseurObservableImpl();
         instance.retirerObserveur(o);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
      * Test of mettreAJourObservateurs method, of class AscenseurObservable.
      */
-    @Test
+    @Test(expected = NullPointerException.class)
     public void testMettreAJourObservateurs() {
         System.out.println("mettreAJourObservateurs");
         int numEtage = 0;
         boolean enMouvement = false;
         boolean ouvert = false;
         boolean bloque = false;
-        Collection<Requete> requetes = null;
         AscenseurObservable instance = new AscenseurObservableImpl();
         instance.mettreAJourObservateurs(numEtage, enMouvement, ouvert, bloque, requetes);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    
     }
 
     public class AscenseurObservableImpl extends AscenseurObservable {

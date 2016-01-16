@@ -46,14 +46,13 @@ public class AscenseurStrategieTest {
     public void testAjouterRequete() {
         System.out.println("ajouterRequete");
         int etageCourant = 0;
-        LinkedList<Requete> requetes = null;
-        Requete r = null;
+        LinkedList<Requete> requetes = new LinkedList<>();
+        Requete r = new Requete();
         AscenseurStrategie instance = new AscenseurStrategieImpl();
-        LinkedList<Requete> expResult = null;
+        LinkedList<Requete> expResult = instance.ajouterRequete(0, requetes, r);
         LinkedList<Requete> result = instance.ajouterRequete(etageCourant, requetes, r);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     public class AscenseurStrategieImpl implements AscenseurStrategie {

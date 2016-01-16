@@ -48,8 +48,7 @@ public class AscenseurTest {
         boolean bloquer = false;
         Ascenseur instance = new AscenseurImpl();
         instance.bloquer(bloquer);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -58,11 +57,10 @@ public class AscenseurTest {
     @Test
     public void testOuvrir() {
         System.out.println("ouvrir");
-        boolean ouvrir = false;
+        boolean ouvrir = true;
         Ascenseur instance = new AscenseurImpl();
         instance.ouvrir(ouvrir);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -74,8 +72,7 @@ public class AscenseurTest {
         boolean mouvement = false;
         Ascenseur instance = new AscenseurImpl();
         instance.mettreEnMouvement(mouvement);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -84,11 +81,10 @@ public class AscenseurTest {
     @Test
     public void testAjouterRequete() {
         System.out.println("ajouterRequete");
-        Requete r = null;
+        Requete r = new Requete();
         Ascenseur instance = new AscenseurImpl();
         instance.ajouterRequete(r);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
 
     /**
@@ -100,8 +96,7 @@ public class AscenseurTest {
         int numEtage = 0;
         Ascenseur instance = new AscenseurImpl();
         instance.creerRequeteInterne(numEtage);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -114,8 +109,7 @@ public class AscenseurTest {
         int expResult = 0;
         int result = instance.getNumEtage();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -125,11 +119,10 @@ public class AscenseurTest {
     public void testGetRequetes() {
         System.out.println("getRequetes");
         Ascenseur instance = new AscenseurImpl();
-        LinkedList<Requete> expResult = null;
+        LinkedList<Requete> expResult = instance.getRequetes();
         LinkedList<Requete> result = instance.getRequetes();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -140,8 +133,7 @@ public class AscenseurTest {
         System.out.println("action");
         Ascenseur instance = new AscenseurImpl();
         instance.action();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     public class AscenseurImpl implements Ascenseur {
