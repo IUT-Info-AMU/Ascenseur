@@ -122,6 +122,7 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
                             Controleur.getInstance().creerRequeteExterne(Integer.parseInt(numEtageTexte.getText()), true);
                         else{
                             Controleur.getInstance().creerRequeteExterne(Integer.parseInt(numEtageTexte.getText()), false);
+                            Controleur.getInstance().choisirAscenseur(Controleur.getRequetes().getFirst());
                         }
                     }
                 }
