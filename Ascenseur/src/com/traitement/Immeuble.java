@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Thorrsten, Gaëtan (modification du fichier)
+ * @author Thorrsten, Gaëtan (javadoc)
  * 
  */
 public class Immeuble {
