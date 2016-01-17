@@ -8,6 +8,7 @@ package com.affichage;
 
 import com.traitement.Requete;
 import com.traitement.ascenseur.AscenseurObservable;
+import com.traitement.controleur.Controleur;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -82,18 +83,18 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
         requeteExterne.setActionCommand("requete interne");
         groupeBouton.add(requeteExterne);
         
-        final JTextField numEtage = new JTextField();
-        numEtage.setPreferredSize( new Dimension( 30, 20 ) );
+        final JTextField numEtageTexte = new JTextField();
+        numEtageTexte.setPreferredSize( new Dimension( 30, 20 ) );
        
         JButton envoyer = new JButton("Envoyer");
         envoyer.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent event){
-                if(!numEtage.getText().isEmpty()){
+                if(!numEtageTexte.getText().isEmpty()){
                     if(requeteInterne.isSelected()){
-                        ascenseur.creerRequeteInterne(Integer.parseInt(numEtage.getText()));
+                        ascenseur.creerRequeteInterne(Integer.parseInt(numEtageTexte.getText()));
                     }
                     else if(requeteExterne.isSelected()){
-                        
+                        Controleur.getInstance().creerRequeteExterne(Integer.parseInt(numEtageTexte.getText()), ouvert);
                     }
                 }
             }
@@ -101,7 +102,7 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
         
         this.add(requeteInterne);
         this.add(requeteExterne);
-        this.add(numEtage);
+        this.add(numEtageTexte);
         this.add(envoyer);          
     }
 }
