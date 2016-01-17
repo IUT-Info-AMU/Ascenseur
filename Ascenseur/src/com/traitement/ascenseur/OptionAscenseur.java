@@ -10,7 +10,7 @@ import java.util.LinkedList;
 
 /**
  *
- * @author Bprog
+ * @author Bprog, Gaëtan (modification du fichier)
  */
 public abstract class OptionAscenseur extends AscenseurObservable {
     

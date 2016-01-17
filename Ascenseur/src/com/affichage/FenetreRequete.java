@@ -18,6 +18,8 @@ import javax.swing.JTextArea;
  */
 public class FenetreRequete extends JPanel implements AfficheurObservateur{
 
+    private Collection<Requete> requetes;
+    
     public FenetreRequete(AscenseurObservable ascenseur){
         super();
         creerZoneTexte();
@@ -26,12 +28,16 @@ public class FenetreRequete extends JPanel implements AfficheurObservateur{
     
     @Override
     public void afficher() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String requetes = "Requetes en cours : \n";
+        for(int i = 0; i < requetes.length();++i){
+            
+        }
+    
     }
 
     @Override
     public void mettreAJour(int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.requetes = requetes;
     }
     
     public void creerZoneTexte(){

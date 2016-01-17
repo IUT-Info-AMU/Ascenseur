@@ -30,6 +30,7 @@ public class FenetreApplicationPrincipale extends JFrame{
         setLayout(new BorderLayout());
         //add(new FenetreBoutonAscenseur());
         //add(new FenetreRequete(),BorderLayout.EAST);
+        //add(new FenetreAscenseur(),BoderLayout.SOUTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setVisible(true);

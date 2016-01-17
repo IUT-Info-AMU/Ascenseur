@@ -9,6 +9,7 @@ import com.traitement.Requete;
 import com.traitement.ascenseur.AscenseurObservable;
 import java.util.Collection;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -20,26 +21,30 @@ public class FenetreAscenseur extends JPanel implements AfficheurObservateur{
     private boolean enMouvement;
     private boolean ouvert;
     private boolean bloque;
+    private JTextArea zoneTexte;
     
     public FenetreAscenseur(AscenseurObservable ascenseur){
         ascenseur.ajouterObserveur (this);
+        this.zoneTexte = new JTextArea("Vue Ascenseur sous forme de texte");
     }
     
     @Override
     public void afficher() {
-         /*System.out.print ("---Ascenseur---\netage: " + numEtage + "\netat: ");
+        String ascenseurEtat = "---Ascenseur---\netage: " + numEtage + "\netat: ";
+        
         if ( bloque )
-            System.out.println ("BLOQUE");
+            ascenseurEtat += "BLOQUE";
         else {
             if ( ouvert )
-                System.out.print ("ouvert, ");
+                ascenseurEtat += "ouvert, ";
             else
-                System.out.print ("fermé, ");
+                ascenseurEtat += "fermé, ";
             if ( enMouvement )
-                System.out.println ("en mouvement");
+                ascenseurEtat += "en mouvement";
             else
-                System.out.println ("à l'arrêt");
-        }*/
+                ascenseurEtat += "à l'arrêt";
+        }
+        zoneTexte.setText(ascenseurEtat);
     }
 
     @Override
