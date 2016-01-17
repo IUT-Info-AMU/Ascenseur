@@ -48,8 +48,7 @@ public class AfficheurObservateurTest {
         System.out.println("afficher");
         AfficheurObservateur instance = new AfficheurObservateurImpl();
         instance.afficher();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -66,8 +65,7 @@ public class AfficheurObservateurTest {
         HashMap<String, String> options = null;
         AfficheurObservateur instance = new AfficheurObservateurImpl();
         instance.mettreAJour(numEtage, enMouvement, ouvert, bloque, requetes, options);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     public class AfficheurObservateurImpl implements AfficheurObservateur {
