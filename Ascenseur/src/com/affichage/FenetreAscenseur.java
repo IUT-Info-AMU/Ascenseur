@@ -31,7 +31,7 @@ public class FenetreAscenseur extends JPanel implements AfficheurObservateur{
     */
     public FenetreAscenseur(AscenseurObservable ascenseur){
         ascenseur.ajouterObserveur (this);
-        this.zoneTexte = new JTextArea("Vue Ascenseur sous forme de texte");
+        add(this.zoneTexte = new JTextArea("Vue Ascenseur sous forme de texte",10,50));
     }
     
     @Override
