@@ -5,6 +5,9 @@
  */
 package com.traitement.ascenseur;
 
+import com.traitement.Requete;
+import java.util.Collection;
+
 
 /**
  *
@@ -37,5 +40,4 @@ public class AscenseurAvecMusique extends OptionAscenseur {
     public void changerMusique (String musique) {
         this.musique = musique;
     }
-    
 }
