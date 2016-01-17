@@ -12,7 +12,7 @@ import com.traitement.RequeteExterne;
  */
 public interface ControleurStrategie {
     /*
-    *Choix du bonne ascenseur pour la Requete entrante
+    *Choix du bon ascenseur pour la Requete entrante
     *@param req RequeteExterne
     */
     public void choisirAscenseur (RequeteExterne req);
