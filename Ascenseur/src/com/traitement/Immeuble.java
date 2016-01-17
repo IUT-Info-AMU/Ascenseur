@@ -26,7 +26,7 @@ public class Immeuble {
     }
     
     /*
-    *Cette fonction renvoit le nombre d'étage de l'Immeuble
+    *Cette fonction renvoie le nombre d'étage de l'Immeuble
     *@return int le nombre d'étage
     */
      public int getNombreEtage(){
@@ -35,7 +35,7 @@ public class Immeuble {
     }
     
     /*
-    * Cette fonction renvoit un tableau contenant els ascenseur de l'Immeuble
+    * Cette fonction renvoie un tableau contenant les ascenseur de l'Immeuble
     *@return ArrayList<Ascenseur> un tableau d'ascenseurs
     */
     public ArrayList<AscenseurAvecOption> getAscenseurs(){
