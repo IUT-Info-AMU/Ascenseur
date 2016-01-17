@@ -23,12 +23,19 @@ public class FenetreAscenseur extends JPanel implements AfficheurObservateur{
     private boolean bloque;
     private JTextArea zoneTexte;
     
+    /*
+    *Cosntructeur de FenetreAscenseur, ajoute un observateur à l'ascenseur passé en paramètre
+    *@param AscenseurObservable ascenseur
+    */
     public FenetreAscenseur(AscenseurObservable ascenseur){
         ascenseur.ajouterObserveur (this);
         this.zoneTexte = new JTextArea("Vue Ascenseur sous forme de texte");
     }
     
     @Override
+    /*
+    *actualise l'affichage
+    */
     public void afficher() {
         String ascenseurEtat = "---Ascenseur---\netage: " + numEtage + "\netat: ";
         
@@ -48,6 +55,14 @@ public class FenetreAscenseur extends JPanel implements AfficheurObservateur{
     }
 
     @Override
+    /*
+    *Met à jour l'observateur
+    *@param int numEtage
+    *@param boolean enMouvement
+    *@param boolean ouvert
+    *@param boolean bloque
+    *@param Collection<Requete> requetes
+    */
     public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
         this.numEtage = numEtage;
         this.enMouvement = enMouvement;

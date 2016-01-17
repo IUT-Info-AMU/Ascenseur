@@ -49,6 +49,9 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
         this.bloque = bloque;
     }
     
+    /*
+    *Creer les boutons pour le choix des requètes ainsi que la zone de texte pour rentrer le numéro d'étage
+    */
     private void creerBouton(){
         
         ButtonGroup groupeBouton = new ButtonGroup();

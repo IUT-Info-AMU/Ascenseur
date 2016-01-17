@@ -36,6 +36,9 @@ public class FenetreApplicationPrincipale extends JFrame{
         setVisible(true);
     }
     
+    /*
+    *Creer le menu et ses boutons
+    */
     private void creerMenu(){
         JMenuBar menuBar = new JMenuBar();
         
