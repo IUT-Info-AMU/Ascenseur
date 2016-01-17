@@ -30,22 +30,16 @@ public class Client {
     try {
         
         Immeuble immeuble = new Immeuble(10);
-        ArrayList<AscenseurStandard> ascenseurs = new ArrayList<AscenseurStandard> ();
-        ArrayList<FenetreApplicationPrincipale> fenetres = new ArrayList<FenetreApplicationPrincipale> ();
-        
+
         for(int i = 0 ;i < 2; ++i) {
             AscenseurStandard a = new AscenseurStandard ();
-            fenetres.add (new FenetreApplicationPrincipale (a));
-            ascenseurs.add (a);
-        }
-        
-        for (AscenseurAvecOption a : ascenseurs) {
             immeuble.ajouterAscenseur(a);
-            Controleur.getInstance().ajouterAscenseur(new AscenseurAvecMusique (a, "yoyo"));
+            Controleur.getInstance().ajouterAscenseur(a);
+            new FenetreApplicationPrincipale (a);
         }
-
+/*
         while(true){
-           /* 
+            
            System.out.println("Voulez-vous ajoutez une requete ? (O/N)");
            String reponse = new Scanner(System.in).next();
            while(reponse.length() > 1 ){ 
@@ -107,12 +101,13 @@ public class Client {
                default :
                    break;
            }//switch reponse
-           */
+           
            for(AscenseurAvecOption a : Controleur.getInstance().getAscenseurs()){
                
                a.action();
            }
-       }//while(true)
+           
+       }//while(true)*/
        } 
        catch(Exception e){
            System.err.println("Exception caught: "+e);         

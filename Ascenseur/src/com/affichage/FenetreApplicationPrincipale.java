@@ -70,7 +70,7 @@ public class FenetreApplicationPrincipale extends JFrame{
                         System.out.println("Impossible d'ouvrir la javadoc !");
                     }
                 }       
-            });
+        });
         menuBar.add(documentation);
         
         JMenu aPropos = new JMenu("à propos de");
