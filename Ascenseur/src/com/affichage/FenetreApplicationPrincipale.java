@@ -44,7 +44,7 @@ public class FenetreApplicationPrincipale extends JFrame{
                 AscenseurStandard a = new AscenseurStandard ();
                 immeuble.ajouterAscenseur (a);
                 Controleur.getInstance().ajouterAscenseur (a);
-                new FenetreGestionAscenseur (a);
+                new FenetreGestionAscenseur (a,immeuble.getNombreEtage());
             }
         });
 

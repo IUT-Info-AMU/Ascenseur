@@ -17,13 +17,12 @@ public class FenetreGestionAscenseur extends JFrame{
     /*
     *Constructeur de FenetreGestionAscenseur
     */
-    public FenetreGestionAscenseur (AscenseurObservable ascenseur){
+    public FenetreGestionAscenseur (AscenseurObservable ascenseur, int nombreEtageMax){
         super("Ascenseur");
         setLayout(new BorderLayout());
-        add(new FenetreBoutonAscenseur(ascenseur), BorderLayout.WEST);
+        add(new FenetreBoutonAscenseur(ascenseur,nombreEtageMax,this), BorderLayout.WEST);
         add(new FenetreRequete(ascenseur),BorderLayout.EAST);
         add(new FenetreAscenseur(ascenseur),BorderLayout.SOUTH);
-        
         pack();
         setVisible(true);
     }

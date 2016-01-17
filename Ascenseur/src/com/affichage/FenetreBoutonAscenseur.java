@@ -16,6 +16,8 @@ import java.util.Collection;
 import java.util.HashMap;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
@@ -34,17 +36,20 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
     JRadioButton requeteExterne;
     JRadioButton haut;
     JRadioButton bas;
+    private final int nombreEtageMax;
+    private final JFrame cadreParent;
     
     /*
     *Constructeur de FenetreBoutonAscenseur, ajoute un observateur à l'ascenseur passé en paramètre
     *@param AscenseurObservable ascenseur
     */
-    public FenetreBoutonAscenseur(AscenseurObservable ascenseur){
+    public FenetreBoutonAscenseur(AscenseurObservable ascenseur,int nombreEtageMax,JFrame cadre){
         super();
         creerBouton();
         this.ascenseur = ascenseur;
-        ascenseur.ajouterObserveur (this);
-        
+        this.nombreEtageMax = nombreEtageMax;
+        this.cadreParent = cadre;
+        ascenseur.ajouterObserveur (this);    
     }
     
     @Override
@@ -114,19 +119,24 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
         envoyer.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent event){
                 if(!numEtageTexte.getText().isEmpty()){
-                    if(requeteInterne.isSelected()){
-                        ascenseur.creerRequeteInterne(Integer.parseInt(numEtageTexte.getText()));
-                    }
-                    else if(requeteExterne.isSelected()){
-                        if(haut.isSelected()) {
-                            Controleur.getInstance().creerRequeteExterne(Integer.parseInt(numEtageTexte.getText()), true);
-                            Controleur.getInstance().choisirAscenseur(Controleur.getRequetes().getFirst());
+                    int numEtageVoulu = Integer.parseInt(numEtageTexte.getText());
+                    if(numEtageVoulu <= nombreEtageMax){
+                        if(requeteInterne.isSelected()){
+                            ascenseur.creerRequeteInterne(numEtageVoulu);
                         }
-                        else{
-                            Controleur.getInstance().creerRequeteExterne(Integer.parseInt(numEtageTexte.getText()), false);
-                            Controleur.getInstance().choisirAscenseur(Controleur.getRequetes().getFirst());
+                        else if(requeteExterne.isSelected()){
+                            if(haut.isSelected()) {
+                                Controleur.getInstance().creerRequeteExterne(numEtageVoulu, true);
+                                Controleur.getInstance().choisirAscenseur(Controleur.getRequetes().getFirst());
+                            }
+                            else{
+                                Controleur.getInstance().creerRequeteExterne(numEtageVoulu, false);
+                                Controleur.getInstance().choisirAscenseur(Controleur.getRequetes().getFirst());
+                            }
                         }
-                    }
+                    }else{
+                        JOptionPane.showMessageDialog(cadreParent,"Le numéro d'étage ne peut être supérieur au nombre d'étage de l'immeuble.","Attention !",JOptionPane.WARNING_MESSAGE);
+                    }     
                 }
             }
         });
