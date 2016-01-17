@@ -10,7 +10,7 @@ import java.util.LinkedList;
 
 /**
  *
- * @author Bprog, Gaëtan (modification du fichier)
+ * @author Bprog, Gaëtan (modification du fichier et javadoc)
  */
 public interface AscenseurAvecOption {
     
@@ -57,7 +57,7 @@ public interface AscenseurAvecOption {
     public LinkedList<Requete> getRequetes ();
     
     /*
-    *
+    *execute l'action de l'ascenseur
     */
     public void action ();
     

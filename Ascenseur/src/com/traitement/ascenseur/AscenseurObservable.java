@@ -12,7 +12,7 @@ import com.affichage.AfficheurObservateur;
 
 /**
  *
- * @author m13001362, Gaëtan (modification du fichier)
+ * @author m13001362, Gaëtan (modification du fichier et javadoc)
  */
 public abstract class AscenseurObservable implements AscenseurAvecOption{
 
@@ -34,6 +34,15 @@ public abstract class AscenseurObservable implements AscenseurAvecOption{
         observateurs.remove(o);
     }
     
+    /*
+    *Met à jour les Observateurs
+    *@param int numEtage
+    *@param boolean enMouvement
+    *@param boolean ouvert
+    *@param boolean bloque
+    *@param Collection<Requete> requetes
+    *@return void
+    */
     public void mettreAJourObservateurs (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
         for (AfficheurObservateur o : observateurs) {
             o.mettreAJour (numEtage, enMouvement, ouvert, bloque, requetes);

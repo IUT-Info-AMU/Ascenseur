@@ -11,7 +11,7 @@ import java.util.Collection;
 
 /**
  *
- * @author Bprog, Gaëtan (modification du fichier)
+ * @author Bprog, Gaëtan (modification du fichier et javadoc)
  */
 public class AscenseurAvecMusique extends OptionAscenseur {
     
@@ -28,6 +28,10 @@ public class AscenseurAvecMusique extends OptionAscenseur {
     }
     
     @Override
+    /*
+    *execute l'action de la classe parente et affiche la musique
+    *@return void
+    */
     public void action () {
         super.action();
         System.out.println ("joue " + musique);

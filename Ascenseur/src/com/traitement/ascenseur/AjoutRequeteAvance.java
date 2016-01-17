@@ -10,11 +10,18 @@ import java.util.LinkedList;
 
 /**
  *
- * @author Bprog
+ * @author Bprog, Gaëtan(Javadoc)
  */
 public class AjoutRequeteAvance implements AscenseurStrategie {
     
     @Override
+    /*
+    *Ajoute une nouvelle Requete
+    *@param int etageCounrant
+    *@param LinkedList<Requete> requetes , les requetes
+    *@param Requete r , nouvelle Requete
+    *@return LinkedList<Requete> , retourne les requetes de l'ascenseur
+    */
     public LinkedList<Requete> ajouterRequete (int etageCourant, LinkedList<Requete> requetes, Requete r) {
         
         LinkedList<Requete> requetesAscenseur = requetes;
