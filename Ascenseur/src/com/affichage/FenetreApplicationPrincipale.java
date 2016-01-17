@@ -28,7 +28,7 @@ public class FenetreApplicationPrincipale extends JFrame{
     /*
     *Constructeur de FenetreApplicationPrincipale
     */
-    FenetreApplicationPrincipale(AscenseurObservable ascenseur){
+    public FenetreApplicationPrincipale(AscenseurObservable ascenseur){
         super("Fenêtre principale");
         creerMenu();
         setLayout(new BorderLayout());

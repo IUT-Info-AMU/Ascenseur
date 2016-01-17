@@ -6,6 +6,7 @@
 package com.traitement;
 
 import com.affichage.AfficheurEtatAscenseur;
+import com.affichage.FenetreApplicationPrincipale;
 import com.traitement.ascenseur.AscenseurAvecOption;
 import com.traitement.ascenseur.AscenseurAvecMusique;
 import com.traitement.ascenseur.AscenseurStandard;
@@ -30,10 +31,11 @@ public class Client {
         
         Immeuble immeuble = new Immeuble(10);
         ArrayList<AscenseurStandard> ascenseurs = new ArrayList<AscenseurStandard> ();
+        ArrayList<FenetreApplicationPrincipale> fenetres = new ArrayList<FenetreApplicationPrincipale> ();
         
         for(int i = 0 ;i < 2; ++i) {
             AscenseurStandard a = new AscenseurStandard ();
-            new AfficheurEtatAscenseur (a);
+            fenetres.add (new FenetreApplicationPrincipale (a));
             ascenseurs.add (a);
         }
         
