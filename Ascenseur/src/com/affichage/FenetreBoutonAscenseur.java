@@ -72,7 +72,7 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
     }
     
     /*
-    *Creer les boutons pour le choix des requête ainsi que la zone de texte pour rentrer le numéro d'étage
+    *Creer les boutons pour le choix des requêtes ainsi que la zone de texte pour rentrer le numéro d'étage
     */
     private void creerBouton(){
         
