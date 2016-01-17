@@ -125,6 +125,7 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
                         }
                     }
                 }
+                ascenseur.action();
             }
         });
         
