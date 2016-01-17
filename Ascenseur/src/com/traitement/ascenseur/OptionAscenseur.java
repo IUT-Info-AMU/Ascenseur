@@ -46,7 +46,7 @@ public abstract class OptionAscenseur extends AscenseurObservable {
     @Override
     /*
     *Met en mouvement l'ascenseur
-    *@param boolena mouvement
+    *@param boolean mouvement
     */
     public void mettreEnMouvement (boolean mouvement) {
         ascenseur.mettreEnMouvement (mouvement);
