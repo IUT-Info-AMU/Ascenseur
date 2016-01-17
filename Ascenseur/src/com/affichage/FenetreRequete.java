@@ -38,7 +38,7 @@ public class FenetreRequete extends JPanel implements AfficheurObservateur{
     public void afficher() {
         String requetesString = "Requetes en cours : \n";
         for(Requete requete : requetes){
-            requete.toString();
+            requetesString += requete.toString()+"\n";
         }
         zoneTexte.setText(requetesString);
     }
@@ -57,7 +57,7 @@ public class FenetreRequete extends JPanel implements AfficheurObservateur{
         afficher();
     }
     /*
-    *Créer la zone de texte de la fenètre, appelé dans le cosntructeur
+    *Créer la zone de texte de la fenètre, appelé dans le constructeur
     */
     private void creerZoneTexte(){
         zoneTexte = new JTextArea(10,50);
