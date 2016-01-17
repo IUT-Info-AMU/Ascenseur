@@ -19,6 +19,7 @@ import javax.swing.JTextArea;
 public class FenetreRequete extends JPanel implements AfficheurObservateur{
 
     private Collection<Requete> requetes;
+    private JTextArea zoneTexte;
     
     public FenetreRequete(AscenseurObservable ascenseur){
         super();
@@ -28,20 +29,21 @@ public class FenetreRequete extends JPanel implements AfficheurObservateur{
     
     @Override
     public void afficher() {
-        String requetes = "Requetes en cours : \n";
-        for(int i = 0; i < requetes.length();++i){
+        String requetesString = "Requetes en cours : \n";
+        for(Requete requete : requetes){
             
         }
-    
+        zoneTexte.setText(requetesString);
     }
 
     @Override
     public void mettreAJour(int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
         this.requetes = requetes;
+        afficher();
     }
     
     public void creerZoneTexte(){
-        JTextArea ZoneTexte = new JTextArea(10,50);
-        this.add(ZoneTexte);
+        zoneTexte = new JTextArea(10,50);
+        this.add(zoneTexte);
     }
 }
