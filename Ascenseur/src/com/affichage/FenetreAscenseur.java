@@ -53,7 +53,11 @@ public class FenetreAscenseur extends JPanel implements AfficheurObservateur{
             else
                 ascenseurEtat += "à l'arrêt";
         }
-        zoneTexte.setText(ascenseurEtat + "\n" + options.toString());
+        if(options != null)
+            zoneTexte.setText(ascenseurEtat + "\n" + options.toString());
+        else{
+            zoneTexte.setText(ascenseurEtat);
+        }
     }
 
     @Override
