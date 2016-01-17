@@ -5,7 +5,7 @@
  */
 package com.traitement.controleur;
 import com.traitement.RequeteExterne;
-import com.traitement.ascenseur.Ascenseur;
+import com.traitement.ascenseur.AscenseurAvecOption;
 import java.util.LinkedList;
 
 /**
@@ -22,10 +22,10 @@ public class ChoisirAscenseurSimple implements ControleurStrategie{
         
          LinkedList<RequeteExterne> requetes = Controleur.getRequetes ();
         
-        //Pour chaque Ascenseur contenu dans ascenceurs
-        for(Ascenseur ascenseur : Controleur.getAscenseurs () ){
+        //Pour chaque AscenseurAvecOption contenu dans ascenceurs
+        for(AscenseurAvecOption ascenseur : Controleur.getAscenseurs () ){
             
-            //si un Ascenseur n'a pas de requetes, alors on lui assigne celle-ci
+            //si un AscenseurAvecOption n'a pas de requetes, alors on lui assigne celle-ci
             if (ascenseur.getRequetes().isEmpty()){
                 ascenseur.ajouterRequete(requete);
                 requetes.remove();

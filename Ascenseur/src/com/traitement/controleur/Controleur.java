@@ -6,7 +6,7 @@
 package com.traitement.controleur;
 
 import com.traitement.RequeteExterne;
-import com.traitement.ascenseur.Ascenseur;
+import com.traitement.ascenseur.AscenseurAvecOption;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -18,11 +18,11 @@ public class Controleur {
     
     final private static Controleur instance = new Controleur ();
     private static LinkedList<RequeteExterne> requetes;
-    private static ArrayList<Ascenseur> ascenseurs;
+    private static ArrayList<AscenseurAvecOption> ascenseurs;
     private ControleurStrategie methode;
     
     private Controleur () {
-        ascenseurs  = new ArrayList<Ascenseur> ();
+        ascenseurs  = new ArrayList<AscenseurAvecOption> ();
         requetes    = new LinkedList<RequeteExterne>   ();
         methode     = new ChoisirAscenseurAvance       ();
     }
@@ -41,11 +41,11 @@ public class Controleur {
         }
     }
     
-    public void ajouterAscenseur (Ascenseur a) {
+    public void ajouterAscenseur (AscenseurAvecOption a) {
         ascenseurs.add (a);
     }
     
-    public static ArrayList<Ascenseur> getAscenseurs () {
+    public static ArrayList<AscenseurAvecOption> getAscenseurs () {
         return ascenseurs;
     }
     

@@ -16,10 +16,10 @@ public class AscenseurAvecMusique extends OptionAscenseur {
     
     /*
     *Constructeur de AscenseurAvecMusique
-    *@param ascenseur Ascenseur
+    *@param ascenseur AscenseurAvecOption
     *@param nomMusique String
     */
-    public AscenseurAvecMusique (Ascenseur ascenseur, String nomMusique) {
+    public AscenseurAvecMusique (AscenseurAvecOption ascenseur, String nomMusique) {
         super (ascenseur);
         this.musique = nomMusique;
     }

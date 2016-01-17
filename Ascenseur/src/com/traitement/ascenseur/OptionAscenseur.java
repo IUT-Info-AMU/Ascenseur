@@ -12,11 +12,11 @@ import java.util.LinkedList;
  *
  * @author Bprog
  */
-public abstract class OptionAscenseur extends AscenseurObservable implements Ascenseur {
+public abstract class OptionAscenseur extends AscenseurObservable implements AscenseurAvecOption {
     
-    protected Ascenseur ascenseur;
+    protected AscenseurAvecOption ascenseur;
     
-    public OptionAscenseur (Ascenseur ascenseur) {
+    public OptionAscenseur (AscenseurAvecOption ascenseur) {
         this.ascenseur = ascenseur;
     }
     

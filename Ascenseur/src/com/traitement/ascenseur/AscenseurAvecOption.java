@@ -12,7 +12,7 @@ import java.util.LinkedList;
  *
  * @author Bprog, Gaëtan (modification du fichier)
  */
-public interface Ascenseur {
+public interface AscenseurAvecOption {
     
     /*
     *Bloque les portes de l'ascenseur
