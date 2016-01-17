@@ -50,7 +50,7 @@ public class AscenseurStandard extends AscenseurObservable{
   
     @Override
     /*
-    *Ouvrir la prote de l'Ascenseur
+    *Ouvrir la porte de l'Ascenseur
     *@param ouvrir boolean
     */
     public void ouvrir (boolean ouvrir) {
@@ -89,7 +89,7 @@ public class AscenseurStandard extends AscenseurObservable{
     @Override
     /*
     *
-    *@return
+    *@return int
     */
     public int getNumEtage () {
         return numEtage;
