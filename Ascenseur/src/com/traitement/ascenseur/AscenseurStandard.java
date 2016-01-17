@@ -101,11 +101,18 @@ public class AscenseurStandard extends AscenseurObservable{
         return requetes;
     }
     
+    /*
+    *Initialise la strategie à appliquer
+    *@param AscenseurStrategie strategie
+    */
     public void setMethode (AscenseurStrategie strategie) {
         this.methode = strategie;
     }
     
     @Override
+    /*
+    *l'action de l'ascenseur
+    */
     public void action () {
         //si l'ascenseur n'est pas bloque
         if ( !bloque ) {

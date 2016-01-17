@@ -10,10 +10,16 @@ import java.util.LinkedList;
 
 /**
  *
- * @author Bprog
+ * @author Bprog, Gaëtan (javadoc)
  */
 public interface AscenseurStrategie {
-    
+    /*
+    *Ajoute une Requete
+    *@param int etageCourant
+    *@param LinkedList<Requete> requetes , la liste des requetes actuel
+    @param Requete r , la nouvelle Requete
+    *@return LinkedList<Requete>
+    */
     public LinkedList<Requete> ajouterRequete (int etageCourant, LinkedList<Requete> requetes, Requete r);
     
 }
