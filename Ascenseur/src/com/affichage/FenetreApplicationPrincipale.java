@@ -28,8 +28,8 @@ public class FenetreApplicationPrincipale extends JFrame{
     /*
     *Constructeur de FenetreApplicationPrincipale
     */
-    public FenetreApplicationPrincipale(AscenseurObservable ascenseur){
-        super("Fenêtre principale");
+    public FenetreApplicationPrincipale (AscenseurObservable ascenseur){
+        super("Ascenseur");
         creerMenu();
         setLayout(new BorderLayout());
         add(new FenetreBoutonAscenseur(ascenseur), BorderLayout.WEST);

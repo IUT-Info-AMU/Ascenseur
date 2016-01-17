@@ -45,14 +45,16 @@ public class Client {
         }
 
         while(true){
-            
+           /* 
            System.out.println("Voulez-vous ajoutez une requete ? (O/N)");
            String reponse = new Scanner(System.in).next();
            while(reponse.length() > 1 ){ 
                System.out.println("un caractere seulement par requete (O/N)");
                reponse = new Scanner(System.in).next();
             }
+            */
            /*if(reponse.length()>1)throw new Exception("This exception is handled here.");*/
+            /*
            reponse = reponse.toUpperCase(); 
            switch(reponse){
                
@@ -105,7 +107,7 @@ public class Client {
                default :
                    break;
            }//switch reponse
-           
+           */
            for(AscenseurAvecOption a : Controleur.getInstance().getAscenseurs()){
                
                a.action();
