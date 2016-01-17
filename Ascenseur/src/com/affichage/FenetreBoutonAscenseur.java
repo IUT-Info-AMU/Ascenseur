@@ -28,7 +28,13 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
     private boolean enMouvement;
     private boolean ouvert;
     private boolean bloque;
+    JRadioButton requeteInterne;
+    JRadioButton requeteExterne;
     
+    /*
+    *Constructeur de FenetreBoutonAscenseur, ajoute un observateur à l'ascenseur passé en paramètre
+    *@param AscenseurObservable ascenseur
+    */
     public FenetreBoutonAscenseur(AscenseurObservable ascenseur){
         super();
         creerBouton();
@@ -39,7 +45,7 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
     
     @Override
     public void afficher() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
     @Override
     public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
@@ -56,11 +62,11 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
         
         ButtonGroup groupeBouton = new ButtonGroup();
         
-        final JRadioButton requeteInterne = new JRadioButton("Requete Interne");
+        requeteInterne = new JRadioButton("Requete Interne");
         requeteInterne.setActionCommand("requete interne");
         groupeBouton.add(requeteInterne);
         
-        final JRadioButton requeteExterne = new JRadioButton("Requete Externe");
+        requeteExterne = new JRadioButton("Requete Externe");
         requeteExterne.setActionCommand("requete interne");
         groupeBouton.add(requeteExterne);
         
@@ -84,8 +90,6 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
         this.add(requeteInterne);
         this.add(requeteExterne);
         this.add(numEtage);
-        this.add(envoyer);   
-        
+        this.add(envoyer);          
     }
-    
 }
