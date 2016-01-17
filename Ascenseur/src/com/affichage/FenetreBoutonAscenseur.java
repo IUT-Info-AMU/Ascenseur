@@ -44,10 +44,22 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
     }
     
     @Override
+    /*
+    *actualise l'affichage (ici il n'y en a pas, mais la possibilité est à garder)
+    */
     public void afficher() {
-        
+        //Do no thing
     }
+    
     @Override
+    /*
+    *Met à jour l'observateur
+    *@param int numEtage
+    *@param boolean enMouvement
+    *@param boolean ouvert
+    *@param boolean bloque
+    *@param Collection<Requete> requetes
+    */
     public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
         this.numEtage = numEtage;
         this.enMouvement = enMouvement;

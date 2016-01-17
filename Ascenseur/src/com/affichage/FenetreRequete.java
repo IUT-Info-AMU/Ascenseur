@@ -50,7 +50,7 @@ public class FenetreRequete extends JPanel implements AfficheurObservateur{
     *@param boolean enMouvement
     *@param boolean ouvert
     *@param boolean bloque
-    *2param Collection<Requete> requetes
+    *@param Collection<Requete> requetes
     */
     public void mettreAJour(int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
         this.requetes = requetes;
