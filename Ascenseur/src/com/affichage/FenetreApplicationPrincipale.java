@@ -75,7 +75,7 @@ public class FenetreApplicationPrincipale extends JFrame{
         
         JMenu aPropos = new JMenu("à propos de");
         JMenuItem equipe = new JMenuItem("Application crée par : Brice Maussang, "
-                                        + "Jérémie Topalian, "
+                                        + "Jérémy Topalian, "
                                         +"Jalal Rabahi, "
                                         + "Victor Pedrazzini, "
                                         + "Gaëtan Perrot");
