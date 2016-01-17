@@ -5,6 +5,7 @@
  */
 package com.affichage;
 
+import com.traitement.ascenseur.AscenseurObservable;
 import java.awt.BorderLayout;
 import java.awt.Desktop;
 import java.awt.Dimension;
@@ -27,13 +28,13 @@ public class FenetreApplicationPrincipale extends JFrame{
     /*
     *Constructeur de FenetreApplicationPrincipale
     */
-    FenetreApplicationPrincipale(){
+    FenetreApplicationPrincipale(AscenseurObservable ascenseur){
         super("Fenêtre principale");
         creerMenu();
         setLayout(new BorderLayout());
-        //add(new FenetreBoutonAscenseur(), BorderLayout.WEST);
-        //add(new FenetreRequete(),BorderLayout.EAST);
-        //add(new FenetreAscenseur(),BoderLayout.SOUTH);
+        add(new FenetreBoutonAscenseur(ascenseur), BorderLayout.WEST);
+        add(new FenetreRequete(ascenseur),BorderLayout.EAST);
+        add(new FenetreAscenseur(ascenseur),BorderLayout.SOUTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setVisible(true);
@@ -82,10 +83,5 @@ public class FenetreApplicationPrincipale extends JFrame{
         menuBar.add(aPropos);
         
         this.setJMenuBar(menuBar);
-    }
-    
-    public static void main (String[] args) {
-        FenetreApplicationPrincipale application = new FenetreApplicationPrincipale();
-
     }
 }
