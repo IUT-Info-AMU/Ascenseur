@@ -10,12 +10,12 @@ import java.util.LinkedList;
 
 /**
  *
- * @author Thorrsten, Gaëtan (modification du fichier)
+ * @author Thorrsten, Gaëtan (modification du fichier et Javadoc)
  */
 public class ChoisirAscenseurAvance implements ControleurStrategie{
   
     /*
-    *
+    *Choix du bonne ascenseur pour la Requete entrante, le plus proche, celui qui n'a pas de Requete
     *@param requete RequeteExterne
     */
     @Override

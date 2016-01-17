@@ -12,7 +12,7 @@ import java.util.LinkedList;
 
 /**
  *
- * @author jeremtop, Gaëtan (modification du fichier)
+ * @author jeremtop, Gaëtan (modification du fichier et javadoc)
  */
 public class Controleur {
     
@@ -21,12 +21,20 @@ public class Controleur {
     private static ArrayList<AscenseurAvecOption> ascenseurs;
     private ControleurStrategie methode;
     
+    /*
+    *Constructeur du controleur
+    */
     private Controleur () {
         ascenseurs  = new ArrayList<AscenseurAvecOption> ();
         requetes    = new LinkedList<RequeteExterne>   ();
         methode     = new ChoisirAscenseurAvance       ();
     }
     
+    /*
+    *Creer une Requete externe avec le num d'étage voulu et la direction (haut(true) ou bas(false))
+    *int numEtage
+    *@param boolean direction
+    */
     public void creerRequeteExterne (int numEtage, boolean direction) {     
         RequeteExterne r = new RequeteExterne (numEtage, direction);
         requetes.add (r);
