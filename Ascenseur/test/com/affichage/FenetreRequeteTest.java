@@ -7,6 +7,7 @@ package com.affichage;
 
 import com.traitement.Requete;
 import java.util.Collection;
+import java.util.HashMap;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -62,20 +63,9 @@ public class FenetreRequeteTest {
         boolean ouvert = false;
         boolean bloque = false;
         Collection<Requete> requetes = null;
+        HashMap<String, String> options = null;
         FenetreRequete instance = null;
-        instance.mettreAJour(numEtage, enMouvement, ouvert, bloque, requetes);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of creerZoneTexte method, of class FenetreRequete.
-     */
-    @Test
-    public void testCreerZoneTexte() {
-        System.out.println("creerZoneTexte");
-        FenetreRequete instance = null;
-        instance.creerZoneTexte();
+        instance.mettreAJour(numEtage, enMouvement, ouvert, bloque, requetes, options);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

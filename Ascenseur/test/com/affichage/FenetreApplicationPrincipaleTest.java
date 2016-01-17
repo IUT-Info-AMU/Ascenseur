@@ -37,26 +37,8 @@ public class FenetreApplicationPrincipaleTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of creerMenu method, of class FenetreApplicationPrincipale.
-     */
     @Test
-    public void testCreerMenu() {
-        System.out.println("creerMenu");
-        FenetreApplicationPrincipale instance = new FenetreApplicationPrincipale();
-        instance.creerMenu();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of main method, of class FenetreApplicationPrincipale.
-     */
-    @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        FenetreApplicationPrincipale.main(args);
+    public void testSomeMethod() {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

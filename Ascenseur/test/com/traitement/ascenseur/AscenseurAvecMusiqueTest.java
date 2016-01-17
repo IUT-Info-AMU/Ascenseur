@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
  */
 public class AscenseurAvecMusiqueTest {
     
-    Ascenseur a;
+    AscenseurAvecOption a;
             
     public AscenseurAvecMusiqueTest() {
     }
@@ -45,8 +45,7 @@ public class AscenseurAvecMusiqueTest {
     @Test(expected = NullPointerException.class)
     public void testAction() {
         System.out.println("action");
-        
-        AscenseurAvecMusique instance = new AscenseurAvecMusique(a, "lala");
+        AscenseurAvecMusique instance = new AscenseurAvecMusique(a, "lala") ;
         instance.action();
         
     }
@@ -54,11 +53,11 @@ public class AscenseurAvecMusiqueTest {
     /**
      * Test of changerMusique method, of class AscenseurAvecMusique.
      */
-    @Test
+    @Test(expected = NullPointerException.class)
     public void testChangerMusique() {
         System.out.println("changerMusique");
-        String musique = "";
-        AscenseurAvecMusique instance = new AscenseurAvecMusique(a, "lalala");
+        String musique = "lala";
+        AscenseurAvecMusique instance = new AscenseurAvecMusique(a, "lala");
         instance.changerMusique(musique);
         
     }

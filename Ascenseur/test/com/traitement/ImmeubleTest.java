@@ -5,8 +5,7 @@
  */
 package com.traitement;
 
-import com.traitement.ascenseur.Ascenseur;
-import com.traitement.ascenseur.AscenseurStandard;
+import com.traitement.ascenseur.AscenseurAvecOption;
 import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -17,9 +16,11 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author r14004493
+ * @author jalal
  */
 public class ImmeubleTest {
+    
+    AscenseurAvecOption ascenseur;
     
     public ImmeubleTest() {
     }
@@ -46,8 +47,8 @@ public class ImmeubleTest {
     @Test
     public void testGetNombreEtage() {
         System.out.println("getNombreEtage");
-        Immeuble instance = new Immeuble(0);
-        int expResult = 0;
+        Immeuble instance = new Immeuble(10);
+        int expResult = 10;
         int result = instance.getNombreEtage();
         assertEquals(expResult, result);
         
@@ -59,9 +60,9 @@ public class ImmeubleTest {
     @Test
     public void testGetAscenseurs() {
         System.out.println("getAscenseurs");
-        Immeuble instance = new Immeuble(0);
-        ArrayList<Ascenseur> expResult = new ArrayList<Ascenseur> ();
-        ArrayList<Ascenseur> result = instance.getAscenseurs();
+        Immeuble instance = new Immeuble(10);
+        ArrayList<AscenseurAvecOption> expResult = new ArrayList<AscenseurAvecOption>() ;
+        ArrayList<AscenseurAvecOption> result = instance.getAscenseurs();
         assertEquals(expResult, result);
         
     }
@@ -72,9 +73,8 @@ public class ImmeubleTest {
     @Test
     public void testAjouterAscenseur() {
         System.out.println("ajouterAscenseur");
-        AscenseurStandard a = new AscenseurStandard();
-        Immeuble instance = new Immeuble(0);
-        instance.ajouterAscenseur(a);
+        Immeuble instance = new Immeuble(10);
+        instance.ajouterAscenseur(ascenseur);
         
     }
     

@@ -6,6 +6,7 @@
 package com.traitement.ascenseur;
 
 import com.traitement.Requete;
+import java.util.HashMap;
 import java.util.LinkedList;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -50,7 +51,7 @@ public class AscenseurStandardTest {
         boolean bloquer = false;
         AscenseurStandard instance = new AscenseurStandard();
         instance.bloquer(bloquer);
-        
+       
     }
 
     /**
@@ -74,7 +75,7 @@ public class AscenseurStandardTest {
         boolean mouvement = false;
         AscenseurStandard instance = new AscenseurStandard();
         instance.mettreEnMouvement(mouvement);
-        
+       
     }
 
     /**
@@ -83,7 +84,7 @@ public class AscenseurStandardTest {
     @Test
     public void testAjouterRequete() {
         System.out.println("ajouterRequete");
-        Requete r = null;
+        Requete r = new Requete();
         AscenseurStandard instance = new AscenseurStandard();
         instance.ajouterRequete(r);
         
@@ -135,7 +136,7 @@ public class AscenseurStandardTest {
         System.out.println("setMethode");
         AscenseurStandard instance = new AscenseurStandard();
         instance.setMethode(strategie);
-        
+       
     }
 
     /**
@@ -158,6 +159,19 @@ public class AscenseurStandardTest {
         AscenseurStandard instance = new AscenseurStandard();
         String expResult = instance.toString();
         String result = instance.toString();
+        assertEquals(expResult, result);
+        
+    }
+
+    /**
+     * Test of getOptions method, of class AscenseurStandard.
+     */
+    @Test
+    public void testGetOptions() {
+        System.out.println("getOptions");
+        AscenseurStandard instance = new AscenseurStandard();
+        HashMap<String, String> expResult = instance.getOptions();
+        HashMap<String, String> result = instance.getOptions();
         assertEquals(expResult, result);
         
     }

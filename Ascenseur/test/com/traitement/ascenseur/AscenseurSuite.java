@@ -17,7 +17,7 @@ import org.junit.runners.Suite;
  * @author jalal
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({com.traitement.ascenseur.OptionAscenseurTest.class, com.traitement.ascenseur.AscenseurObservableTest.class, com.traitement.ascenseur.AscenseurStrategieTest.class, com.traitement.ascenseur.AjoutRequeteAvanceTest.class, com.traitement.ascenseur.AscenseurTest.class, com.traitement.ascenseur.AscenseurAvecMusiqueTest.class, com.traitement.ascenseur.AscenseurStandardTest.class})
+@Suite.SuiteClasses({com.traitement.ascenseur.OptionAscenseurTest.class, com.traitement.ascenseur.AscenseurObservableTest.class, com.traitement.ascenseur.AscenseurStrategieTest.class, com.traitement.ascenseur.AjoutRequeteAvanceTest.class, com.traitement.ascenseur.AscenseurAvecOptionTest.class, com.traitement.ascenseur.AscenseurAvecMusiqueTest.class, com.traitement.ascenseur.AscenseurStandardTest.class})
 public class AscenseurSuite {
 
     @BeforeClass

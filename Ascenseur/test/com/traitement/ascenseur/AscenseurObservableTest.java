@@ -8,6 +8,7 @@ package com.traitement.ascenseur;
 import com.affichage.AfficheurObservateur;
 import com.traitement.Requete;
 import java.util.Collection;
+import java.util.HashMap;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -21,8 +22,8 @@ import static org.junit.Assert.*;
  */
 public class AscenseurObservableTest {
     
+    AscenseurObservable instance;
     AfficheurObservateur o;
-    Collection<Requete> requetes;
     
     public AscenseurObservableTest() {
     }
@@ -49,7 +50,6 @@ public class AscenseurObservableTest {
     @Test(expected = NullPointerException.class)
     public void testAjouterObserveur() {
         System.out.println("ajouterObserveur");
-        AscenseurObservable instance = new AscenseurObservableImpl();
         instance.ajouterObserveur(o);
         
     }
@@ -60,7 +60,6 @@ public class AscenseurObservableTest {
     @Test(expected = NullPointerException.class)
     public void testRetirerObserveur() {
         System.out.println("retirerObserveur");
-        AscenseurObservable instance = new AscenseurObservableImpl();
         instance.retirerObserveur(o);
         
     }
@@ -75,12 +74,13 @@ public class AscenseurObservableTest {
         boolean enMouvement = false;
         boolean ouvert = false;
         boolean bloque = false;
-        AscenseurObservable instance = new AscenseurObservableImpl();
-        instance.mettreAJourObservateurs(numEtage, enMouvement, ouvert, bloque, requetes);
-    
+        Collection<Requete> requetes = instance.getRequetes();
+        HashMap<String, String> options = instance.getOptions();
+        instance.mettreAJourObservateurs(numEtage, enMouvement, ouvert, bloque, requetes, options);
+        
     }
 
-    public class AscenseurObservableImpl extends AscenseurObservable {
+    public abstract class AscenseurObservableImpl extends AscenseurObservable {
     }
     
 }

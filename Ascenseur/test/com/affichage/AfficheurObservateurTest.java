@@ -7,6 +7,7 @@ package com.affichage;
 
 import com.traitement.Requete;
 import java.util.Collection;
+import java.util.HashMap;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -62,8 +63,9 @@ public class AfficheurObservateurTest {
         boolean ouvert = false;
         boolean bloque = false;
         Collection<Requete> requetes = null;
+        HashMap<String, String> options = null;
         AfficheurObservateur instance = new AfficheurObservateurImpl();
-        instance.mettreAJour(numEtage, enMouvement, ouvert, bloque, requetes);
+        instance.mettreAJour(numEtage, enMouvement, ouvert, bloque, requetes, options);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -73,7 +75,7 @@ public class AfficheurObservateurTest {
         public void afficher() {
         }
 
-        public void mettreAJour(int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
+        public void mettreAJour(int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes, HashMap<String, String> options) {
         }
     }
     

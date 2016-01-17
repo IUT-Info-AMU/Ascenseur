@@ -46,10 +46,10 @@ public class AjoutRequeteAvanceTest {
     public void testAjouterRequete() {
         System.out.println("ajouterRequete");
         int etageCourant = 0;
-        LinkedList<Requete> requetes = new LinkedList<>();
+        LinkedList<Requete> requetes = new LinkedList<Requete>();
         Requete r = new Requete();
         AjoutRequeteAvance instance = new AjoutRequeteAvance();
-        LinkedList<Requete> expResult = instance.ajouterRequete(0, requetes, r);
+        LinkedList<Requete> expResult = instance.ajouterRequete(etageCourant, requetes, r);;
         LinkedList<Requete> result = instance.ajouterRequete(etageCourant, requetes, r);
         assertEquals(expResult, result);
         

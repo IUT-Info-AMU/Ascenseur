@@ -6,6 +6,7 @@
 package com.traitement.ascenseur;
 
 import com.traitement.Requete;
+import java.util.HashMap;
 import java.util.LinkedList;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -18,9 +19,9 @@ import static org.junit.Assert.*;
  *
  * @author jalal
  */
-public class AscenseurTest {
+public class AscenseurAvecOptionTest {
     
-    public AscenseurTest() {
+    public AscenseurAvecOptionTest() {
     }
     
     @BeforeClass
@@ -40,72 +41,72 @@ public class AscenseurTest {
     }
 
     /**
-     * Test of bloquer method, of class Ascenseur.
+     * Test of bloquer method, of class AscenseurAvecOption.
      */
     @Test
     public void testBloquer() {
         System.out.println("bloquer");
         boolean bloquer = false;
-        Ascenseur instance = new AscenseurImpl();
+        AscenseurAvecOption instance = new AscenseurAvecOptionImpl();
         instance.bloquer(bloquer);
         
     }
 
     /**
-     * Test of ouvrir method, of class Ascenseur.
+     * Test of ouvrir method, of class AscenseurAvecOption.
      */
     @Test
     public void testOuvrir() {
         System.out.println("ouvrir");
-        boolean ouvrir = true;
-        Ascenseur instance = new AscenseurImpl();
+        boolean ouvrir = false;
+        AscenseurAvecOption instance = new AscenseurAvecOptionImpl();
         instance.ouvrir(ouvrir);
         
     }
 
     /**
-     * Test of mettreEnMouvement method, of class Ascenseur.
+     * Test of mettreEnMouvement method, of class AscenseurAvecOption.
      */
     @Test
     public void testMettreEnMouvement() {
         System.out.println("mettreEnMouvement");
         boolean mouvement = false;
-        Ascenseur instance = new AscenseurImpl();
+        AscenseurAvecOption instance = new AscenseurAvecOptionImpl();
         instance.mettreEnMouvement(mouvement);
         
     }
 
     /**
-     * Test of ajouterRequete method, of class Ascenseur.
+     * Test of ajouterRequete method, of class AscenseurAvecOption.
      */
     @Test
     public void testAjouterRequete() {
         System.out.println("ajouterRequete");
         Requete r = new Requete();
-        Ascenseur instance = new AscenseurImpl();
+        AscenseurAvecOption instance = new AscenseurAvecOptionImpl();
         instance.ajouterRequete(r);
-       
+        
     }
 
     /**
-     * Test of creerRequeteInterne method, of class Ascenseur.
+     * Test of creerRequeteInterne method, of class AscenseurAvecOption.
      */
     @Test
     public void testCreerRequeteInterne() {
         System.out.println("creerRequeteInterne");
         int numEtage = 0;
-        Ascenseur instance = new AscenseurImpl();
+        AscenseurAvecOption instance = new AscenseurAvecOptionImpl();
         instance.creerRequeteInterne(numEtage);
         
     }
 
     /**
-     * Test of getNumEtage method, of class Ascenseur.
+     * Test of getNumEtage method, of class AscenseurAvecOption.
      */
     @Test
     public void testGetNumEtage() {
         System.out.println("getNumEtage");
-        Ascenseur instance = new AscenseurImpl();
+        AscenseurAvecOption instance = new AscenseurAvecOptionImpl();
         int expResult = 0;
         int result = instance.getNumEtage();
         assertEquals(expResult, result);
@@ -113,12 +114,12 @@ public class AscenseurTest {
     }
 
     /**
-     * Test of getRequetes method, of class Ascenseur.
+     * Test of getRequetes method, of class AscenseurAvecOption.
      */
     @Test
     public void testGetRequetes() {
         System.out.println("getRequetes");
-        Ascenseur instance = new AscenseurImpl();
+        AscenseurAvecOption instance = new AscenseurAvecOptionImpl();
         LinkedList<Requete> expResult = instance.getRequetes();
         LinkedList<Requete> result = instance.getRequetes();
         assertEquals(expResult, result);
@@ -126,17 +127,30 @@ public class AscenseurTest {
     }
 
     /**
-     * Test of action method, of class Ascenseur.
+     * Test of getOptions method, of class AscenseurAvecOption.
+     */
+    @Test
+    public void testGetOptions() {
+        System.out.println("getOptions");
+        AscenseurAvecOption instance = new AscenseurAvecOptionImpl();
+        HashMap<String, String> expResult = instance.getOptions();
+        HashMap<String, String> result = instance.getOptions();
+        assertEquals(expResult, result);
+        
+    }
+
+    /**
+     * Test of action method, of class AscenseurAvecOption.
      */
     @Test
     public void testAction() {
         System.out.println("action");
-        Ascenseur instance = new AscenseurImpl();
+        AscenseurAvecOption instance = new AscenseurAvecOptionImpl();
         instance.action();
         
     }
 
-    public class AscenseurImpl implements Ascenseur {
+    public class AscenseurAvecOptionImpl implements AscenseurAvecOption {
 
         public void bloquer(boolean bloquer) {
         }
@@ -158,6 +172,10 @@ public class AscenseurTest {
         }
 
         public LinkedList<Requete> getRequetes() {
+            return null;
+        }
+
+        public HashMap<String, String> getOptions() {
             return null;
         }
 

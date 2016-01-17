@@ -6,6 +6,7 @@
 package com.traitement.ascenseur;
 
 import com.traitement.Requete;
+import java.util.HashMap;
 import java.util.LinkedList;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -93,7 +94,7 @@ public class OptionAscenseurTest {
         System.out.println("creerRequeteInterne");
         int numEtage = 0;
         instance.creerRequeteInterne(numEtage);
-
+        ;
     }
 
     /**
@@ -105,6 +106,7 @@ public class OptionAscenseurTest {
         int expResult = 0;
         int result = instance.getNumEtage();
         assertEquals(expResult, result);
+
     }
 
     /**
@@ -126,6 +128,18 @@ public class OptionAscenseurTest {
     public void testAction() {
         System.out.println("action");
         instance.action();
+
+    }
+
+    /**
+     * Test of getOptions method, of class OptionAscenseur.
+     */
+    @Test(expected = NullPointerException.class)
+    public void testGetOptions() {
+        System.out.println("getOptions");
+        HashMap<String, String> expResult = instance.getOptions();
+        HashMap<String, String> result = instance.getOptions();
+        assertEquals(expResult, result);
 
     }
 
