@@ -15,7 +15,7 @@ import com.affichage.AfficheurObservateur;
  *
  * @author Bprog, Gaëtan (javadoc)
  */
-public class AscenseurStandard extends AscenseurObservable implements AscenseurAvecOption {
+public class AscenseurStandard extends AscenseurObservable{
 
     private int                             numEtage;
     private boolean                         enMouvement;

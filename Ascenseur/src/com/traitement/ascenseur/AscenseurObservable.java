@@ -14,7 +14,7 @@ import com.affichage.AfficheurObservateur;
  *
  * @author m13001362, Gaëtan (modification du fichier)
  */
-public abstract class AscenseurObservable {
+public abstract class AscenseurObservable implements AscenseurAvecOption{
 
     protected ArrayList<AfficheurObservateur> observateurs;
     
