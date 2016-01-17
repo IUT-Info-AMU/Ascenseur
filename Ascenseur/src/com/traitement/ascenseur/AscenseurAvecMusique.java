@@ -5,17 +5,12 @@
  */
 package com.traitement.ascenseur;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 
 /**
  *
  * @author Bprog, Gaëtan (modification du fichier et javadoc)
  */
 public class AscenseurAvecMusique extends OptionAscenseur {
-    
-    private HashMap<String,String> options;
     
     /*
     *Constructeur de AscenseurAvecMusique
@@ -43,15 +38,6 @@ public class AscenseurAvecMusique extends OptionAscenseur {
     */
     public void changerMusique (String musique) {
         this.options.put("musique", musique);
-    }
-    
-    @Override
-    /*
-    *Retourne toutes les options de l'ascenseur dans un ArrayList
-    *@return ArrayList<String>
-    */
-    public HashMap<String,String> getOptions() {
-        return options;
     }
     
 }

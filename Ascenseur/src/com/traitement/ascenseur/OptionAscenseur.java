@@ -6,6 +6,7 @@
 package com.traitement.ascenseur;
 
 import com.traitement.Requete;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 /**
@@ -15,7 +16,7 @@ import java.util.LinkedList;
 public abstract class OptionAscenseur extends AscenseurObservable {
     
     protected AscenseurAvecOption ascenseur;
-    
+    protected HashMap<String,String> options;
     /*
     *COnstructeur de OptionAscenseur
     *@param AscenseurAvecOption ascenseur
@@ -94,6 +95,15 @@ public abstract class OptionAscenseur extends AscenseurObservable {
     */
     public void action () {
         ascenseur.action ();
+    }
+    
+    @Override
+    /*
+    *Retourne toutes les options de l'ascenseur dans un ArrayList
+    *@return ArrayList<String>
+    */
+    public HashMap<String,String> getOptions() {
+        return options;
     }
     
 }
