@@ -15,14 +15,14 @@ import java.util.LinkedList;
 public class ChoisirAscenseurSimple implements ControleurStrategie{
     
     /*
-    *Choix du bonne ascenseur pour la Requete entrante, le plus proche, celui qui n'a pas de Requete
+    *Choix du bon ascenseur pour la Requete entrante, le plus proche, celui qui n'a pas de Requete
     *@param requete RequeteExterne
     */
     public void choisirAscenseur (RequeteExterne requete) {
         
          LinkedList<RequeteExterne> requetes = Controleur.getRequetes ();
         
-        //Pour chaque AscenseurAvecOption contenu dans ascenceurs
+        //Pour chaque AscenseurAvecOption contenu dans ascenseurs
         for(AscenseurAvecOption ascenseur : Controleur.getAscenseurs () ){
             
             //si un AscenseurAvecOption n'a pas de requetes, alors on lui assigne celle-ci
