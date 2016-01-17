@@ -23,7 +23,7 @@ public class FenetreRequete extends JPanel implements AfficheurObservateur{
     private JTextArea zoneTexte;
     
     /*
-    *Constructeur de FenetreRequete, ajouteunObservateur à l'ascenseur passé en paramètre
+    *Constructeur de FenetreRequete, ajoute un Observateur à l'ascenseur passé en paramètre
     *@param AscenseurObservable ascenseur
     */
     public FenetreRequete(AscenseurObservable ascenseur){
@@ -39,7 +39,8 @@ public class FenetreRequete extends JPanel implements AfficheurObservateur{
     public void afficher() {
         String requetesString = "Requetes en cours : \n";
         for(Requete requete : requetes){
-            requetesString += requete.toString()+"\n";
+            requetesString += "l'ascenseur va à l'étage";
+            requetesString += requete.getNumEtage()+"\n";
         }
         zoneTexte.setText(requetesString);
     }
@@ -58,7 +59,7 @@ public class FenetreRequete extends JPanel implements AfficheurObservateur{
         afficher();
     }
     /*
-    *Créer la zone de texte de la fenètre, appelé dans le constructeur
+    *Créer la zone de texte de la fenètre, appelée dans le constructeur
     */
     private void creerZoneTexte(){
         zoneTexte = new JTextArea(10,50);

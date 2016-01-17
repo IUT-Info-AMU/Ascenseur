@@ -28,8 +28,8 @@ public class FenetreApplicationPrincipale extends JFrame{
     /*
     *Constructeur de FenetreApplicationPrincipale
     */
-    FenetreApplicationPrincipale(AscenseurObservable ascenseur){
-        super("Fenêtre principale");
+    public FenetreApplicationPrincipale (AscenseurObservable ascenseur){
+        super("Ascenseur");
         creerMenu();
         setLayout(new BorderLayout());
         add(new FenetreBoutonAscenseur(ascenseur), BorderLayout.WEST);
@@ -70,12 +70,12 @@ public class FenetreApplicationPrincipale extends JFrame{
                         System.out.println("Impossible d'ouvrir la javadoc !");
                     }
                 }       
-            });
+        });
         menuBar.add(documentation);
         
         JMenu aPropos = new JMenu("à propos de");
         JMenuItem equipe = new JMenuItem("Application crée par : Brice Maussang, "
-                                        + "Jérémie Topalian, "
+                                        + "Jérémy Topalian, "
                                         +"Jalal Rabahi, "
                                         + "Victor Pedrazzini, "
                                         + "Gaëtan Perrot");

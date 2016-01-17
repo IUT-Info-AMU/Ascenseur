@@ -52,7 +52,7 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
     *actualise l'affichage (ici il n'y en a pas, mais la possibilité est à garder)
     */
     public void afficher() {
-        //Do no thing
+        //Do nothing
     }
     
     @Override
@@ -72,7 +72,7 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
     }
     
     /*
-    *Creer les boutons pour le choix des requètes ainsi que la zone de texte pour rentrer le numéro d'étage
+    *Creer les boutons pour le choix des requêtes ainsi que la zone de texte pour rentrer le numéro d'étage
     */
     private void creerBouton(){
         
