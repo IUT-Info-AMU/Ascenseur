@@ -22,8 +22,8 @@ import javax.swing.JTextField;
  *
  * @author Gaëtan
  */
-public class FenetreBoutonAscenseur extends JPanel {
-
+public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservateur{
+    private AscenseurObservable ascenseur;
     private int     numEtage;
     private boolean enMouvement;
     private boolean ouvert;
@@ -32,8 +32,22 @@ public class FenetreBoutonAscenseur extends JPanel {
     public FenetreBoutonAscenseur(AscenseurObservable ascenseur){
         super();
         creerBouton();
+        this.ascenseur = ascenseur;
+        ascenseur.ajouterObserveur (this);
+        
     }
     
+    @Override
+    public void afficher() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    @Override
+    public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
+        this.numEtage = numEtage;
+        this.enMouvement = enMouvement;
+        this.ouvert = ouvert;
+        this.bloque = bloque;
+    }
     
     public void creerBouton(){
         
@@ -55,7 +69,7 @@ public class FenetreBoutonAscenseur extends JPanel {
             public void actionPerformed(ActionEvent event){
                 if(!numEtage.getText().isEmpty()){
                     if(requeteInterne.isSelected()){
-                        numEtage.getText();
+                        ascenseur.creerRequeteInterne(Integer.parseInt(numEtage.getText()));
                     }
                     else if(requeteExterne.isSelected()){
                         
