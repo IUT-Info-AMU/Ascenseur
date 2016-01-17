@@ -24,6 +24,9 @@ import javax.swing.JMenuItem;
  * @author Gaëtan
  */
 public class FenetreApplicationPrincipale extends JFrame{
+    /*
+    *Constructeur de FenetreApplicationPrincipale
+    */
     FenetreApplicationPrincipale(){
         super("Fenêtre principale");
         creerMenu();

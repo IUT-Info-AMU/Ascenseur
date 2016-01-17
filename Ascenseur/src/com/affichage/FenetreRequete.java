@@ -38,7 +38,7 @@ public class FenetreRequete extends JPanel implements AfficheurObservateur{
     public void afficher() {
         String requetesString = "Requetes en cours : \n";
         for(Requete requete : requetes){
-            
+            requete.toString();
         }
         zoneTexte.setText(requetesString);
     }
