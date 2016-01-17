@@ -6,6 +6,7 @@
 package com.traitement.ascenseur;
 
 import com.traitement.Requete;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 /**
@@ -55,6 +56,12 @@ public interface AscenseurAvecOption {
     *@return LinkedList<Requete>
     */
     public LinkedList<Requete> getRequetes ();
+    
+    /*
+    *Retourne toutes les options de l'ascenseur dans un HashMap<String,String>
+    *@return HashMap<String,String>
+    */
+    public HashMap<String,String> getOptions();
     
     /*
     *execute l'action de l'ascenseur

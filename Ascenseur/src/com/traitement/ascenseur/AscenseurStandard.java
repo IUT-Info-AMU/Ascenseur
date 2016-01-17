@@ -10,6 +10,7 @@ import com.traitement.RequeteInterne;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import com.affichage.AfficheurObservateur;
+import java.util.HashMap;
 
 /**
  *
@@ -23,6 +24,7 @@ public class AscenseurStandard extends AscenseurObservable{
     private boolean                         bloque;
     private LinkedList<Requete>             requetes;
     private AscenseurStrategie              methode;
+    private HashMap<String,String> options = null;
     
     /*
     *Constructeur de AscenseurStandard
@@ -167,6 +169,15 @@ public class AscenseurStandard extends AscenseurObservable{
     @Override
     public String toString () {
         return "Ascenseur{" + "numEtage=" + numEtage + ", enMouvement=" + enMouvement + ", ouvert=" + ouvert + ", bloque=" + bloque + ", requetes=" + requetes + '}';
+    }
+
+    @Override
+    /*
+    *Retourne toutes les options de l'ascenseur dans un ArrayList
+    *@return ArrayList<String>
+    */
+    public HashMap<String,String> getOptions() {
+        return options;
     }
         
 }//class AscenseurStandard

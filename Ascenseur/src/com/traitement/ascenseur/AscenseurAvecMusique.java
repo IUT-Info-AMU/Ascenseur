@@ -5,8 +5,8 @@
  */
 package com.traitement.ascenseur;
 
-import com.traitement.Requete;
-import java.util.Collection;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 
 /**
@@ -15,7 +15,7 @@ import java.util.Collection;
  */
 public class AscenseurAvecMusique extends OptionAscenseur {
     
-    private String musique;
+    private HashMap<String,String> options;
     
     /*
     *Constructeur de AscenseurAvecMusique
@@ -24,7 +24,7 @@ public class AscenseurAvecMusique extends OptionAscenseur {
     */
     public AscenseurAvecMusique (AscenseurAvecOption ascenseur, String nomMusique) {
         super (ascenseur);
-        this.musique = nomMusique;
+        options.put("musique", nomMusique);
     }
     
     @Override
@@ -34,7 +34,7 @@ public class AscenseurAvecMusique extends OptionAscenseur {
     */
     public void action () {
         super.action();
-        System.out.println ("joue " + musique);
+        System.out.println ("joue " + this.options.get("musique"));
     }
     
     /*
@@ -42,6 +42,16 @@ public class AscenseurAvecMusique extends OptionAscenseur {
     *@param musique String
     */
     public void changerMusique (String musique) {
-        this.musique = musique;
+        this.options.put("musique", musique);
     }
+    
+    @Override
+    /*
+    *Retourne toutes les options de l'ascenseur dans un ArrayList
+    *@return ArrayList<String>
+    */
+    public HashMap<String,String> getOptions() {
+        return options;
+    }
+    
 }
