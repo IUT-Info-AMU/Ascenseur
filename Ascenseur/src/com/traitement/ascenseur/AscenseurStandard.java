@@ -72,7 +72,8 @@ public class AscenseurStandard extends AscenseurObservable{
     *@param r Requete
     */
     public void ajouterRequete (Requete r) {       
-        requetes = methode.ajouterRequete (numEtage, requetes, r);       
+        requetes = methode.ajouterRequete (numEtage, requetes, r);
+        mettreAJourObservateurs (numEtage, enMouvement, ouvert, bloque, requetes,options);
     }
     
     @Override
