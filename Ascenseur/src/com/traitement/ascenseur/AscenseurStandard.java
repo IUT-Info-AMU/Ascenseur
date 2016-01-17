@@ -10,12 +10,13 @@ import com.traitement.RequeteInterne;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import com.affichage.AfficheurObservateur;
+import java.util.HashMap;
 
 /**
  *
- * @author Bprog, Gaëtan (javadoc)
+ * @author Bprog, Gaëtan (modification du fichier et javadoc)
  */
-public class AscenseurStandard extends AscenseurObservable implements Ascenseur {
+public class AscenseurStandard extends AscenseurObservable{
 
     private int                             numEtage;
     private boolean                         enMouvement;
@@ -23,6 +24,7 @@ public class AscenseurStandard extends AscenseurObservable implements Ascenseur 
     private boolean                         bloque;
     private LinkedList<Requete>             requetes;
     private AscenseurStrategie              methode;
+    private HashMap<String,String> options = null;
     
     /*
     *Constructeur de AscenseurStandard
@@ -101,11 +103,18 @@ public class AscenseurStandard extends AscenseurObservable implements Ascenseur 
         return requetes;
     }
     
+    /*
+    *Initialise la strategie à appliquer
+    *@param AscenseurStrategie strategie
+    */
     public void setMethode (AscenseurStrategie strategie) {
         this.methode = strategie;
     }
     
     @Override
+    /*
+    *l'action de l'ascenseur
+    */
     public void action () {
         //si l'ascenseur n'est pas bloque
         if ( !bloque ) {
@@ -153,13 +162,22 @@ public class AscenseurStandard extends AscenseurObservable implements Ascenseur 
             }
         }
         
-        mettreAJourObservateurs (numEtage, enMouvement, ouvert, bloque, requetes);
+        mettreAJourObservateurs (numEtage, enMouvement, ouvert, bloque, requetes,options);
         
     }// action()
 
     @Override
     public String toString () {
         return "Ascenseur{" + "numEtage=" + numEtage + ", enMouvement=" + enMouvement + ", ouvert=" + ouvert + ", bloque=" + bloque + ", requetes=" + requetes + '}';
+    }
+
+    @Override
+    /*
+    *Retourne toutes les options de l'ascenseur dans un ArrayList
+    *@return ArrayList<String>
+    */
+    public HashMap<String,String> getOptions() {
+        return options;
     }
         
 }//class AscenseurStandard

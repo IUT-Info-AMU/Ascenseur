@@ -7,14 +7,27 @@ package com.affichage;
 
 import com.traitement.Requete;
 import java.util.Collection;
+import java.util.HashMap;
 
 /**
  *
- * @author Bprog
+ * @author Bprog, Gaëtan (Javadoc)
  */
 public interface AfficheurObservateur {
     
-    public void afficher ();  
-    public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes);
+    /*
+    *Actualise l'affichage
+    */
+    public void afficher ();
+    
+    /*
+    *Met à jour l'observateur
+    *@param int numEtage
+    *@param boolean enMouvement
+    *@param boolean ouvert
+    *@param boolean bloque
+    *@param Collection<Requete> requetes
+    */
+    public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes, HashMap<String,String> options);
     
 }

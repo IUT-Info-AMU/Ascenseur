@@ -9,12 +9,13 @@ import com.traitement.Requete;
 import java.util.ArrayList;
 import java.util.Collection;
 import com.affichage.AfficheurObservateur;
+import java.util.HashMap;
 
 /**
  *
- * @author m13001362, Gaëtan (modification du fichier)
+ * @author m13001362, Gaëtan (modification du fichier et javadoc)
  */
-public abstract class AscenseurObservable {
+public abstract class AscenseurObservable implements AscenseurAvecOption{
 
     protected ArrayList<AfficheurObservateur> observateurs;
     
@@ -34,9 +35,18 @@ public abstract class AscenseurObservable {
         observateurs.remove(o);
     }
     
-    public void mettreAJourObservateurs (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
+    /*
+    *Met à jour les Observateurs
+    *@param int numEtage
+    *@param boolean enMouvement
+    *@param boolean ouvert
+    *@param boolean bloque
+    *@param Collection<Requete> requetes
+    *@return void
+    */
+    public void mettreAJourObservateurs (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes,HashMap<String,String> options) {
         for (AfficheurObservateur o : observateurs) {
-            o.mettreAJour (numEtage, enMouvement, ouvert, bloque, requetes);
+            o.mettreAJour (numEtage, enMouvement, ouvert, bloque, requetes, options);
         }
     }
     

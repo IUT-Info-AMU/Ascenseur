@@ -5,23 +5,23 @@
  */
 package com.traitement;
 
-import com.traitement.ascenseur.Ascenseur;
+import com.traitement.ascenseur.AscenseurAvecOption;
 import java.util.ArrayList;
 
 /**
  *
- * @author Thorrsten, Gaëtan (modification du fichier)
+ * @author Thorrsten, Gaëtan (javadoc)
  * 
  */
 public class Immeuble {
     private int nombreEtage;
-    private ArrayList<Ascenseur> ascenseurs;
+    private ArrayList<AscenseurAvecOption> ascenseurs;
     /*
     *Constructeur de la classe Immeuble
     *@param nombreEtage le nombre d'étage, un entier
     */
     public Immeuble (int nombreEtage) {
-        this.ascenseurs = new ArrayList<Ascenseur> ();
+        this.ascenseurs = new ArrayList<AscenseurAvecOption> ();
         this.nombreEtage = nombreEtage;
     }
     
@@ -38,16 +38,16 @@ public class Immeuble {
     * Cette fonction renvoit un tableau contenant els ascenseur de l'Immeuble
     *@return ArrayList<Ascenseur> un tableau d'ascenseurs
     */
-    public ArrayList<Ascenseur> getAscenseurs(){
+    public ArrayList<AscenseurAvecOption> getAscenseurs(){
         
         return this.ascenseurs;
     }
     
     /*
-    *Ajoute un Ascenseur à l'Immeuble
-    *@param ascenseur un Ascenseur
+    *Ajoute un AscenseurAvecOption à l'Immeuble
+    *@param ascenseur un AscenseurAvecOption
     */
-    public void ajouterAscenseur (Ascenseur ascenseur) {
+    public void ajouterAscenseur (AscenseurAvecOption ascenseur) {
         this.ascenseurs.add (ascenseur);
     }
 

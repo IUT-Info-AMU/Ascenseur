@@ -8,7 +8,9 @@ package com.affichage;
 import com.traitement.Requete;
 import com.traitement.ascenseur.AscenseurObservable;
 import java.util.Collection;
+import java.util.HashMap;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -20,34 +22,59 @@ public class FenetreAscenseur extends JPanel implements AfficheurObservateur{
     private boolean enMouvement;
     private boolean ouvert;
     private boolean bloque;
+    private JTextArea zoneTexte;
+    private HashMap<String, String> options;
     
+    /*
+    *Cosntructeur de FenetreAscenseur, ajoute un observateur à l'ascenseur passé en paramètre
+    *@param AscenseurObservable ascenseur
+    */
     public FenetreAscenseur(AscenseurObservable ascenseur){
         ascenseur.ajouterObserveur (this);
+        this.zoneTexte = new JTextArea("Vue Ascenseur sous forme de texte");
     }
     
     @Override
+    /*
+    *actualise l'affichage
+    */
     public void afficher() {
-         /*System.out.print ("---Ascenseur---\netage: " + numEtage + "\netat: ");
+        String ascenseurEtat = "---Ascenseur---\netage: " + numEtage + "\netat: ";
+        
         if ( bloque )
-            System.out.println ("BLOQUE");
+            ascenseurEtat += "BLOQUE";
         else {
             if ( ouvert )
-                System.out.print ("ouvert, ");
+                ascenseurEtat += "ouvert, ";
             else
-                System.out.print ("fermé, ");
+                ascenseurEtat += "fermé, ";
             if ( enMouvement )
-                System.out.println ("en mouvement");
+                ascenseurEtat += "en mouvement";
             else
-                System.out.println ("à l'arrêt");
-        }*/
+                ascenseurEtat += "à l'arrêt";
+        }
+        if(options != null)
+            zoneTexte.setText(ascenseurEtat + "\n" + options.toString());
+        else{
+            zoneTexte.setText(ascenseurEtat);
+        }
     }
 
     @Override
-    public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
+    /*
+    *Met à jour l'observateur
+    *@param int numEtage
+    *@param boolean enMouvement
+    *@param boolean ouvert
+    *@param boolean bloque
+    *@param Collection<Requete> requetes
+    */
+    public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes,HashMap<String,String> options) {
         this.numEtage = numEtage;
         this.enMouvement = enMouvement;
         this.ouvert = ouvert;
         this.bloque = bloque;
+        this.options = options;
         afficher ();
     }
     

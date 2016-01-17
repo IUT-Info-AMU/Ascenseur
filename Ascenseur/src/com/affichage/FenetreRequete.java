@@ -9,6 +9,7 @@ package com.affichage;
 import com.traitement.Requete;
 import com.traitement.ascenseur.AscenseurObservable;
 import java.util.Collection;
+import java.util.HashMap;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
@@ -18,6 +19,13 @@ import javax.swing.JTextArea;
  */
 public class FenetreRequete extends JPanel implements AfficheurObservateur{
 
+    private Collection<Requete> requetes;
+    private JTextArea zoneTexte;
+    
+    /*
+    *Constructeur de FenetreRequete, ajouteunObservateur à l'ascenseur passé en paramètre
+    *@param AscenseurObservable ascenseur
+    */
     public FenetreRequete(AscenseurObservable ascenseur){
         super();
         creerZoneTexte();
@@ -25,17 +33,35 @@ public class FenetreRequete extends JPanel implements AfficheurObservateur{
     }
     
     @Override
+    /*
+    *Actualise l'affichage
+    */
     public void afficher() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String requetesString = "Requetes en cours : \n";
+        for(Requete requete : requetes){
+            requetesString += requete.toString()+"\n";
+        }
+        zoneTexte.setText(requetesString);
     }
 
     @Override
-    public void mettreAJour(int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    /*
+    *Met à jour l'observateur
+    *@param int numEtage
+    *@param boolean enMouvement
+    *@param boolean ouvert
+    *@param boolean bloque
+    *@param Collection<Requete> requetes
+    */
+    public void mettreAJour(int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes,HashMap<String,String> options) {
+        this.requetes = requetes;
+        afficher();
     }
-    
-    public void creerZoneTexte(){
-        JTextArea ZoneTexte = new JTextArea(10,50);
-        this.add(ZoneTexte);
+    /*
+    *Créer la zone de texte de la fenètre, appelé dans le constructeur
+    */
+    private void creerZoneTexte(){
+        zoneTexte = new JTextArea(10,50);
+        this.add(zoneTexte);
     }
 }

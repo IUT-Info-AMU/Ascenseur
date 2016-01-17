@@ -6,13 +6,14 @@
 package com.traitement.ascenseur;
 
 import com.traitement.Requete;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 /**
  *
- * @author Bprog, Gaëtan (modification du fichier)
+ * @author Bprog, Gaëtan (modification du fichier et javadoc)
  */
-public interface Ascenseur {
+public interface AscenseurAvecOption {
     
     /*
     *Bloque les portes de l'ascenseur
@@ -57,7 +58,13 @@ public interface Ascenseur {
     public LinkedList<Requete> getRequetes ();
     
     /*
-    *
+    *Retourne toutes les options de l'ascenseur dans un HashMap<String,String>
+    *@return HashMap<String,String>
+    */
+    public HashMap<String,String> getOptions();
+    
+    /*
+    *execute l'action de l'ascenseur
     */
     public void action ();
     

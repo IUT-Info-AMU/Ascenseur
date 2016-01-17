@@ -8,26 +8,28 @@ package com.traitement.ascenseur;
 
 /**
  *
- * @author Bprog, Gaëtan (modification du fichier)
+ * @author Bprog, Gaëtan (modification du fichier et javadoc)
  */
 public class AscenseurAvecMusique extends OptionAscenseur {
     
-    private String musique;
-    
     /*
     *Constructeur de AscenseurAvecMusique
-    *@param ascenseur Ascenseur
+    *@param ascenseur AscenseurAvecOption
     *@param nomMusique String
     */
-    public AscenseurAvecMusique (Ascenseur ascenseur, String nomMusique) {
+    public AscenseurAvecMusique (AscenseurAvecOption ascenseur, String nomMusique) {
         super (ascenseur);
-        this.musique = nomMusique;
+        options.put("musique", nomMusique);
     }
     
     @Override
+    /*
+    *execute l'action de la classe parente et affiche la musique
+    *@return void
+    */
     public void action () {
         super.action();
-        System.out.println ("joue " + musique);
+        System.out.println ("joue " + this.options.get("musique"));
     }
     
     /*
@@ -35,7 +37,7 @@ public class AscenseurAvecMusique extends OptionAscenseur {
     *@param musique String
     */
     public void changerMusique (String musique) {
-        this.musique = musique;
+        this.options.put("musique", musique);
     }
     
 }

@@ -6,9 +6,8 @@
 package com.traitement;
 
 import com.affichage.AfficheurEtatAscenseur;
-import com.traitement.ascenseur.Ascenseur;
+import com.traitement.ascenseur.AscenseurAvecOption;
 import com.traitement.ascenseur.AscenseurAvecMusique;
-import com.traitement.ascenseur.AscenseurObservable;
 import com.traitement.ascenseur.AscenseurStandard;
 import com.traitement.controleur.Controleur;
 import java.util.ArrayList;
@@ -38,7 +37,7 @@ public class Client {
             ascenseurs.add (a);
         }
         
-        for (Ascenseur a : ascenseurs) {
+        for (AscenseurAvecOption a : ascenseurs) {
             immeuble.ajouterAscenseur(a);
             Controleur.getInstance().ajouterAscenseur(new AscenseurAvecMusique (a, "yoyo"));
         }
@@ -105,7 +104,7 @@ public class Client {
                    break;
            }//switch reponse
            
-           for(Ascenseur a : Controleur.getInstance().getAscenseurs()){
+           for(AscenseurAvecOption a : Controleur.getInstance().getAscenseurs()){
                
                a.action();
            }
