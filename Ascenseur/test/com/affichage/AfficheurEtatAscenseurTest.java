@@ -6,6 +6,7 @@
 package com.affichage;
 
 import com.traitement.Requete;
+import com.traitement.ascenseur.AscenseurObservable;
 import java.util.Collection;
 import java.util.HashMap;
 import org.junit.After;
@@ -20,6 +21,8 @@ import static org.junit.Assert.*;
  * @author jalal
  */
 public class AfficheurEtatAscenseurTest {
+    
+    AscenseurObservable ascenseur;
     
     public AfficheurEtatAscenseurTest() {
     }
@@ -43,31 +46,29 @@ public class AfficheurEtatAscenseurTest {
     /**
      * Test of afficher method, of class AfficheurEtatAscenseur.
      */
-    @Test
+    @Test(expected = NullPointerException.class)
     public void testAfficher() {
         System.out.println("afficher");
-        AfficheurEtatAscenseur instance = null;
+        AfficheurEtatAscenseur instance = new AfficheurEtatAscenseur(ascenseur);
         instance.afficher();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
      * Test of mettreAJour method, of class AfficheurEtatAscenseur.
      */
-    @Test
+    @Test(expected = NullPointerException.class)
     public void testMettreAJour() {
         System.out.println("mettreAJour");
         int numEtage = 0;
         boolean enMouvement = false;
         boolean ouvert = false;
         boolean bloque = false;
-        Collection<Requete> requetes = null;
-        HashMap<String, String> options = null;
-        AfficheurEtatAscenseur instance = null;
+        Collection<Requete> requetes = ascenseur.getRequetes();
+        HashMap<String, String> options = ascenseur.getOptions();
+        AfficheurEtatAscenseur instance = new AfficheurEtatAscenseur(ascenseur);
         instance.mettreAJour(numEtage, enMouvement, ouvert, bloque, requetes, options);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

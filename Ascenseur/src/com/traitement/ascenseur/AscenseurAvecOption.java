@@ -28,7 +28,7 @@ public interface AscenseurAvecOption {
     public void ouvrir (boolean ouvrir);
     
     /*
-    *MEt en mouvement l'ascenseur
+    *Met en mouvement l'ascenseur
     *@param mouvement boolean
     */
     public void mettreEnMouvement (boolean mouvement);

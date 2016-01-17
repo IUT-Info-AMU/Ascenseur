@@ -15,7 +15,7 @@ import java.util.LinkedList;
 public class ChoisirAscenseurAvance implements ControleurStrategie{
   
     /*
-    *Choix du bonne ascenseur pour la Requete entrante, le plus proche, celui qui n'a pas de Requete
+    *Choix du bon ascenseur pour la Requete entrante, le plus proche, celui qui n'a pas de Requete
     *@param requete RequeteExterne
     */
     @Override
@@ -23,7 +23,7 @@ public class ChoisirAscenseurAvance implements ControleurStrategie{
         
         LinkedList<RequeteExterne> requetes = Controleur.getRequetes ();
         
-        //Pour chaque AscenseurAvecOption contenu dans ascenceurs :
+        //Pour chaque AscenseurAvecOption contenu dans ascenseurs :
         for(AscenseurAvecOption ascenseur : Controleur.getAscenseurs () ) {
             
             //si un AscenseurAvecOption n'a pas de requetes, alors on lui assigne celle-ci
@@ -50,12 +50,12 @@ public class ChoisirAscenseurAvance implements ControleurStrategie{
                         
                         //On ajoute la requete à l'ascenseur
                         ascenseur.ajouterRequete(requete);
-                        //La requete est assigné au bon ascenseur, le controlleur ne s'en charge plus
+                        //La requete est assignée au bon ascenseur, le controleur ne s'en charge plus
                         requetes.removeFirst();
                         break;
 
                 }
-                //Si l'Assenceur  descend
+                //Si l'Ascenceur  descend
                 else if (ascenseur.getRequetes().getFirst().getNumEtage() < ascenseur.getNumEtage() &&
                     //Et requete descendante
                     requete.getDirection() == false && 
@@ -64,7 +64,7 @@ public class ChoisirAscenseurAvance implements ControleurStrategie{
                     
                     //On ajoute la requete en position 0 et devient prioritaire
                     ascenseur.ajouterRequete(requete);
-                    //La requete est assigné au bon ascenseur, le controlleur ne s'en charge plus
+                    //La requete est assignée au bon ascenseur, le controleur ne s'en charge plus
                     requetes.removeFirst();
                     break;
                 }

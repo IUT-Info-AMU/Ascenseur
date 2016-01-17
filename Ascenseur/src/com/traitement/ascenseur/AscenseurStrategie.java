@@ -16,7 +16,7 @@ public interface AscenseurStrategie {
     /*
     *Ajoute une Requete
     *@param int etageCourant
-    *@param LinkedList<Requete> requetes , la liste des requetes actuel
+    *@param LinkedList<Requete> requetes , la liste des requetes actuelles
     @param Requete r , la nouvelle Requete
     *@return LinkedList<Requete>
     */

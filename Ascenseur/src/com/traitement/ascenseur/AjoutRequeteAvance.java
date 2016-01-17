@@ -29,7 +29,7 @@ public class AjoutRequeteAvance implements AscenseurStrategie {
         if (requetesAscenseur.isEmpty()) {
             requetesAscenseur.add (r);
         }
-        //si il y a au mois une requete
+        //si il y a au moins une requete
         else {
             int i = 0;
             //si l'ascenseur monte

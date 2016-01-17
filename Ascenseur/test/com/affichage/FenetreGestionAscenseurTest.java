@@ -16,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author jalal
  */
-public class FenetreApplicationPrincipaleTest {
+public class FenetreGestionAscenseurTest {
     
-    public FenetreApplicationPrincipaleTest() {
+    public FenetreGestionAscenseurTest() {
     }
     
     @BeforeClass
@@ -39,7 +39,7 @@ public class FenetreApplicationPrincipaleTest {
 
     @Test
     public void testSomeMethod() {
-       
+        
     }
     
 }

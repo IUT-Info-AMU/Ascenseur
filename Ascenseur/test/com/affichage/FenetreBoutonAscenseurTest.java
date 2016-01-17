@@ -6,6 +6,8 @@
 package com.affichage;
 
 import com.traitement.Requete;
+import com.traitement.ascenseur.AscenseurObservable;
+import javax.swing.JFrame;
 import java.util.Collection;
 import java.util.HashMap;
 import org.junit.After;
@@ -20,6 +22,9 @@ import static org.junit.Assert.*;
  * @author jalal
  */
 public class FenetreBoutonAscenseurTest {
+    
+    AscenseurObservable ascenseur;
+    JFrame cadre;
     
     public FenetreBoutonAscenseurTest() {
     }
@@ -43,31 +48,29 @@ public class FenetreBoutonAscenseurTest {
     /**
      * Test of afficher method, of class FenetreBoutonAscenseur.
      */
-    @Test
+    @Test(expected = NullPointerException.class)
     public void testAfficher() {
         System.out.println("afficher");
-        FenetreBoutonAscenseur instance = null;
+        FenetreBoutonAscenseur instance = new FenetreBoutonAscenseur(ascenseur, 10, cadre);
         instance.afficher();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
      * Test of mettreAJour method, of class FenetreBoutonAscenseur.
      */
-    @Test
+    @Test(expected = NullPointerException.class)
     public void testMettreAJour() {
         System.out.println("mettreAJour");
         int numEtage = 0;
         boolean enMouvement = false;
         boolean ouvert = false;
         boolean bloque = false;
-        Collection<Requete> requetes = null;
-        HashMap<String, String> options = null;
-        FenetreBoutonAscenseur instance = null;
+        Collection<Requete> requetes = ascenseur.getRequetes();
+        HashMap<String, String> options = ascenseur.getOptions();
+        FenetreBoutonAscenseur instance = new FenetreBoutonAscenseur(ascenseur, 10, cadre);
         instance.mettreAJour(numEtage, enMouvement, ouvert, bloque, requetes, options);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }
