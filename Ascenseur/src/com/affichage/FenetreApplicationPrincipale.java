@@ -6,6 +6,7 @@
 package com.affichage;
 
 import com.traitement.Immeuble;
+import com.traitement.ascenseur.AscenseurAvecMusique;
 import com.traitement.ascenseur.AscenseurAvecOption;
 import com.traitement.ascenseur.AscenseurStandard;
 import com.traitement.controleur.Controleur;
