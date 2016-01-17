@@ -25,7 +25,7 @@ public class FenetreAscenseur extends JPanel implements AfficheurObservateur{
     private JTextArea zoneTexte;
     private HashMap<String, String> options;
     
-    /*
+    /**
     *Constructeur de FenetreAscenseur, ajoute un observateur à l'ascenseur passé en paramètre
     *@param AscenseurObservable ascenseur
     */
@@ -35,7 +35,7 @@ public class FenetreAscenseur extends JPanel implements AfficheurObservateur{
     }
     
     @Override
-    /*
+    /**
     *actualise l'affichage
     */
     public void afficher() {
@@ -61,7 +61,7 @@ public class FenetreAscenseur extends JPanel implements AfficheurObservateur{
     }
 
     @Override
-    /*
+    /**
     *Met à jour l'observateur
     *@param int numEtage
     *@param boolean enMouvement

@@ -15,12 +15,12 @@ import java.util.HashMap;
  */
 public interface AfficheurObservateur {
     
-    /*
+    /**
     *Actualise l'affichage
     */
     public void afficher ();
     
-    /*
+    /**
     *Met à jour l'observateur
     *@param int numEtage
     *@param boolean enMouvement

@@ -14,7 +14,7 @@ import javax.swing.JFrame;
  * @author Gaëtan
  */
 public class FenetreGestionAscenseur extends JFrame{
-    /*
+    /**
     *Constructeur de FenetreGestionAscenseur
     */
     public FenetreGestionAscenseur (AscenseurObservable ascenseur, int nombreEtageMax){

@@ -14,7 +14,7 @@ import java.util.LinkedList;
  */
 public class ChoisirAscenseurSimple implements ControleurStrategie{
     
-    /*
+    /**
     *Choix du bon ascenseur pour la Requete entrante, le plus proche, celui qui n'a pas de Requete
     *@param requete RequeteExterne
     */

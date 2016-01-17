@@ -17,7 +17,7 @@ public abstract class OptionAscenseur extends AscenseurObservable {
     
     protected AscenseurAvecOption ascenseur;
     protected HashMap<String,String> options;
-    /*
+    /**
     *COnstructeur de OptionAscenseur
     *@param AscenseurAvecOption ascenseur
     */
@@ -26,7 +26,7 @@ public abstract class OptionAscenseur extends AscenseurObservable {
     }
     
     @Override
-    /*
+    /**
     *Bloque les portes de l'ascenseur
     *@param boolean bloquer
     */
@@ -35,7 +35,7 @@ public abstract class OptionAscenseur extends AscenseurObservable {
     }
     
     @Override
-    /*
+    /**
     *Ouvre les portes de l'ascenseur
     *@param boolean ouvrir
     */
@@ -44,7 +44,7 @@ public abstract class OptionAscenseur extends AscenseurObservable {
     }
     
     @Override
-    /*
+    /**
     *Met en mouvement l'ascenseur
     *@param boolean mouvement
     */
@@ -53,7 +53,7 @@ public abstract class OptionAscenseur extends AscenseurObservable {
     } 
     
     @Override
-    /*
+    /**
     *Ajoute une Requete à l'ascenseur
     *@param Requete r
     */
@@ -62,7 +62,7 @@ public abstract class OptionAscenseur extends AscenseurObservable {
     }
     
     @Override
-    /*
+    /**
     *Creer une Requete Interne
     *@param int numEtage
     */
@@ -71,7 +71,7 @@ public abstract class OptionAscenseur extends AscenseurObservable {
     }  
     
     @Override
-    /*
+    /**
     *Retourne le numéro d'étage
     *@return int numEtage
     */
@@ -80,7 +80,7 @@ public abstract class OptionAscenseur extends AscenseurObservable {
     }
     
     @Override
-    /*
+    /**
     *Retourne la list des Requetes de l'ascenseur
     *@return LinkedList<Requete>
     */
@@ -89,7 +89,7 @@ public abstract class OptionAscenseur extends AscenseurObservable {
     }
     
     @Override
-    /*
+    /**
     *execute l'action de l'ascenseur
     *@return void
     */
@@ -98,12 +98,11 @@ public abstract class OptionAscenseur extends AscenseurObservable {
     }
     
     @Override
-    /*
+    /**
     *Retourne toutes les options de l'ascenseur dans un ArrayList
     *@return ArrayList<String>
     */
     public HashMap<String,String> getOptions() {
         return options;
     }
-    
 }

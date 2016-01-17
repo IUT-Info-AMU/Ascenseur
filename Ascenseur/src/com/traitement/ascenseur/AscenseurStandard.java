@@ -26,7 +26,7 @@ public class AscenseurStandard extends AscenseurObservable{
     private AscenseurStrategie              methode;
     private HashMap<String,String> options = null;
     
-    /*
+    /**
     *Constructeur de AscenseurStandard
     */
     public AscenseurStandard () {
@@ -40,7 +40,7 @@ public class AscenseurStandard extends AscenseurObservable{
     }
     
     @Override
-    /*
+    /**
     *Bloque la porte de l'Ascenseur
     *@param bloquer boolean
     */
@@ -49,7 +49,7 @@ public class AscenseurStandard extends AscenseurObservable{
     }
   
     @Override
-    /*
+    /**
     *Ouvrir la porte de l'Ascenseur
     *@param ouvrir boolean
     */
@@ -58,7 +58,7 @@ public class AscenseurStandard extends AscenseurObservable{
     }
     
     @Override
-    /*
+    /**
     *Met en mouvement l'Ascenseur
     *@param mouvement boolean
     */
@@ -67,7 +67,7 @@ public class AscenseurStandard extends AscenseurObservable{
     }    
     
     @Override
-    /*
+    /**
     *Ajoute une Requete
     *@param r Requete
     */
@@ -77,7 +77,7 @@ public class AscenseurStandard extends AscenseurObservable{
     }
     
     @Override
-    /*
+    /**
     *Creer une RequeteInterne
     *@param numEtage int
     */
@@ -87,8 +87,8 @@ public class AscenseurStandard extends AscenseurObservable{
     }
 
     @Override
-    /*
-    *
+    /**
+    *Retourne le numéro d'étage
     *@return int
     */
     public int getNumEtage () {
@@ -96,7 +96,7 @@ public class AscenseurStandard extends AscenseurObservable{
     }
 
     @Override
-    /*
+    /**
     *Retourne une List des Requete
     *@return LinkedList<Requete>
     */
@@ -104,7 +104,7 @@ public class AscenseurStandard extends AscenseurObservable{
         return requetes;
     }
     
-    /*
+    /**
     *Initialise la strategie à appliquer
     *@param AscenseurStrategie strategie
     */
@@ -113,7 +113,7 @@ public class AscenseurStandard extends AscenseurObservable{
     }
     
     @Override
-    /*
+    /**
     *l'action de l'ascenseur
     */
     public void action () {
@@ -168,12 +168,15 @@ public class AscenseurStandard extends AscenseurObservable{
     }// action()
 
     @Override
+    /**
+     * Méthode ToString d'AscenseurStandard
+     */
     public String toString () {
         return "Ascenseur{" + "numEtage=" + numEtage + ", enMouvement=" + enMouvement + ", ouvert=" + ouvert + ", bloque=" + bloque + ", requetes=" + requetes + '}';
     }
 
     @Override
-    /*
+    /**
     *Retourne toutes les options de l'ascenseur dans un ArrayList
     *@return ArrayList<String>
     */

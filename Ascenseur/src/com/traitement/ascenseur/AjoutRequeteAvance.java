@@ -15,7 +15,7 @@ import java.util.LinkedList;
 public class AjoutRequeteAvance implements AscenseurStrategie {
     
     @Override
-    /*
+    /**
     *Ajoute une nouvelle Requete
     *@param int etageCounrant
     *@param LinkedList<Requete> requetes , les requetes

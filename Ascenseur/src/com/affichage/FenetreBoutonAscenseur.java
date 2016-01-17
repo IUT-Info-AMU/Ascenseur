@@ -39,7 +39,7 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
     private final int nombreEtageMax;
     private final JFrame cadreParent;
     
-    /*
+    /**
     *Constructeur de FenetreBoutonAscenseur, ajoute un observateur à l'ascenseur passé en paramètre
     *@param AscenseurObservable ascenseur
     */
@@ -53,7 +53,7 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
     }
     
     @Override
-    /*
+    /**
     *actualise l'affichage (ici il n'y en a pas, mais la possibilité est à garder)
     */
     public void afficher() {
@@ -61,7 +61,7 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
     }
     
     @Override
-    /*
+    /**
     *Met à jour l'observateur
     *@param int numEtage
     *@param boolean enMouvement
@@ -76,7 +76,7 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
         this.bloque = bloque;
     }
     
-    /*
+    /**
     *Creer les boutons pour le choix des requêtes ainsi que la zone de texte pour rentrer le numéro d'étage
     */
     private void creerBouton(){

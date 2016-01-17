@@ -8,10 +8,10 @@ import com.traitement.RequeteExterne;
 
 /**
  *
- * @author Thorrsten
+ * @author Thorrsten, Gaëtan et Jérémy (Javadoc)
  */
 public interface ControleurStrategie {
-    /*
+    /**
     *Choix du bon ascenseur pour la Requete entrante
     *@param req RequeteExterne
     */

@@ -6,7 +6,6 @@
 package com.affichage;
 
 import com.traitement.Immeuble;
-import com.traitement.ascenseur.AscenseurAvecMusique;
 import com.traitement.ascenseur.AscenseurAvecOption;
 import com.traitement.ascenseur.AscenseurStandard;
 import com.traitement.controleur.Controleur;
@@ -30,7 +29,7 @@ import javax.swing.JPanel;
  * @author Gaëtan
  */
 public class FenetreApplicationPrincipale extends JFrame{
-    /*
+    /**
     *Constructeur de FenetreApplicationPrincipale
     */
     public FenetreApplicationPrincipale (){
@@ -68,7 +67,7 @@ public class FenetreApplicationPrincipale extends JFrame{
         setVisible(true);
     }
     
-    /*
+    /**
     *Creer le menu et ses boutons
     */
     private void creerMenu() {

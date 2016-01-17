@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class Immeuble {
     private int nombreEtage;
     private ArrayList<AscenseurAvecOption> ascenseurs;
-    /*
+    /**
     *Constructeur de la classe Immeuble
     *@param nombreEtage le nombre d'étage, un entier
     */
@@ -25,7 +25,7 @@ public class Immeuble {
         this.nombreEtage = nombreEtage;
     }
     
-    /*
+    /**
     *Cette fonction renvoie le nombre d'étage de l'Immeuble
     *@return int le nombre d'étage
     */
@@ -34,7 +34,7 @@ public class Immeuble {
         return this.nombreEtage;
     }
     
-    /*
+    /**
     * Cette fonction renvoie un tableau contenant les ascenseur de l'Immeuble
     *@return ArrayList<Ascenseur> un tableau d'ascenseurs
     */
@@ -43,7 +43,7 @@ public class Immeuble {
         return this.ascenseurs;
     }
     
-    /*
+    /**
     *Ajoute un AscenseurAvecOption à l'Immeuble
     *@param ascenseur un AscenseurAvecOption
     */
