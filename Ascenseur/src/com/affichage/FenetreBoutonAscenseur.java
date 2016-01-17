@@ -49,7 +49,7 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
         this.bloque = bloque;
     }
     
-    public void creerBouton(){
+    private void creerBouton(){
         
         ButtonGroup groupeBouton = new ButtonGroup();
         

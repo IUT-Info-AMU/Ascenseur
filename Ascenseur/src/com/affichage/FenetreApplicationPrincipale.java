@@ -36,7 +36,7 @@ public class FenetreApplicationPrincipale extends JFrame{
         setVisible(true);
     }
     
-    public void creerMenu(){
+    private void creerMenu(){
         JMenuBar menuBar = new JMenuBar();
         
         JMenu fichier = new JMenu("Fichier");
