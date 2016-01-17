@@ -7,6 +7,7 @@ package com.affichage;
 
 import com.traitement.Requete;
 import java.util.Collection;
+import java.util.HashMap;
 
 /**
  *
@@ -27,6 +28,6 @@ public interface AfficheurObservateur {
     *@param boolean bloque
     *@param Collection<Requete> requetes
     */
-    public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes);
+    public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes, HashMap<String,String> options);
     
 }

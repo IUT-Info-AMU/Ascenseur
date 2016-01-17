@@ -13,6 +13,7 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Collection;
+import java.util.HashMap;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -63,7 +64,7 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
     *@param boolean bloque
     *@param Collection<Requete> requetes
     */
-    public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
+    public void mettreAJour (int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes,HashMap<String,String> options) {
         this.numEtage = numEtage;
         this.enMouvement = enMouvement;
         this.ouvert = ouvert;

@@ -9,6 +9,7 @@ package com.affichage;
 import com.traitement.Requete;
 import com.traitement.ascenseur.AscenseurObservable;
 import java.util.Collection;
+import java.util.HashMap;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
@@ -52,7 +53,7 @@ public class FenetreRequete extends JPanel implements AfficheurObservateur{
     *@param boolean bloque
     *@param Collection<Requete> requetes
     */
-    public void mettreAJour(int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes) {
+    public void mettreAJour(int numEtage, boolean enMouvement, boolean ouvert, boolean bloque, Collection<Requete> requetes,HashMap<String,String> options) {
         this.requetes = requetes;
         afficher();
     }

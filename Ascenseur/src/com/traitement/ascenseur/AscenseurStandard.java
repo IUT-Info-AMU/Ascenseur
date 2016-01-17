@@ -14,7 +14,7 @@ import java.util.HashMap;
 
 /**
  *
- * @author Bprog, Gaëtan (javadoc)
+ * @author Bprog, Gaëtan (modification du fichier et javadoc)
  */
 public class AscenseurStandard extends AscenseurObservable{
 
@@ -162,7 +162,7 @@ public class AscenseurStandard extends AscenseurObservable{
             }
         }
         
-        mettreAJourObservateurs (numEtage, enMouvement, ouvert, bloque, requetes);
+        mettreAJourObservateurs (numEtage, enMouvement, ouvert, bloque, requetes,options);
         
     }// action()
 
