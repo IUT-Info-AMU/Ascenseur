@@ -8,15 +8,13 @@ package com.traitement;
 import com.affichage.AfficheurEtatAscenseur;
 import com.affichage.FenetreApplicationPrincipale;
 import com.traitement.ascenseur.AscenseurAvecOption;
-import com.traitement.ascenseur.AscenseurAvecMusique;
 import com.traitement.ascenseur.AscenseurStandard;
 import com.traitement.controleur.Controleur;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  *
- * @author Bprog, Gaëtan (modification du fichier)
+ * @author Brice, Gaëtan (modification du fichier)
  */
 public class Client {
     
@@ -28,16 +26,17 @@ public class Client {
         * + exception
         */
     try {
-        
+        new FenetreApplicationPrincipale ();
+        /* 
         Immeuble immeuble = new Immeuble(10);
 
         for(int i = 0 ;i < 2; ++i) {
             AscenseurStandard a = new AscenseurStandard ();
             immeuble.ajouterAscenseur(a);
             Controleur.getInstance().ajouterAscenseur(a);
-            new FenetreApplicationPrincipale (a);
+            new AfficheurEtatAscenseur (a);
         }
-/*
+        
         while(true){
             
            System.out.println("Voulez-vous ajoutez une requete ? (O/N)");
@@ -46,9 +45,9 @@ public class Client {
                System.out.println("un caractere seulement par requete (O/N)");
                reponse = new Scanner(System.in).next();
             }
-            */
+        
            /*if(reponse.length()>1)throw new Exception("This exception is handled here.");*/
-            /*
+        /*   
            reponse = reponse.toUpperCase(); 
            switch(reponse){
                

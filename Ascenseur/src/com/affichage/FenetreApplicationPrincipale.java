@@ -5,8 +5,10 @@
  */
 package com.affichage;
 
-import com.traitement.ascenseur.AscenseurObservable;
-import java.awt.BorderLayout;
+import com.traitement.Immeuble;
+import com.traitement.ascenseur.AscenseurAvecOption;
+import com.traitement.ascenseur.AscenseurStandard;
+import com.traitement.controleur.Controleur;
 import java.awt.Desktop;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
@@ -15,10 +17,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JPanel;
 
 /**
  *
@@ -28,13 +32,36 @@ public class FenetreApplicationPrincipale extends JFrame{
     /*
     *Constructeur de FenetreApplicationPrincipale
     */
-    public FenetreApplicationPrincipale (AscenseurObservable ascenseur){
-        super("Ascenseur");
-        creerMenu();
-        setLayout(new BorderLayout());
-        add(new FenetreBoutonAscenseur(ascenseur), BorderLayout.WEST);
-        add(new FenetreRequete(ascenseur),BorderLayout.EAST);
-        add(new FenetreAscenseur(ascenseur),BorderLayout.SOUTH);
+    public FenetreApplicationPrincipale (){
+        super("Application");
+        creerMenu ();
+        
+        final Immeuble immeuble = new Immeuble (10);
+        
+        JButton ajoutAscenseur = new JButton("+ Ascenseur");
+        ajoutAscenseur.addActionListener(new ActionListener() {
+            public void actionPerformed (ActionEvent event) {
+                AscenseurStandard a = new AscenseurStandard ();
+                immeuble.ajouterAscenseur (a);
+                Controleur.getInstance().ajouterAscenseur (a);
+                new FenetreGestionAscenseur (a);
+            }
+        });
+
+        JButton action = new JButton("Action");
+        action.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent event) {
+                for (AscenseurAvecOption a : Controleur.getInstance().getAscenseurs()) {
+                    a.action();
+                }
+            }
+        });
+        JPanel p = new JPanel ();
+        p.add (ajoutAscenseur);
+        p.add (action);
+        
+        add (p);
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setVisible(true);
@@ -43,7 +70,7 @@ public class FenetreApplicationPrincipale extends JFrame{
     /*
     *Creer le menu et ses boutons
     */
-    private void creerMenu(){
+    private void creerMenu() {
         JMenuBar menuBar = new JMenuBar();
         
         JMenu fichier = new JMenu("Fichier");
