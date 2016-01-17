@@ -31,6 +31,8 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
     private boolean bloque;
     JRadioButton requeteInterne;
     JRadioButton requeteExterne;
+    JRadioButton haut;
+    JRadioButton bas;
     
     /*
     *Constructeur de FenetreBoutonAscenseur, ajoute un observateur à l'ascenseur passé en paramètre
@@ -73,15 +75,36 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
     */
     private void creerBouton(){
         
-        ButtonGroup groupeBouton = new ButtonGroup();
+        ButtonGroup requetes = new ButtonGroup();
+        ButtonGroup direction = new ButtonGroup();
+        
+        final JRadioButton haut = new JRadioButton("haut");
+        haut.setVisible(false);
+        direction.add(haut);
+        final JRadioButton bas = new JRadioButton("bas");
+        bas.setVisible(false);
+        direction.add(bas);
         
         requeteInterne = new JRadioButton("Requete Interne");
         requeteInterne.setActionCommand("requete interne");
-        groupeBouton.add(requeteInterne);
+        requeteInterne.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                haut.setVisible(false);
+                bas.setVisible(false);
+            }     
+        });
+        requetes.add(requeteInterne);
         
         requeteExterne = new JRadioButton("Requete Externe");
         requeteExterne.setActionCommand("requete interne");
-        groupeBouton.add(requeteExterne);
+        requeteExterne.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                haut.setVisible(true);
+                bas.setVisible(true);
+            }     
+        });
+        requetes.add(requeteExterne);
+        
         
         final JTextField numEtageTexte = new JTextField();
         numEtageTexte.setPreferredSize( new Dimension( 30, 20 ) );
@@ -102,6 +125,8 @@ public class FenetreBoutonAscenseur extends JPanel implements AfficheurObservate
         
         this.add(requeteInterne);
         this.add(requeteExterne);
+        this.add(haut);
+        this.add(bas);
         this.add(numEtageTexte);
         this.add(envoyer);          
     }
