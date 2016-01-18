@@ -34,7 +34,7 @@ public class AscenseurStandard extends AscenseurObservable{
         requetes          = new LinkedList<Requete> ();
         observateurs      = new ArrayList<AfficheurObservateur> ();
         methode           = new AjoutRequeteAvance ();
-        options           = new HashMap<String,String> ();
+        options           = null;
         this.enMouvement  = false;
         this.ouvert       = false;
         this.bloque       = false;
