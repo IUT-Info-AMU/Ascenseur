@@ -22,17 +22,7 @@ public class AscenseurAvecMusique extends OptionAscenseur {
         super (ascenseur);
         ascenseur.getOptions().put(optionName, nomMusique);
     }
-    
-    @Override
-    /**
-    *execute l'action de la classe parente et affiche la musique
-    *@return void
-    */
-    public void action () {
-        super.action();
-        System.out.println ("joue " + this.options.get("musique"));
-    }
-    
+
     /**
     *Permet de changer de musique
     *@param musique String
