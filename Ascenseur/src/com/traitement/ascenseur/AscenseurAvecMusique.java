@@ -37,6 +37,7 @@ public class AscenseurAvecMusique extends OptionAscenseur {
     *@param musique String
     */
     public void changerMusique (String musique) {
+        this.options.remove("musique");
         this.options.put("musique", musique);
     }
     
