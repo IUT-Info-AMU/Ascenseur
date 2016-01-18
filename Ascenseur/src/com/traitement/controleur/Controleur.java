@@ -21,7 +21,7 @@ public class Controleur {
     private static ArrayList<AscenseurAvecOption> ascenseurs;
     private ControleurStrategie methode;
     
-    /*
+    /**
     *Constructeur du controleur
     */
     private Controleur () {
@@ -30,58 +30,61 @@ public class Controleur {
         methode     = new ChoisirAscenseurAvance       ();
     }
     
-    /*
+    /**
     *Creer une Requete externe avec le num d'étage voulu et la direction (haut(true) ou bas(false))
     *@param int numEtage
     *@param boolean direction
     */
     public void creerRequeteExterne (int numEtage, boolean direction) {     
         RequeteExterne r = new RequeteExterne (numEtage, direction);
-        requetes.add (r);
-        
+        requetes.add (r); 
     }
-    /*
+    
+    /**
     *Choisir l'Ascenseur avec une Requete externe 
     *@param RequeteExterne requete
     */
-    public void choisirAscenseur (RequeteExterne requete) {   
-        
+    public void choisirAscenseur (RequeteExterne requete) {    
         if ( !requetes.isEmpty() ) {
             //appelle la methode appropriée de choisirAscenseur()
             methode.choisirAscenseur (requete);
         }
     }
-     /*
+    
+    /**
     *Ajout de l'Ascenseur avec option
     *@param AscenseurAvecOption a
     */
     public void ajouterAscenseur (AscenseurAvecOption a) {
         ascenseurs.add (a);
     }
-    /*
+    
+    /**
     *Accesseur de l'Ascenseur
     */
     public static ArrayList<AscenseurAvecOption> getAscenseurs () {
         return ascenseurs;
     }
-    /*
+    
+    /**
     *Accesseur de Requetes
     */
     public static LinkedList<RequeteExterne> getRequetes () {
         return requetes;
     }
-    /*
+    
+    /**
     *Mutateur de Methode
     *@param ControleurStrategie methode
     */
     public void setMethode (ControleurStrategie methode) {
         this.methode = methode;
     }
-    /*
+    
+    /**
     *Accesseur d'Instance
     */
     public static Controleur getInstance () {
         return instance;
     }
-
 }

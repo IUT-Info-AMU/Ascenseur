@@ -13,7 +13,7 @@ import java.util.LinkedList;
  * @author Bprog, Gaëtan (javadoc)
  */
 public interface AscenseurStrategie {
-    /*
+    /**
     *Ajoute une Requete
     *@param int etageCourant
     *@param LinkedList<Requete> requetes , la liste des requetes actuelles

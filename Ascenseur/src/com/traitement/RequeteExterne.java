@@ -13,7 +13,7 @@ public class RequeteExterne extends Requete {
     
     private boolean haut;
     
-    /*
+    /**
     *Constructeur de RequeteExterne
     *@param numEtage numéro de l'étage voulu
     *@param direction indique la direction avec un booléen
@@ -23,7 +23,7 @@ public class RequeteExterne extends Requete {
         this.haut = direction;
     }
     
-    /*
+    /**
     *Retourne le numéro d'étage
     *@return int numEtage
     */
@@ -31,13 +31,11 @@ public class RequeteExterne extends Requete {
         return numEtage;
     }
     
-    /*
+    /**
     *Retourne la direction, un booléen
     *@return boolean haut
     */
     public boolean getDirection(){
-        
         return haut;
     }
-    
 }

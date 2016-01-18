@@ -13,7 +13,7 @@ public class Requete {
     
     protected int numEtage;  
     
-    /*
+    /**
     *Retourne le numéro de l'étage
     *@return numEtage retourne le numéro d'étage
     */

@@ -22,7 +22,7 @@ public class FenetreRequete extends JPanel implements AfficheurObservateur{
     private Collection<Requete> requetes;
     private JTextArea zoneTexte;
     
-    /*
+    /**
     *Constructeur de FenetreRequete, ajoute un Observateur à l'ascenseur passé en paramètre
     *@param AscenseurObservable ascenseur
     */
@@ -33,7 +33,7 @@ public class FenetreRequete extends JPanel implements AfficheurObservateur{
     }
     
     @Override
-    /*
+    /**
     *Actualise l'affichage
     */
     public void afficher() {
@@ -46,7 +46,7 @@ public class FenetreRequete extends JPanel implements AfficheurObservateur{
     }
 
     @Override
-    /*
+    /**
     *Met à jour l'observateur
     *@param int numEtage
     *@param boolean enMouvement
@@ -58,7 +58,7 @@ public class FenetreRequete extends JPanel implements AfficheurObservateur{
         this.requetes = requetes;
         afficher();
     }
-    /*
+    /**
     *Créer la zone de texte de la fenètre, appelée dans le constructeur
     */
     private void creerZoneTexte(){

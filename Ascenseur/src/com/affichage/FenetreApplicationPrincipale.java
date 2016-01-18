@@ -30,7 +30,7 @@ import javax.swing.JPanel;
  * @author Gaëtan
  */
 public class FenetreApplicationPrincipale extends JFrame{
-    /*
+    /**
     *Constructeur de FenetreApplicationPrincipale
     */
     public FenetreApplicationPrincipale (){
@@ -80,7 +80,7 @@ public class FenetreApplicationPrincipale extends JFrame{
         setVisible(true);
     }
     
-    /*
+    /**
     *Creer le menu et ses boutons
     */
     private void creerMenu() {

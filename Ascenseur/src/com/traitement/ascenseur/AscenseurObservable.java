@@ -19,7 +19,7 @@ public abstract class AscenseurObservable implements AscenseurAvecOption{
 
     protected ArrayList<AfficheurObservateur> observateurs;
     
-    /*
+    /**
     *Ajoute un Observateur
     *@param o AfficheurObservateur
     */
@@ -27,7 +27,7 @@ public abstract class AscenseurObservable implements AscenseurAvecOption{
         observateurs.add (o);
     }
     
-    /*
+    /**
     *Retirer un Observateur
     *@param o AfficheurObservateur
     */
@@ -35,7 +35,7 @@ public abstract class AscenseurObservable implements AscenseurAvecOption{
         observateurs.remove(o);
     }
     
-    /*
+    /**
     *Met à jour les Observateurs
     *@param int numEtage
     *@param boolean enMouvement
