@@ -80,17 +80,6 @@ public class FenetreApplicationPrincipale extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setVisible(true);
-        
-        JDialog dialog = new JDialog();
-	dialog.setSize(300, 200);//On lui donne une taille
-        dialog.setTitle("Nombre étage pour l'immeuble"); //On lui donne un titre
-        JTextField nbEtage = new JTextField();
-        nbEtage.setPreferredSize( new Dimension( 30, 20 ) );
-        JButton envoyer = new JButton("Envoyer");
-        envoyer.setPreferredSize( new Dimension( 10, 10 ) );
-        dialog.add(nbEtage);
-        dialog.add(envoyer);
-        dialog.setVisible(true);
     }
     
     /**
