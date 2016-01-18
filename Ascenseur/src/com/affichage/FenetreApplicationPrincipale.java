@@ -53,8 +53,8 @@ public class FenetreApplicationPrincipale extends JFrame{
         ajoutAscenseurMusique.addActionListener(new ActionListener() {
             public void actionPerformed (ActionEvent event) {
                 AscenseurStandard a = new AscenseurStandard ();
-                immeuble.ajouterAscenseur (new AscenseurAvecMusique (a, "yoyo"));
-                Controleur.getInstance().ajouterAscenseur (new AscenseurAvecMusique (a, "yoyo"));
+                immeuble.ajouterAscenseur (new AscenseurAvecMusique (a, "Do you feel it? - Chaos chaos"));
+                Controleur.getInstance().ajouterAscenseur (new AscenseurAvecMusique (a, "Do you feel it? - Chaos chaos"));
                 new FenetreGestionAscenseur (a,immeuble.getNombreEtage());
             }
         });
