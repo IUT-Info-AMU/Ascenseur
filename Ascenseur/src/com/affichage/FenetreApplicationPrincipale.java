@@ -48,6 +48,16 @@ public class FenetreApplicationPrincipale extends JFrame{
                 new FenetreGestionAscenseur (a,immeuble.getNombreEtage());
             }
         });
+        
+        JButton ajoutAscenseurMusique = new JButton("+ Ascenseur avec musique");
+        ajoutAscenseurMusique.addActionListener(new ActionListener() {
+            public void actionPerformed (ActionEvent event) {
+                AscenseurStandard a = new AscenseurStandard ();
+                immeuble.ajouterAscenseur (new AscenseurAvecMusique (a, "yoyo"));
+                Controleur.getInstance().ajouterAscenseur (new AscenseurAvecMusique (a, "yoyo"));
+                new FenetreGestionAscenseur (a,immeuble.getNombreEtage());
+            }
+        });
 
         JButton action = new JButton("Action");
         action.addActionListener(new ActionListener() {
@@ -57,8 +67,10 @@ public class FenetreApplicationPrincipale extends JFrame{
                 }
             }
         });
+        
         JPanel p = new JPanel ();
         p.add (ajoutAscenseur);
+        p.add (ajoutAscenseurMusique);
         p.add (action);
         
         add (p);

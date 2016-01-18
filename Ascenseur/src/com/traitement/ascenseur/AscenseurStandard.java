@@ -24,7 +24,7 @@ public class AscenseurStandard extends AscenseurObservable{
     private boolean                         bloque;
     private LinkedList<Requete>             requetes;
     private AscenseurStrategie              methode;
-    private HashMap<String,String> options = null;
+    private HashMap<String,String>          options;
     
     /*
     *Constructeur de AscenseurStandard
@@ -34,6 +34,7 @@ public class AscenseurStandard extends AscenseurObservable{
         requetes          = new LinkedList<Requete> ();
         observateurs      = new ArrayList<AfficheurObservateur> ();
         methode           = new AjoutRequeteAvance ();
+        options           = new HashMap<String,String> ();
         this.enMouvement  = false;
         this.ouvert       = false;
         this.bloque       = false;

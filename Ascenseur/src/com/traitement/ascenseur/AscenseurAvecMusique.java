@@ -12,6 +12,7 @@ package com.traitement.ascenseur;
  */
 public class AscenseurAvecMusique extends OptionAscenseur {
     
+    final String optionName = "musique";
     /*
     *Constructeur de AscenseurAvecMusique
     *@param ascenseur AscenseurAvecOption
@@ -19,7 +20,7 @@ public class AscenseurAvecMusique extends OptionAscenseur {
     */
     public AscenseurAvecMusique (AscenseurAvecOption ascenseur, String nomMusique) {
         super (ascenseur);
-        options.put("musique", nomMusique);
+        ascenseur.getOptions().put(optionName, nomMusique);
     }
     
     @Override
@@ -37,7 +38,7 @@ public class AscenseurAvecMusique extends OptionAscenseur {
     *@param musique String
     */
     public void changerMusique (String musique) {
-        this.options.put("musique", musique);
+        this.options.put(optionName, musique);
     }
     
 }
